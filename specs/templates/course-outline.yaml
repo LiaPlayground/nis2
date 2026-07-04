@@ -1,0 +1,37 @@
+template:
+  id: course-outline
+  name: 'Course Outline'
+  version: 1.0
+  output:
+    format: markdown
+    filename: journal.md
+    section: Outline
+  title: 'Course Outline'
+  sections:
+    - id: title
+      title: Title
+      template: |
+        * __Title:__
+          [Name of the lecture or course]
+    - id: target-audience
+      title: Target Audience
+      template: |
+        * __Target Audience:__
+          [Who is this course/lecture for?]
+    - id: time-commitment
+      title: Time Commitment
+      template: |
+        * __Time Commitment:__
+          [Estimated time commitment, e.g., semester hours per week or total hours]
+    - id: abstract
+      title: Abstract
+      template: |
+        * __Abstract:__
+          [Detailed abstract with all topics, benefits, and application.]
+    - id: learning-goals
+      title: Learning Objectives
+      template: |
+        * __Learning Objectives:__
+          1. [Clear learning objective with application scenario]
+          2. [Clear learning objective with application scenario]
+          3. [Clear learning objective with application scenario]

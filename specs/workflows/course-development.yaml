@@ -1,0 +1,492 @@
+workflow:
+  id: course-development
+  name: Course Development Workflow
+  description: >-
+    Multi-agent workflow for creating complete course materials from outline to publication.
+    Coordinates Teaching-Agent, Artist-Agent, and Development-Agent to build structured,
+    visually consistent course content with automated publishing.
+  type: educational
+  project_types:
+    - course-creation
+    - course-development
+    - educational-materials
+
+  agents:
+    teaching:
+      id: teaching-agent
+      role: "Pedagogical structure and content creation"
+    artist:
+      id: artist-agent
+      role: "Visual identity and image prompts"
+    development:
+      id: development-agent
+      role: "Version control and publishing"
+    learner:
+      id: learner-agent
+      role: "Learner personas and perspective-based quality review"
+
+  project_memory:
+    canonical_file: journal.md
+    rule: >-
+      All generated planning/state/review artifacts are stored as sections in `journal.md`.
+      Keep final LiaScript materials in `materials/`, generated visual assets and prompts in
+      `assets/`, and publishing/runtime files such as `project.yaml` and `.github/workflows/`
+      as separate files.
+    sections:
+      - Dashboard
+      - Course Context
+      - Outline
+      - Didactics
+      - Visual Identity
+      - Templates
+      - Agenda
+      - Sessions
+      - Agents
+      - Validation
+      - Analysis Status
+      - Notes Backup
+
+  sequence:
+    # Phase 0: Project Initialization
+    - step: init
+      agent: teaching
+      command: :init-course
+      output: "journal.md → ## Course Context"
+      notes: |
+        First mandatory step for every new course:
+        - Choose course type (lecture-series / self-paced / workshop / single-lesson / improve-existing)
+        - Set terminology, persona type, pacing, assessment defaults
+        - Define project-level conventions (language, tone, accessibility)
+        - All subsequent steps read `journal.md`, especially `## Course Context`, as their governance layer
+
+    # Phase 0-alt: Scaffold Fast-Track (replaces Phase 0–3 in one pass)
+    - step: scaffold
+      agent: teaching
+      command: :scaffold {course-type?}
+      output: "journal.md sections: Course Context, Outline, Didactics, Templates, Agenda, Sessions"
+      alternative_to: [init, create_outline, create_didactics, create_agenda, create_session]
+      notes: |
+        Fast-track for instructors who know what they want:
+        - Single intake interview collects all inputs upfront
+        - Auto-generates all structural artefacts in one pass (no approval between steps)
+        - Adds `## Templates` and header imports if template requirements are provided
+        - Stops before :coauthor-materials — content authoring remains interactive
+        - Use instead of running :init-course → :create-outline → :create-didactics → :create-agenda → :create-session separately
+        - Not suitable for improve-existing (use :analyze-existing instead)
+
+    # Phase 0b: Existing Course Analysis (improve-existing only)
+    - step: analyze_existing
+      agent: teaching
+      command: :analyze-existing
+      output: "journal.md → ## Analysis Status"
+      dependencies: [init]
+      condition: course_type == improve-existing
+      notes: |
+        Scan project for existing sections and fill gaps:
+        - Check `journal.md` sections `## Outline`, `## Didactics`, `## Agenda`, `## Sessions`, plus `materials/`
+        - For missing core sections: offer auto-generate or interactive creation
+        - List improvement opportunities and suggest next steps
+        - Skip all of Phase 1–3 if sections already exist
+
+    # Phase 1: Foundation
+    - step: create_outline
+      agent: teaching
+      command: :create-outline
+      output: "journal.md → ## Outline"
+      dependencies: [init]
+      notes: |
+        Define the course foundation:
+        - Title, target audience, time commitment
+        - Abstract with topics and benefits
+        - 3-5 clear learning objectives
+
+    - step: create_didactics
+      agent: teaching
+      command: :create-didactics
+      output: "journal.md → ## Didactics"
+      dependencies: [create_outline]
+      notes: |
+        Define teaching approach:
+        - Didactic concept and methods
+        - Professor persona and style
+        - Course type and difficulty level
+
+    # Phase 1b: Learner Personas (optional)
+    - step: create_learner_personas
+      agent: teaching
+      command: :create-learner-persona {name?}
+      output: "journal.md → ## Agents → ### Learner Personas"
+      dependencies: [create_didactics]
+      optional: true
+      notes: |
+        Create one or more evidence-based learner personas (optional but recommended):
+        - Quick mode: derive directly from `## Outline` and `## Didactics`
+        - Data-driven mode: generate research prompt, then build from provided data
+        - Number of personas: flexible — 1 typical, or 2–3 for target group diversity
+        - Personas are used later by :review-as-persona to give learner-perspective feedback
+        - Run :list-learners to see existing personas at any time
+
+    # Phase 2: Visual Identity
+    - step: create_visuals
+      agent: artist
+      command: :create-visuals
+      output: "journal.md → ## Visual Identity"
+      dependencies: [create_outline, create_didactics]
+      notes: |
+        Create visual identity aligned with teaching persona:
+        - Logo generation guidelines and colors
+        - Course image style and consistency rules
+        - Website color palette and typography
+
+    - step: create_logo
+      agent: artist
+      command: :create-logo
+      output: "journal.md → ## Visual Identity → __Example Prompts__"
+      dependencies: [create_visuals]
+      optional: true
+      notes: |
+        Generate detailed logo prompt for the course.
+        Optional: Can be done later or skipped.
+
+    # Phase 3: Structure
+    - step: create_agenda
+      agent: teaching
+      command: :create-agenda
+      output: "journal.md → ## Agenda"
+      dependencies: [create_didactics, create_visuals]
+      notes: |
+        Build session structure (skipped for single-lesson):
+        - Define all sessions/modules using terminology from course-context
+        - Assign learning objectives per session
+        - Set duration and type (lecture/exercise)
+
+    - step: manage_templates
+      agent: teaching
+      command: :manage-templates {name?}
+      output: "journal.md header imports + journal.md → ## Templates"
+      optional: true
+      notes: |
+        Available whenever a LiaScript template is needed:
+        - Adds `import: {url}` lines to the main project metadata header
+        - Documents template purpose, examples, and usage rules in `## Templates`
+        - Includes the community template discovery link: https://github.com/topics/liascript-template
+        - Ensures promoted materials include required imports when they use template macros
+
+    # Phase 4: Session Development (Two Approaches)
+    - step: session_development
+      agent: teaching
+      approaches:
+        iterative:
+          description: "Create one session at a time, fully develop it, then move to next"
+          sequence:
+            - command: :create-session {number} {type} {title}
+              output: "journal.md → ## Sessions"
+              notes: "Create skeleton subsection for session N and update the Sessions overview table"
+            - command: :promote-session {number} {type}
+              output: materials/{number}-{type}.md
+              notes: "Convert skeleton to full material"
+            - command: :coauthor-materials
+              notes: |
+                Interactive co-authoring in instructor persona:
+                - Refine content, add examples
+                - Suggest images (call artist-agent if needed)
+                - Iterate until material is complete
+            - agent: artist
+              command: :create-image {description}
+              optional: true
+              notes: "Create image prompts during coauthoring as needed"
+            - command: :validate-course {number} {type}
+              notes: |
+                Session-level check after coauthor approval:
+                - LiaScript syntax, learning objectives, persona tone
+                - If issues found: re-open :coauthor-materials with report as context
+                - If clean: proceed to persona review
+            - agent: learner
+              command: :review-as-persona {name} {number} {type}
+              optional: true
+              condition: "journal.md contains ## Agents → ### Learner Personas"
+              notes: |
+                Learner-perspective review after syntax validation (optional):
+                - Agent embodies persona and reads material as that learner
+                - Reviews: language level, cognitive load, relevance, accessibility,
+                  format fit, and assumed prior knowledge gaps
+                - Saves report to the matching `journal.md` → `## Sessions` session subsection under `#### Persona Reviews`
+                - Agent stays in persona for interactive follow-up chat
+                - Run for each defined persona, or just one
+                - If issues found: fix with :coauthor-materials, then optionally re-review
+            - repeat: for each session
+
+        batch:
+          description: "Create all skeletons first, then promote all, then coauthor all"
+          sequence:
+            - command: :create-session {number} {type} {title}
+              output: "journal.md → ## Sessions"
+              notes: "Create all session skeleton subsections and update the Sessions overview table"
+              repeat: for all sessions
+            - command: :promote-session {number} {type}
+              output: materials/{number}-{type}.md
+              notes: "Promote all skeletons to materials"
+              repeat: for all sessions
+            - command: :coauthor-materials
+              notes: |
+                Go through all materials sequentially:
+                - Refine content for each session
+                - Add images via artist-agent when needed
+                - Mark each session complete before moving to next
+              repeat: for all materials
+            - command: :validate-course {number} {type}
+              notes: "Session-level check per material after coauthor approval"
+              repeat: for all materials
+            - agent: learner
+              command: :review-as-persona {name} {number} {type}
+              optional: true
+              condition: "journal.md contains ## Agents → ### Learner Personas"
+              notes: "Learner-perspective review per material; saves each report under that session's `#### Persona Reviews`"
+              repeat: for all materials
+
+      notes: |
+        User chooses approach based on preference:
+        - Iterative: Complete one session fully before next (focused)
+        - Batch: Create all structure first, then fill in content (overview)
+
+    # Phase 5: Validation
+    - step: validate_course
+      agent: teaching
+      command: :validate-course
+      output: "journal.md → ## Sessions plus journal.md → ## Validation"
+      dependencies: [session_development]
+      notes: |
+        Full course check before publishing:
+        - Project-memory consistency (context ↔ outline ↔ didactics ↔ agenda ↔ sessions)
+        - All sessions Done ✅ in `journal.md` → `## Sessions`
+        - LiaScript syntax check on all material files
+        - Creates or replaces one `#### Validation Report` per material inside the matching `journal.md` → `## Sessions` session subsection
+        - Replaces `journal.md` → `## Validation` → `### Latest Validation Summary` with `Mode: course`, PASS/FAIL, and issue count
+
+        Feedback loop if issues found:
+        - Open :coauthor-materials {number} {type} for affected sessions
+        - Agent loads the matching session's `#### Validation Report` and works through issues
+        - Re-run :validate-course after fixes until report is clean
+        - Instructor confirms "Report ist akzeptabel" to exit loop
+
+        Publishing Gate (enforced):
+        - `Mode: course` + PASS → proceed to :create-project or :assemble-bundle
+        - FAIL → publishing commands blocked until re-validation passes
+        - PASS with concerns → instructor decides explicitly
+
+    # Phase 6: Publishing (optional, user-initiated)
+    - step: git_operations
+      agent: development
+      command: :manage-git
+      optional: throughout workflow
+      notes: |
+        Available anytime for:
+        - Staging and committing changes
+        - Writing meaningful commit messages
+        - Pulling, pushing, viewing diffs
+        - Resolving conflicts
+        - Step-by-step guidance for beginners
+
+    - step: initial_publishing
+      agent: development
+      command: :create-project
+      output: project.yaml + .github/workflows/
+      optional: true
+      condition: user_requests_publishing AND first_time_setup AND project_validation == PASS
+      notes: |
+        Only when the instructor explicitly wants to publish AND `journal.md` → `## Validation` → `### Latest Validation Summary` shows `Mode: course` and `Result: PASS`.
+        Recommended when multiple materials exist and the course is ready to share.
+        - Generate project.yaml with all materials from materials/
+        - Apply visuals colors to project.yaml
+        - Create GitHub Actions workflow (force_orphan: true)
+        - Ask about GitHub Pages activation
+        - Commit and push to repository
+
+    - step: update_publishing
+      agent: development
+      command: :update-project
+      optional: true
+      condition: user_requests_publishing AND updates_to_existing_project
+      notes: |
+        Only when the instructor explicitly wants to publish updates.
+        - Update project.yaml with new/changed materials
+        - Commit and push changes
+        - Trigger GitHub Pages workflow
+
+    # Phase 7: Bundling (Optional)
+    - step: assemble_bundle
+      agent: teaching
+      command: :assemble-bundle
+      output: course-bundle/
+      optional: true
+      condition: project_validation == PASS
+      notes: |
+        Create complete distributable package (requires `Mode: course` and `Result: PASS` in `journal.md` → `## Validation` → `### Latest Validation Summary`):
+        - Pre-flight check: blocks if `### Latest Validation Summary` is missing, not `Mode: course`, or not `Result: PASS`
+        - Collects `journal.md` plus all materials/
+        - Ensures optional sections (`## Agenda`, `## Sessions`, `## Notes Backup`) are represented if present
+        - Includes assets/ if present
+        - Generates bundle-index.md with content table and quick-start guide
+
+  usage_notes: |
+    This workflow is flexible:
+    - Steps can be done in sequence or with iterations
+    - Git operations (manage-git) available anytime
+    - Image creation on-demand during coauthoring
+    - Choose iterative or batch approach for sessions
+    - Publishing is optional and user-initiated — only when explicitly requested
+    - :create-project recommended when multiple materials exist and course is ready to share
+    - `journal.md` → `## Sessions` contains an overview table first, then one skeleton subsection per session; the overview table tracks skeleton/material/Done status automatically
+    - Learner personas are optional but recommended: :create-learner-persona after :create-didactics
+    - :review-as-persona runs after coauthor + validate; agent stays in persona for follow-up chat
+    - `journal.md` → `## Dashboard` is derived state and should be regenerated automatically with :update-dashboard after state-changing tasks
+
+  flow_diagram: |
+    ```mermaid
+    graph TD
+        A[Start: :init-course] --> B{Course Type?}
+        B -->|improve-existing| C[teaching: analyze-existing]
+        B -->|new course| D[teaching: create-outline]
+        D --> E[teaching: create-didactics]
+        E --> EP[teaching: create-learner-persona - optional]
+        EP --> F[artist: create-visuals]
+        F --> G[artist: create-logo - optional]
+        G --> H[teaching: create-agenda]
+        H --> I{Session Approach?}
+
+        I -->|Iterative| J[teaching: create-session N]
+        J --> K[teaching: promote-session N]
+        K --> L[teaching: coauthor-materials N]
+        L --> LV[teaching: validate-course N]
+        LV --> LR[learner: review-as-persona - optional]
+        LR --> P{More sessions?}
+        P -->|Yes| J
+        P -->|No| VAL[teaching: validate-course full]
+
+        I -->|Batch| Q[teaching: create all skeletons]
+        Q --> R[teaching: promote all sessions]
+        R --> S[teaching: coauthor all materials]
+        S --> SV[teaching: validate-course per session]
+        SV --> SR[learner: review-as-persona per session - optional]
+        SR --> VAL
+
+        C --> VAL
+
+        VAL --> T{Publish?}
+        T -->|Yes, first time| U[development: create-project]
+        T -->|Yes, update| W[development: update-project]
+        T -->|Not yet| Y
+
+        U --> X[development: manage-git - anytime]
+        W --> X
+        X --> Y[Optional: teaching: assemble-bundle]
+        Y --> END[Published Course]
+
+        style A fill:#0B6E75,color:#fff
+        style END fill:#FF8C42,color:#fff
+        style B fill:#f9f,stroke:#333,stroke-width:2px
+        style I fill:#f9f,stroke:#333,stroke-width:2px
+        style T fill:#f9f,stroke:#333,stroke-width:2px
+        style P fill:#f9f,stroke:#333,stroke-width:2px
+        style EP fill:#e8f4f8,stroke:#0B6E75
+        style LR fill:#e8f4f8,stroke:#0B6E75
+        style SR fill:#e8f4f8,stroke:#0B6E75
+        style EP stroke-dasharray: 5 5
+        style LR stroke-dasharray: 5 5
+        style SR stroke-dasharray: 5 5
+    ```
+
+  decision_guidance:
+    when_to_use:
+      - Creating new course materials from scratch
+      - Developing complete course content
+      - Building structured educational materials
+      - Coordinating pedagogical, visual, and technical aspects
+
+  handoff_prompts:
+    foundation_complete: |
+      Course foundation created:
+      - Outline: {{title}} for {{target_audience}}
+      - Didactics: {{instructor_persona}} with {{teaching_style}} style
+      Ready for visual identity creation.
+
+    visual_identity_complete: |
+      Visual identity established:
+      - Style guide created with {{primary_color}} primary color
+      - Logo prompt generated (if applicable)
+      Ready for agenda and session planning.
+
+    structure_complete: |
+      Course structure defined:
+      - Agenda with {{session_count}} sessions
+      Choose approach:
+      1. Iterative: Create→Promote→Coauthor one session at a time
+      2. Batch: Create all→Promote all→Coauthor all
+
+    session_development_complete: |
+      All sessions developed:
+      - {{session_count}} sessions created and coauthored
+      - Materials validated and consistent
+      Ready for publishing setup.
+
+    publishing_complete: |
+      Course published:
+      - project.yaml configured
+      - GitHub Pages workflow active
+      - All materials live at: {{github_pages_url}}
+
+  quick_reference:
+    course_type_paths:
+      lecture-series:
+        sequence: [":init-course", ":create-outline", ":create-didactics", ":create-visuals", ":create-agenda", ":create-session", ":promote-session", ":coauthor-materials", ":validate-course"]
+        publishing: "optional: :create-project when ready to share"
+      self-paced:
+        sequence: [":init-course", ":create-outline", ":create-didactics", ":create-session", ":promote-session", ":coauthor-materials", ":validate-course"]
+        note: "Agenda optional — decided at :init-course"
+        publishing: "optional: :create-project when ready to share"
+      workshop:
+        sequence: [":init-course", ":create-outline", ":create-didactics", ":create-agenda", ":create-session", ":promote-session", ":coauthor-materials", ":validate-course"]
+        publishing: "optional: :create-project when ready to share"
+      single-lesson:
+        sequence: [":init-course", ":create-outline", ":create-didactics", ":create-session", ":promote-session", ":coauthor-materials", ":validate-course"]
+        note: "No agenda needed; one session only"
+        publishing: "usually not needed for a single lesson"
+      improve-existing:
+        sequence: [":init-course", ":analyze-existing", ":coauthor-materials", ":validate-course"]
+        note: ":analyze-existing scans for missing `journal.md` sections and offers to auto-generate or create them interactively"
+        publishing: "optional: :update-project if project.yaml already exists"
+
+    teaching_agent_commands:
+      - :init-course
+      - :scaffold {course-type?}
+      - :analyze-existing
+      - :configure-agent {agent}
+      - :create-outline
+      - :create-didactics
+      - :create-learner-persona {name?}
+      - :create-agenda
+      - :manage-templates {name?}
+      - :update-dashboard
+      - :create-session {number} {type} {title}
+      - :promote-session {number} {type}
+      - :coauthor-materials
+      - :quick-fix {number} {type} {description}
+      - :validate-course
+      - :assemble-bundle
+      - :save-notes {type?} {title?}
+      - :save-decision {title}
+
+    learner_agent_commands:
+      - :review-as-persona {name} {number} {type}
+      - :list-learners
+      - :agent {character}
+
+    artist_agent_commands:
+      - :create-visuals
+      - :create-logo
+      - :create-image {description}
+
+    development_agent_commands:
+      - :manage-git
+      - :create-project
+      - :update-project

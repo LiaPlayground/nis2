@@ -32,23 +32,20 @@ An IT administrator notices a burst of failed login attempts against the citizen
 
       {{1}}
 > [!WARNING] 08:14 — Something odd
-> A burst of failed login attempts against the citizen-services portal, accumulated overnight. Nothing is broken — yet. But nobody in the building can immediately answer three simple questions:
 > *Is this serious? Who do we tell? How long do we have?*
 
     --{{2}}--
-Three tense hours later: all clear. A misconfigured monitoring bot, not an attacker. No data exposed, no citizen affected.
+Three tense hours later: all clear. The cause was a misconfigured monitoring bot, not an attacker — no data exposed, no citizen affected. Everyone goes back to work.
 
       {{2}}
 > [!NOTE] 11:05 — All clear
-> The cause: a misconfigured monitoring bot, not an attacker. No data exposed, no citizen affected. Everyone goes back to work.
+> False alarm. No data exposed, no citizen affected.
 
     --{{3}}--
 But the real story isn't the false alarm. It's that an ordinary Monday exposed a gap: nobody had a clear answer ready — and if it had been real, those three missing hours could have mattered.
 
       {{3}}
 <div>
-
-The real story isn't the false alarm. It's that an ordinary Monday exposed a **gap**: nobody had a clear answer ready — and if it *had* been real, those three missing hours could have mattered.
 
 Sound familiar? If your organization has ever had a *"wait, who's actually responsible for this?"* moment, you're exactly who this course is for.
 
@@ -60,13 +57,11 @@ Sound familiar? If your organization has ever had a *"wait, who's actually respo
 You don't need to care about a 46-article EU directive for its own sake. You need exactly three things — and those three things are this whole course, compressed.
 
 
-You don't need to care about a 46-article EU directive for its own sake. You need three things:
+**Three things — that's the whole course, compressed:**
 
 1. To know whether NIS2 **applies to you** — *that's Unit 2.*
 2. To know what it **actually asks you to do** — *that's Units 3 to 5.*
 3. To know what to do **when the Monday-morning moment isn't a false alarm** — *that's Unit 4.*
-
-That's the whole course, compressed into three lines.
 
 
 ## What NIS2 Actually Is (And Why It Exists)
@@ -88,18 +83,20 @@ Now the formal name — once, so you recognize it when you see it in a memo or a
     --{{0}}--
 NIS2 didn't appear out of nowhere. Three developments made a shared European rulebook unavoidable.
 
-Three developments made a shared European rulebook unavoidable:
-
 - **Digital dependency.** Public services, healthcare, transport, and utilities now run on networked software — there is no "offline fallback" for most of what they do.
 - **Cascading failures.** A single weak link in one organization's systems can become a problem for citizens, patients, passengers, or an entire region.
 - **Uneven preparedness.** The first NIS directive (2016) was applied very differently across member states — how well an essential service was protected depended on where it happened to be located.
 
+> [!NOTE] By the numbers
+> NIS2 — Directive (EU) 2022/2555 — entered into force on 16 January 2023, replacing that original 2016 NIS Directive. EU member states had until 17 October 2024 to transpose it into national law.
+
 ### Not Just Another Compliance Checkbox
 
     --{{0}}--
-So NIS2 is the EU's answer to that risk. Not paperwork for its own sake, but a shared minimum standard — so that "we didn't know we had to check that" stops being an acceptable excuse.
-
 NIS2 is the EU's answer to that risk: not paperwork for its own sake, but a **shared minimum standard**, so that *"we didn't know we had to check that"* stops being an acceptable excuse — anywhere in the EU, in any sector that people's daily lives depend on.
+
+> [!NOTE] What "shared minimum standard" means in numbers
+> Under Art. 34, supervisory authorities can fine **essential entities** up to €10 million or 2% of global annual turnover — whichever is higher. For **important entities**, it's up to €7 million or 1.4% of turnover. *(Unit 5 covers exactly who is personally on the hook for that.)*
 
 > [!TIP] You will never need to read all 46 articles.
 > That's this course's job — we've already done that part.
@@ -113,16 +110,45 @@ Here is the single most common first reaction to NIS2 — and why it's usually w
 
 The most common first reaction to NIS2 is some version of: *"That sounds like something for big tech companies or federal agencies. Probably not me."* It's an understandable guess. It's also, more often than not, wrong — and here's why.
 
-    --{{1}}--
-Let's take the four most frequent versions of "probably not me" and hold each one against reality.
-
       {{1}}
-| The first guess                                                        | The reality                                                                                                                                  |
-| ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| *"We're too small for this."*                                          | NIS2 scope is **sector-first, size second** — and some organizations are covered regardless of size. Size alone never rules you out.          |
-| *"We're public administration, not industry."*                         | Public administration is **explicitly among the covered sectors**.                                                                            |
-| *"We've outsourced our IT."*                                           | You can outsource operations. You **cannot outsource responsibility**.                                                                        |
-| *"We're not critical — we just run buses / billing / a clinic ward."*  | Transport, health, water, energy, digital services: precisely the everyday services NIS2 was written to protect.                              |
+<section>
+
+    --{{1}}--
+Let's take the four most frequent versions of "probably not me." For each one: decide for yourself first — true or false? — then open it to check against reality.
+
+<details>
+<summary>❓ <em>"We're too small for this."</em> — true or false?</summary>
+
+**Reality:** NIS2 scope is **sector-first, size second** — some organizations are covered regardless of size. Size alone never rules you out.
+
+</details>
+
+<details>
+<summary>❓ <em>"We're public administration, not industry."</em> — true or false?</summary>
+
+**Reality:** Public administration is **explicitly among the covered sectors** (Annex I).
+
+</details>
+
+<details>
+<summary>❓ <em>"We've outsourced our IT."</em> — true or false?</summary>
+
+**Reality:** You can outsource operations. You **cannot outsource responsibility**.
+
+</details>
+
+<details>
+<summary>❓ <em>"We're not critical — we just run buses / billing / a clinic ward."</em> — true or false?</summary>
+
+**Reality:** Transport, health, water, energy, digital services: precisely the everyday services NIS2 was written to protect.
+
+</details>
+
+
+> [!NOTE] By the numbers
+> Annex I and Annex II together list **18 sectors** — 11 "high-criticality" sectors (energy, transport, banking, health, digital infrastructure, public administration, and more) and 7 "other critical" sectors (from postal services to food production to digital marketplaces). That breadth is exactly why "probably not me" fails so often.
+
+</section>
 
     --{{2}}--
 And "in scope" is not only an organizational label. It lands on individual desks — including, quite possibly, yours.
@@ -130,7 +156,7 @@ And "in scope" is not only an organizational label. It lands on individual desks
       {{2}}
 <div>
 
-"In scope" is not just an organizational label — it lands on desks:
+Three places it lands, specifically:
 
 - **Decision-makers** carry personal governance responsibility for cybersecurity. *Unit 5 covers exactly what that means.*
 - **IT and security staff** implement the concrete measures the directive requires. *Unit 3 walks through all ten.*
@@ -150,8 +176,6 @@ To be clear: whether NIS2 applies to your organization is not a matter of gut fe
     --{{0}}--
 This course is built to fit around your actual job — not the other way around. Four things to know before you continue.
 
-This course is built to fit around your actual job, not the other way around:
-
 - **Six self-paced units**, roughly four to six hours total, in units of 20–40 minutes each.
 - **You control the order.** Every unit is self-contained — take them in sequence, or jump straight to the one your role needs most.
 - **Every unit follows the same rhythm** — in fact, you're inside it right now: this unit opened with a scenario, not a legal definition.
@@ -159,7 +183,7 @@ This course is built to fit around your actual job, not the other way around:
 
 ### The Rhythm Every Unit Follows
 
-    --{{1}}--
+    --{{0}}--
 Every unit runs through the same five beats: a real scenario first, then an example, then the explanation behind it, then a short task or checklist, and finally a quick self-check.
 
 ```mermaid   @mermaid
@@ -172,11 +196,8 @@ flowchart LR
 
 ### Your Path Through the Course
 
-    --{{2}}--
+    --{{0}}--
 Here is the full path. Note the last column — every unit ends with something concrete in your hands, and Unit 6 turns all of it into a single number: your personal NIS2 Readiness Score.
-
-      {{2}}
-<div>
 
 | #   | Unit                                                | Type     | ~Time  | You leave with…                                                       |
 | --- | --------------------------------------------------- | -------- | ------ | --------------------------------------------------------------------- |
@@ -190,15 +211,12 @@ Here is the full path. Note the last column — every unit ends with something c
 > [!TIP] The destination is concrete.
 > By the end of Unit 6 you'll have your own **NIS2 Readiness Score** — built from a short self-assessment you fill in as you go, not from theory.
 
-</div>
-
 ### Meet Your Guide
 
 ![Flat geometric illustration of Mika Reinhardt, a friendly compliance coach, seated at a desk between a legal codebook, a network diagram, and an organizational chart.](../assets/images/mika-reinhardt-guide-portrait.png)
 
-    --{{3}}--
-One more introduction before you go: me.
-
+    --{{0}}--
+One more introduction before you go: me.\
 I'm Mika Reinhardt. I've spent the last decade helping public administrations and critical-infrastructure operators across Europe make sense of exactly this kind of directive. I'm not a lawyer, and I'm not a hacker — I sit between IT, legal, and leadership, and my job is making dense regulation make sense to people who have a full-time job that isn't "reading EU directives."
 
 > I'll always show you where the real risk sits, not just where the paperwork sits.
@@ -209,8 +227,6 @@ I'm Mika Reinhardt. I've spent the last decade helping public administrations an
 
     --{{0}}--
 Before you move on, three quick questions and two reflections. None of it is graded — it's a private gut-check, just for you.
-
-Before you move on, a quick gut-check — this isn't graded, it's just for you.
 
 **1. What is NIS2, in one sentence?**
 
@@ -258,4 +274,6 @@ Which unit do you expect to need most for your role? (No wrong answer — this j
 **References:**
 
 1. [Directive (EU) 2022/2555 (NIS2)](https://eur-lex.europa.eu/eli/dir/2022/2555/oj), Recitals 1–10 (context and rationale) — full German text in `data/cybersichert.pdf`
-2. Course Agenda — `journal.md` → `## Agenda`
+2. Directive (EU) 2022/2555 (NIS2), Art. 34 (administrative fines), Art. 41 (transposition deadline), Art. 45 (entry into force) — `data/cybersichert.pdf`
+3. Directive (EU) 2022/2555 (NIS2), Annexes I–II (sector lists) — `data/cybersichert.pdf`
+4. Course Agenda — `journal.md` → `## Agenda`

@@ -4,6 +4,9 @@ email:    LiaScript@web.de
 version:  1.1.0
 language: en
 narrator: English Female
+
+logo:     assets/images/preview-card.png
+
 comment:  Unit 1 of "NIS2 Ready" — orientation to the EU NIS2 Directive and why it matters for public administration and critical infrastructure.
 
 import: https://raw.githubusercontent.com/liaScript/mermaid_template/master/README.md
@@ -20,7 +23,7 @@ Welcome to NIS2 Ready. In the next twenty-five minutes you'll find out what the 
 
 ## A Monday Morning at Stadtverwaltung Nordholm
 
-![Flat geometric illustration of a public-sector IT team in a modern municipal office reacting to amber warning indicators on large wall monitors, rendered in EU blue and gold on a neutral background.](../assets/images/incident-monday-morning-hero.png)
+![Flat geometric illustration of a public-sector IT team in a modern municipal office reacting to amber warning indicators on large wall monitors, rendered in EU blue and gold on a neutral background.](assets/images/incident-monday-morning-hero.png)
 
     --{{0}}--
 Let's not start with the law. Let's start with an ordinary Monday morning in an ordinary city administration — because that is where NIS2 actually lives.
@@ -103,7 +106,7 @@ NIS2 is the EU's answer to that risk: not paperwork for its own sake, but a **sh
 
 ## "Probably Not Me" — The Most Expensive First Guess
 
-![Flat geometric illustration of four workers side by side — a public administrator, a nurse, a bus driver, and an IT technician — each with a small blue-and-gold shield symbol floating above them.](../assets/images/probably-not-me-staff-lineup.png)
+![Flat geometric illustration of four workers side by side — a public administrator, a nurse, a bus driver, and an IT technician — each with a small blue-and-gold shield symbol floating above them.](assets/images/probably-not-me-staff-lineup.png)
 
     --{{0}}--
 Here is the single most common first reaction to NIS2 — and why it's usually wrong.
@@ -213,7 +216,7 @@ Here is the full path. Note the last column — every unit ends with something c
 
 ### Meet Your Guide
 
-![Flat geometric illustration of Mika Reinhardt, a friendly compliance coach, seated at a desk between a legal codebook, a network diagram, and an organizational chart.](../assets/images/mika-reinhardt-guide-portrait.png)
+![Flat geometric illustration of Mika Reinhardt, a friendly compliance coach, seated at a desk between a legal codebook, a network diagram, and an organizational chart.](assets/images/mika-reinhardt-guide-portrait.png)
 
     --{{0}}--
 One more introduction before you go: me.\

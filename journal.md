@@ -81,7 +81,7 @@ __Current step:__ <span class="dashboard-status dashboard-status-current">Materi
 
 __Course validation:__ <span class="dashboard-status dashboard-status-blocked">not run</span>
 
-__Sessions complete:__ 0 / 6 (2 skeletons, 1 material drafted)
+__Sessions complete:__ 0 / 6 (6 / 6 skeletons, 2 materials drafted)
 
 __Last updated:__ 2026-07-04
 
@@ -91,9 +91,9 @@ __Last updated:__ 2026-07-04
 
 ### Next Commands
 
-1. `:promote-session 2 exercise` (draft full material for Unit 2's skeleton)
-2. `:create-session 3 exercise` (next unit skeleton — "The 10 Measures You Actually Need")
-3. `:validate-course 1 lecture` (spot-check Unit 1's material before drafting more)
+1. `:promote-session 3 exercise` (draft full material for Unit 3's skeleton)
+2. `:validate-course 1 lecture` and `:validate-course 2 exercise` (spot-check drafted materials before writing more)
+3. `:promote-session 4 lecture` (draft full material for Unit 4's skeleton)
 
 </div>
 
@@ -106,7 +106,7 @@ __Last updated:__ 2026-07-04
 | --- | --- |
 | Course context | <span class="dashboard-status dashboard-status-done">done</span> |
 | Templates | <span class="dashboard-status dashboard-status-done">done</span> |
-| Materials | <span class="dashboard-status dashboard-status-current">1 / 6 (2 skeletons)</span> |
+| Materials | <span class="dashboard-status dashboard-status-current">2 / 6 (6 / 6 skeletons)</span> |
 | Course validation | <span class="dashboard-status dashboard-status-blocked">not run</span> |
 | Persona reviews | <span class="dashboard-status dashboard-status-current">optional</span> |
 
@@ -160,11 +160,11 @@ flowchart LR
 | # | Title | Type | Skeleton | Material | Done |
 |---|-------|------|----------|----------|------|
 | 1 | Welcome & Why NIS2 Matters | lecture | ✅ | ✅ | ❌ |
-| 2 | Are You in Scope? Essential vs. Important Entities | exercise | ✅ | ❌ | ❌ |
-| 3 | The 10 Measures You Actually Need | exercise | ❌ | ❌ | ❌ |
-| 4 | Handling & Reporting Incidents | lecture | ❌ | ❌ | ❌ |
-| 5 | Who's Responsible? Governance & Consequences | lecture | ❌ | ❌ | ❌ |
-| 6 | Your NIS2 Readiness Score | exercise | ❌ | ❌ | ❌ |
+| 2 | Are You in Scope? Essential vs. Important Entities | exercise | ✅ | ✅ | ❌ |
+| 3 | The 10 Measures You Actually Need | exercise | ✅ | ❌ | ❌ |
+| 4 | Handling & Reporting Incidents | lecture | ✅ | ❌ | ❌ |
+| 5 | Who's Responsible? Governance & Consequences | lecture | ✅ | ❌ | ❌ |
+| 6 | Your NIS2 Readiness Score | exercise | ✅ | ❌ | ❌ |
 
 </div>
 
@@ -172,7 +172,7 @@ flowchart LR
 
 ### Open Blockers
 
-None — Unit 1 has full material drafted (`materials/1-lecture.md`), Unit 2 has a skeleton only. Units 3–6 still need `:create-session`. No `:validate-course` run yet. Logo not yet generated (`:create-logo`).
+None — all six unit skeletons are complete. Units 1–2 have full material drafted, each in its own folder with per-session assets (`materials/1-lecture/README.md`, `materials/2-exersize/README.md` — note the folder-name typo flagged below); Units 3–6 still need `:promote-session`. No `:validate-course` run yet. Logo not yet generated (`:create-logo`).
 
 </div>
 
@@ -273,7 +273,7 @@ None — Unit 1 has full material drafted (`materials/1-lecture.md`), Unit 2 has
 * __Recurring Case Examples:__
   A small recurring cast of fictional organizations, reused opportunistically across units rather than one continuously-escalating story — chosen to preserve familiarity/continuity without breaking the "self-contained, reorderable unit" requirement from `## Course Context`. Each unit's hook must re-establish the organization in 1–2 sentences (name, sector, one relevant fact) before using it — no unit may assume a learner has seen a previous unit's scenario or outcome.
   1. __Stadtverwaltung Nordholm__ — a mid-size German municipal administration (public-sector, Annex I). Used for governance/liability and general "does this apply to us" framing. Appears in Unit 1 (hook) and Unit 5 (governance & liability).
-  2. __Nordholm Nahverkehr__ — the city's regional public-transport operator, a subsidiary of Stadtverwaltung Nordholm (transport sector, Annex I). Its medium size makes it a good borderline case for essential-vs-important thresholds. Used in Unit 2 (scope classification).
+  2. __Nordholm Nahverkehr__ — the city's regional public-transport operator, a subsidiary of Stadtverwaltung Nordholm (transport sector, Annex I; operates both buses and trams — the tram/rail service is what cleanly anchors it in Annex I's transport subsector, since bus-only local transit sits in genuinely grayer territory under some national transpositions). Its medium size makes it a good borderline case for essential-vs-important thresholds. Used in Unit 2 (scope classification).
   3. __Klinikum Ostheide__ — a regional hospital network (health sector, Annex I), unrelated to the Nordholm city entities. Used in Unit 3 (Art. 21 risk-management measures, concrete IT/OT environment) and Unit 4 (incident handling & reporting, high-stakes timeline).
   Unit 6 (Readiness Score) is learner-facing and personal — it does not need a fictional org; it may optionally reference Stadtverwaltung Nordholm's tally alongside the learner's own live inputs as a worked example.
 
@@ -437,12 +437,12 @@ More community templates can be found at [topics/liascript-template](https://git
 
   | # | Title | Type | Duration | Learning Objective | Material |
   |---|-------|------|----------|--------------------|----------|
-  | 1 | Welcome & Why NIS2 Matters | lecture | 25 min | Sets up course rhythm and stakes; grounds the rest of the course | materials/1-lecture.md |
-  | 2 | Are You in Scope? Essential vs. Important Entities | exercise | 40 min | LO1 — determine whether your organization/role falls under NIS2 (Art. 2–3, Annex I–II) | materials/2-exercise.md |
-  | 3 | The 10 Measures You Actually Need | exercise | 50 min | LO2 — explain and apply the Art. 21 risk-management measures | materials/3-exercise.md |
-  | 4 | Handling & Reporting Incidents | lecture | 45 min | LO3 — apply the incident-reporting process and timeline (Art. 23) | materials/4-lecture.md |
-  | 5 | Who's Responsible? Governance & Consequences | lecture | 40 min | LO4 — assess governance/liability implications and sanctions (Art. 20, 32–34) | materials/5-lecture.md |
-  | 6 | Your NIS2 Readiness Score | exercise | 35 min | LO5 — use a self-assessment checklist/calculator to evaluate readiness | materials/6-exercise.md |
+  | 1 | Welcome & Why NIS2 Matters | lecture | 25 min | Sets up course rhythm and stakes; grounds the rest of the course | materials/1-lecture/README.md |
+  | 2 | Are You in Scope? Essential vs. Important Entities | exercise | 40 min | LO1 — determine whether your organization/role falls under NIS2 (Art. 2–3, Annex I–II) | materials/2-exersize/README.md ⚠️ |
+  | 3 | The 10 Measures You Actually Need | exercise | 50 min | LO2 — explain and apply the Art. 21 risk-management measures | materials/3-exercise/README.md |
+  | 4 | Handling & Reporting Incidents | lecture | 45 min | LO3 — apply the incident-reporting process and timeline (Art. 23) | materials/4-lecture/README.md |
+  | 5 | Who's Responsible? Governance & Consequences | lecture | 40 min | LO4 — assess governance/liability implications and sanctions (Art. 20, 32–34) | materials/5-lecture/README.md |
+  | 6 | Your NIS2 Readiness Score | exercise | 35 min | LO5 — use a self-assessment checklist/calculator to evaluate readiness | materials/6-exercise/README.md |
 
 ---
 
@@ -453,7 +453,11 @@ _Managed by `:create-session`, `:promote-session`, `:coauthor-materials`, and `:
 | # | Title | Type | Skeleton | Material | Done | Notes |
 |---|-------|------|----------|----------|------|-------|
 | 1 | Welcome & Why NIS2 Matters | lecture | ✅ | ✅ | ❌ | |
-| 2 | Are You in Scope? Essential vs. Important Entities | exercise | ✅ | ❌ | ❌ | |
+| 2 | Are You in Scope? Essential vs. Important Entities | exercise | ✅ | ✅ | ❌ | |
+| 3 | The 10 Measures You Actually Need | exercise | ✅ | ❌ | ❌ | |
+| 4 | Handling & Reporting Incidents | lecture | ✅ | ❌ | ❌ | |
+| 5 | Who's Responsible? Governance & Consequences | lecture | ✅ | ❌ | ❌ | |
+| 6 | Your NIS2 Readiness Score | exercise | ✅ | ❌ | ❌ | |
 
 ### 1. Welcome & Why NIS2 Matters
 
@@ -494,13 +498,13 @@ Known stumbling block: learners who assume "this is legal, therefore it's not fo
 
 #### incident-monday-morning-hero
 
-* __Datei:__ assets/images/incident-monday-morning-hero.png
+* __Datei:__ materials/1-lecture/assets/images/incident-monday-morning-hero.png
 * __Status:__ generated
 * __Alt-Text:__ Flat geometric illustration of a public-sector IT team in a modern municipal office reacting to amber warning indicators on large wall monitors, rendered in EU blue and gold on a neutral background.
 * __Prompt:__
   "A flat, geometric vector illustration of a small public-sector IT team in a modern municipal administration office on an early Monday morning, gathered around a desk and looking up at large wall-mounted monitors showing abstract amber warning indicators and a stylized login screen with alert symbols — concerned but composed, not panicked. Diverse public-sector staff in business-casual clothing, consistent flat-illustration character style. Color palette: deep EU blue (#003399) as the dominant color, gold (#FFCC00) accents reserved for the warning indicators and small highlights, off-white neutral background (#F5F7FA). Rule-of-thirds composition with the monitors on the upper-right third and the team on the lower-left third, clear and uncluttered, generous negative space. Soft natural morning lighting, professional and approachable educational mood, no photorealism, no dark 'hooded hacker' imagery, clean minimalist vector style. The image must not contain any readable text; any unavoidable screen elements must be abstract shapes only."
 
-![Flat geometric illustration of a public-sector IT team in a modern municipal office reacting to amber warning indicators on large wall monitors, rendered in EU blue and gold on a neutral background.](assets/images/incident-monday-morning-hero.png)
+![Flat geometric illustration of a public-sector IT team in a modern municipal office reacting to amber warning indicators on large wall monitors, rendered in EU blue and gold on a neutral background.](materials/1-lecture/assets/images/incident-monday-morning-hero.png)
 
 </section>
 
@@ -508,13 +512,13 @@ Known stumbling block: learners who assume "this is legal, therefore it's not fo
 
 #### probably-not-me-staff-lineup
 
-* __Datei:__ assets/images/probably-not-me-staff-lineup.png
+* __Datei:__ materials/1-lecture/assets/images/probably-not-me-staff-lineup.png
 * __Status:__ generated
 * __Alt-Text:__ Flat geometric illustration of four workers side by side — a public administrator, a nurse, a bus driver, and an IT technician — each with a small blue-and-gold shield symbol floating above them.
 * __Prompt:__
   "A flat, geometric vector illustration of four diverse workers standing side by side in a friendly lineup, each representing a sector covered by EU cybersecurity rules: a public administrator holding a document folder, a nurse in scrubs with a stethoscope, a bus driver with a cap, and an IT technician with a laptop. Above each person floats one identical small shield icon in deep EU blue (#003399) with a gold (#FFCC00) outline accent, visually connecting all four. Consistent flat-illustration character style, diverse in gender, age, and ethnicity. Color palette: deep EU blue (#003399) dominant, gold (#FFCC00) accents only on the shields and small details, off-white neutral background (#F5F7FA). Balanced horizontal composition with even spacing and generous negative space, clear and uncluttered. Soft natural lighting, professional, warm, and approachable educational mood, no photorealism, clean minimalist vector style. The image must not contain any readable text."
 
-![Flat geometric illustration of four workers side by side — a public administrator, a nurse, a bus driver, and an IT technician — each with a small blue-and-gold shield symbol floating above them.](assets/images/probably-not-me-staff-lineup.png)
+![Flat geometric illustration of four workers side by side — a public administrator, a nurse, a bus driver, and an IT technician — each with a small blue-and-gold shield symbol floating above them.](materials/1-lecture/assets/images/probably-not-me-staff-lineup.png)
 
 </section>
 
@@ -522,13 +526,28 @@ Known stumbling block: learners who assume "this is legal, therefore it's not fo
 
 #### mika-reinhardt-guide-portrait
 
-* __Datei:__ assets/images/mika-reinhardt-guide-portrait.png
+* __Datei:__ materials/1-lecture/assets/images/mika-reinhardt-guide-portrait.png
 * __Status:__ generated
 * __Alt-Text:__ Flat geometric illustration of Mika Reinhardt, a friendly compliance coach, seated at a desk between a legal codebook, a network diagram, and an organizational chart.
 * __Prompt:__
   "A flat, geometric vector illustration of a friendly, approachable compliance coach in their mid-forties, gender-ambiguous, with short practical hair and smart-casual clothing (blazer over a plain shirt, no tie), seated confidently at a tidy desk and facing the viewer with a calm, warm expression. The desk composition places three symbolic objects around the person: a thick legal codebook on one side, a framed abstract network diagram on the wall behind, and a small organizational chart on a stand on the other side — visually positioning the person between law, IT, and leadership. Consistent flat-illustration character style. Color palette: deep EU blue (#003399) dominant, a single gold (#FFCC00) accent (e.g. a pen or a bookmark ribbon), off-white neutral background (#F5F7FA). Rule-of-thirds composition with the person slightly off-center, clear and uncluttered, generous negative space. Soft natural lighting, professional, trustworthy, and approachable educational mood, no photorealism, clean minimalist vector style. The image must not contain any readable text; the book, diagram, and chart must show abstract shapes and lines only."
 
-![Flat geometric illustration of Mika Reinhardt, a friendly compliance coach, seated at a desk between a legal codebook, a network diagram, and an organizational chart.](assets/images/mika-reinhardt-guide-portrait.png)
+![Flat geometric illustration of Mika Reinhardt, a friendly compliance coach, seated at a desk between a legal codebook, a network diagram, and an organizational chart.](materials/1-lecture/assets/images/mika-reinhardt-guide-portrait.png)
+
+</section>
+
+<section>
+
+#### preview-card
+
+* __Datei:__ materials/1-lecture/assets/images/preview-card.png
+* __Status:__ generated
+* __Alt-Text:__ Flat geometric illustration of Mika Reinhardt standing in a bright open doorway with a welcoming gesture, a path of six stepping stones leading into the distance behind them, in EU blue and gold on a neutral background.
+* __Prompt:__
+  "A flat, geometric vector illustration of Mika Reinhardt — a friendly, approachable compliance coach in their mid-forties, gender-ambiguous, short practical hair, smart-casual blazer, matching the character design used elsewhere in this course — standing in a bright open doorway or threshold, one arm extended in a warm, welcoming gesture toward the viewer. Behind them, a soft abstract pathway of six evenly spaced stepping-stone shapes leads away into the distance, suggesting the six units ahead. No other characters. Consistent flat-illustration character style matching the course's established visuals. Color palette: deep EU blue (#003399) dominant, gold (#FFCC00) accent on the stepping stones and a small detail on Mika's clothing, off-white neutral background (#F5F7FA). Rule-of-thirds composition with Mika slightly left of center and the path leading right into the background, clear and uncluttered, generous negative space. Soft natural lighting, professional, warm, and approachable educational mood, no photorealism, clean minimalist vector style. The image must not contain any readable text."
+* __Note:__ Referenced via the LiaScript `logo:` header field in `materials/1-lecture/README.md`, not inline in the material body.
+
+![Flat geometric illustration of Mika Reinhardt standing in a bright open doorway with a welcoming gesture, a path of six stepping stones leading into the distance behind them, in EU blue and gold on a neutral background.](materials/1-lecture/assets/images/preview-card.png)
 
 </section>
 
@@ -546,7 +565,8 @@ Known stumbling block: learners tend to treat "in scope" as size-only (like GDPR
 
 **Content:**
 
-1. Hook: Nordholm Nahverkehr, the regional public-transport operator for a mid-size German city, isn't sure whether NIS2 applies to it at all.
+1. Hook: Nordholm Nahverkehr, the regional public-transport operator (buses and trams) for a mid-size German city, isn't sure whether NIS2 applies to it at all.
+   <!-- IMAGE: flat-illustration hero scene of a transit-operator control room team looking at a route/network map with a shield motif, EU blue/gold palette -->
 2. Plain-language framing: NIS2 scope is sector-driven, not purely a size test — correcting the GDPR-style "big company" assumption.
 3. The two-step scope test: (1) is your sector listed in Annex I or Annex II (Art. 2–3)? (2) does your organization meet the size-class thresholds (with named exceptions for entities that are in scope regardless of size)?
    <!-- IMAGE: Mermaid decision-flow diagram walking through the two-step "am I in scope?" test — see `## Templates` → `### Mermaid` -->
@@ -566,7 +586,265 @@ Known stumbling block: learners tend to treat "in scope" as size-only (like GDPR
 
 #### Images
 
-_Filled by `:create-image` (Artist-Agent). One `<section>` per image belonging to this session; rendered by `:generate-image`. Empty until the first image prompt is created._
+<section>
+
+#### nahverkehr-control-room-hero
+
+* __Datei:__ materials/2-exersize/assets/images/nahverkehr-control-room-hero.png
+* __Status:__ generated
+* __Alt-Text:__ Flat geometric illustration of a diverse public-transport control-room team studying an abstract route network map with a small shield icon overlay, rendered in EU blue and gold on a neutral background.
+* __Prompt:__
+  "A flat, geometric vector illustration of a diverse public-transport control-room team — three operators in smart-casual uniforms — standing and seated at a control desk, looking up together at a large wall-mounted display showing an abstract, stylized transit network map (simple lines and node dots suggesting bus and tram routes), with one small shield icon overlaid near the center of the map. The team's expression is attentive and curious, not alarmed — echoing a routine operational check, not a crisis. Diverse public-sector staff in business-casual clothing, consistent flat-illustration character style. Color palette: deep EU blue (#003399) as the dominant color, gold (#FFCC00) accent reserved for the shield icon and small highlight details, off-white neutral background (#F5F7FA). Rule-of-thirds composition with the wall display on the upper-right third and the control-room team on the lower-left third, clear and uncluttered, generous negative space. Soft natural lighting, professional and approachable educational mood, no photorealism, clean minimalist vector style. The image must not contain any readable text; the network map and any screen elements must show abstract shapes, dots, and lines only."
+
+![Flat geometric illustration of a diverse public-transport control-room team studying an abstract route network map with a small shield icon overlay, rendered in EU blue and gold on a neutral background.](materials/2-exersize/assets/images/nahverkehr-control-room-hero.png)
+
+</section>
+
+<section>
+
+#### preview-card
+
+* __Datei:__ materials/2-exersize/assets/images/preview-card.png
+* __Status:__ generated
+* __Alt-Text:__ Flat geometric illustration of a transit-operations staff member standing between a bus and a tram, comparing the two with a clipboard, with a small shield-and-checkmark icon floating above, rendered in EU blue and gold on a neutral background.
+* __Prompt:__
+  "A flat, geometric vector illustration of a Nordholm Nahverkehr staff member in a smart-casual uniform standing in a depot yard between a simplified side-elevation bus and a simplified side-elevation tram, holding an abstract clipboard and looking back and forth between the two vehicles as if comparing them. A small shield icon with a gold checkmark floats above the tram, marking it as the relevant one. Consistent flat-illustration character style matching the course's established visuals, diverse representation. Color palette: deep EU blue (#003399) dominant for the vehicles and uniform, gold (#FFCC00) accent reserved for the shield-and-checkmark motif, off-white neutral background (#F5F7FA). Rule-of-thirds composition with the staff member centered and the two vehicles flanking left and right, clear and uncluttered, generous negative space. Soft natural lighting, professional and approachable educational mood, no photorealism, clean minimalist vector style. The image must not contain any readable text; the bus and tram must be simple abstract geometric shapes, not detailed vehicles."
+* __Note:__ Referenced via the LiaScript `logo:` header field in `materials/2-exersize/README.md`, not inline in the material body.
+
+![Flat geometric illustration of a transit-operations staff member standing between a bus and a tram, comparing the two with a clipboard, with a small shield-and-checkmark icon floating above, rendered in EU blue and gold on a neutral background.](materials/2-exersize/assets/images/preview-card.png)
+
+</section>
+
+### 3. The 10 Measures You Actually Need
+
+**Type:** exercise
+
+**Summary:**
+
+This unit is the heart of "what do I actually have to do" — LO2. It's exercise-weighted: minimal new explanation, most time spent mapping Art. 21's ten cybersecurity risk-management measures onto a concrete, recognizable IT/OT environment, then onto the learner's own area of responsibility. It's the first unit to work with genuinely technical territory (backups, access control, MFA, supply chain security), so the didactic risk is tipping into IT-jargon overload for a mixed, non-technical-by-default audience — each measure must land as a plain-language "what does this mean I actually do" before any technical vocabulary is named.
+
+Introduces the third recurring case organization, Klinikum Ostheide (see `## Didactics` → `__Recurring Case Examples:__`), self-recapped independently of Units 1–2 (unrelated to the Nordholm entities). Its combined IT/OT environment (patient-record systems alongside medical devices and building infrastructure) makes it a natural fit for demonstrating supply-chain and asset-management measures concretely, not just administratively.
+
+Known stumbling block: learners with no IT background may read "ten measures" and assume this is entirely an IT department's problem, disengaging from measures that are actually organizational (governance, training, access policies) rather than technical. The unit must keep surfacing which of the ten are org-wide, not IT-only.
+
+**Content:**
+
+1. Hook: Klinikum Ostheide, a regional hospital network, is preparing for its first NIS2 compliance review, and its interim IT lead doesn't know where to start — "ten measures, risk-appropriate" feels abstract until it's translated to their actual environment.
+   <!-- IMAGE: flat-illustration hero scene of a hospital IT/facilities team reviewing a checklist against ward equipment and server racks, EU blue/gold palette -->
+2. Plain-language framing: Art. 21 doesn't prescribe specific tools or products — it requires "appropriate and proportionate" technical, operational, and organizational measures, sized to the entity's actual risk exposure, size, and the likelihood/severity of incidents.
+3. The ten measures (Art. 21(2), points a–j), each introduced with a one-line plain-language paraphrase before the formal name:
+   1. Risk analysis & information system security policies
+   2. Incident handling
+   3. Business continuity — backup management, disaster recovery, crisis management
+   4. Supply chain security (including direct suppliers/service providers)
+   5. Security in system acquisition, development & maintenance, including vulnerability handling and disclosure
+   6. Policies and procedures to assess the effectiveness of the measures themselves
+   7. Basic cyber hygiene practices & cybersecurity training
+   8. Policies on the use of cryptography and, where appropriate, encryption
+   9. Human resources security, access control policies, and asset management
+   10. Multi-factor/continuous authentication and secured emergency communications
+   <!-- IMAGE: icon-grid diagram mapping the 10 measures, grouped visually as "people/process" vs. "technical" -->
+4. Worked example: walk Klinikum Ostheide through 3–4 of the ten measures against its actual environment (e.g., patient-records backup, MFA for clinical-staff logins, supplier security for a medical-device vendor) — showing the reasoning, not a checklist recitation.
+5. "Risk-appropriate" in practice: proportionality — a large hospital network's implementation of a measure looks different from a small municipal office's implementation of the same measure.
+6. Hand-off: the learner maps the ten measures against their own area of responsibility, marking status (in place / partial / missing).
+
+**Activities:**
+
+1. Self-assessment worksheet: for each of the 10 measures, mark your organization's/team's status (in place / partial / missing) and note one concrete next step for any "missing" or "partial" item.
+2. Reflection: which of the ten measures surprised you by being more organizational than technical? Why might that be easy to overlook?
+
+**References:**
+
+1. Directive (EU) 2022/2555 (NIS2), Art. 21 (cybersecurity risk-management measures, incl. points a–j) — `data/cybersichert.pdf`
+2. Directive (EU) 2022/2555 (NIS2), Art. 20 (governance — management-body approval/oversight, previewed further in Unit 5) — `data/cybersichert.pdf`
+3. Course Agenda — `journal.md` → `## Agenda`
+
+#### Images
+
+<section>
+
+#### klinikum-compliance-review-hero
+
+* __Datei:__ materials/3-exercise/assets/images/klinikum-compliance-review-hero.png
+* __Status:__ prompt-ready
+* __Alt-Text:__ Flat geometric illustration of a hospital IT and facilities team reviewing an abstract checklist against server racks and ward equipment, rendered in EU blue and gold on a neutral background.
+* __Prompt:__
+  "A flat, geometric vector illustration of a hospital IT lead and a facilities technician standing together in a server and equipment room adjacent to a hospital ward, both looking down at an abstract checklist clipboard held by the IT lead, which shows a small gold shield icon in one corner. Behind them, a row of server racks and pieces of abstract medical-adjacent equipment (rendered as simple geometric shapes, not detailed machinery) line the wall. Diverse public-sector/healthcare staff in practical work attire (the IT lead in a blazer over smart-casual wear, the facilities technician in a utility vest), consistent flat-illustration character style. Color palette: deep EU blue (#003399) as the dominant color, gold (#FFCC00) accent reserved for the shield icon and small highlight details on the server racks, off-white neutral background (#F5F7FA). Rule-of-thirds composition with the server racks on the right third and the two-person team on the left two-thirds, clear and uncluttered, generous negative space. Soft natural lighting, professional and approachable educational mood, no photorealism, clean minimalist vector style. The image must not contain any readable text; the checklist, racks, and equipment must show abstract shapes and lines only."
+
+![Flat geometric illustration of a hospital IT and facilities team reviewing an abstract checklist against server racks and ward equipment, rendered in EU blue and gold on a neutral background.](materials/3-exercise/assets/images/klinikum-compliance-review-hero.png)
+
+</section>
+
+<section>
+
+#### preview-card
+
+* __Datei:__ materials/3-exercise/assets/images/preview-card.png
+* __Status:__ prompt-ready
+* __Alt-Text:__ Flat geometric illustration of a hospital IT lead and facilities technician standing before a wall-mounted board showing a grid of ten small icons, in EU blue and gold on a neutral background.
+* __Prompt:__
+  "A flat, geometric vector illustration of a Klinikum Ostheide IT lead and a facilities technician standing together in a hospital corridor, both looking up and pointing at a large wall-mounted board that displays a neat 2-row-by-5-column grid of ten small abstract icons (simple line-icon representations only — a lock, a backup arrow, a key, a document, a handshake, a gear, a chain link, a padlock-shield, a person silhouette, a clock), with one icon on the board highlighted in gold. Diverse public-sector/healthcare staff in practical work attire, consistent flat-illustration character style matching the course's established visuals. Color palette: deep EU blue (#003399) dominant, lighter institutional blue (#336FB5) for the icon grid, gold (#FFCC00) accent reserved for the one highlighted icon, off-white neutral background (#F5F7FA). Rule-of-thirds composition with the board on the right two-thirds and the two-person team on the left third, clear and uncluttered, generous negative space. Soft natural lighting, professional and approachable educational mood, no photorealism, clean minimalist vector style. The image must not contain any readable text; the board and its icons must show abstract shapes and lines only."
+
+![Flat geometric illustration of a hospital IT lead and facilities technician standing before a wall-mounted board showing a grid of ten small icons, in EU blue and gold on a neutral background.](materials/3-exercise/assets/images/preview-card.png)
+
+</section>
+
+### 4. Handling & Reporting Incidents
+
+**Type:** lecture
+
+**Summary:**
+
+This unit answers Unit 1's third promised question — "what to do when the Monday-morning moment isn't a false alarm" — and delivers LO3. Unlike Units 2–3 (self-classification, self-assessment), this unit is explanation-and-recognition-weighted: learners need to internalize a precise timeline (severity test → 24h → 72h → 1 month) rather than run an extended self-assessment, so it's typed as a lecture despite still ending in an applied task.
+
+Reuses Klinikum Ostheide (see `## Didactics` → `__Recurring Case Examples:__`), self-recapped independently of Unit 3 — this time the hospital network is living through an actual significant incident rather than preparing for a compliance review, giving the same organization a second, unrelated narrative role.
+
+Known stumbling block: learners tend to treat the 24h/72h/1-month deadlines as three independent alarms rather than stages of one continuous, escalating disclosure obligation about the same incident. A second stumbling block: confusing "significant incident" (the actual reporting threshold, Art. 23(3)) with any anomaly at all — not every burst of failed logins triggers this duty, which is exactly the callback to Unit 1's false alarm.
+
+**Content:**
+
+1. Hook: Klinikum Ostheide, self-recapped (regional hospital network, health sector), this time living through a real significant incident (e.g., a ransomware event affecting a patient-scheduling system) — self-contained scenario with its own resolution.
+   <!-- IMAGE: flat-illustration hero scene of a hospital IT/crisis team responding to an active incident alert, EU blue/gold palette -->
+2. Callback to Unit 1's three unanswered questions — *Is this serious? Who do we tell? How long do we have?* — this unit answers all three, in order.
+3. Question 1 — "Is this serious?": the Art. 23(3) significant-incident test (severe operational disruption or financial loss for the entity, or considerable material/non-material damage to others) — distinguishing a true significant incident from Unit 1's false alarm.
+4. Question 2 — "Who do we tell?": your CSIRT or competent authority, briefly — national implementation specifics vary by member state and stay out of scope for this course.
+5. Question 3 — "How long do we have?": the three-stage reporting timeline (Art. 23(4)).
+   <!-- IMAGE: Mermaid timeline diagram: 24h early warning → 72h incident notification → 1 month final report -->
+   1. Early warning — within 24 hours of becoming aware of the incident.
+   2. Incident notification — within 72 hours, updating the early warning with an initial severity/impact assessment.
+   3. Final report — within one month of the 72-hour notification (or a progress report plus final report if the incident is still ongoing at that point).
+6. Worked example: walk Klinikum Ostheide's incident through all three stages, showing what content is actually due at each stage, not just the deadline.
+7. Reassurance: the 24-hour early warning is a heads-up, not a full investigation — accuracy is expected to improve stage by stage, not be complete on hour one.
+
+**Activities:**
+
+1. Timeline application: given a short incident scenario, fill in what should be reported at the 24h, 72h, and 1-month marks.
+2. Reflection: think of a real or hypothetical incident in your own organization — would it meet the Art. 23(3) significance threshold? What's the one piece of information you'd need to decide?
+
+**References:**
+
+1. Directive (EU) 2022/2555 (NIS2), Art. 23 (reporting obligations, incl. the significance test and the 24h/72h/1-month timeline) — `data/cybersichert.pdf`
+2. Course Agenda — `journal.md` → `## Agenda`
+
+#### Images
+
+<section>
+
+#### preview-card
+
+* __Datei:__ materials/4-lecture/assets/images/preview-card.png
+* __Status:__ prompt-ready
+* __Alt-Text:__ Flat geometric illustration of a hospital crisis-response team gathered around a workstation, pointing at a wall display showing a three-stage timeline with a small alert icon, in EU blue and gold on a neutral background.
+* __Prompt:__
+  "A flat, geometric vector illustration of a small Klinikum Ostheide crisis-response team — two or three staff in practical work attire — gathered around a workstation, one team member pointing at a wall-mounted display showing a simple abstract timeline divided into three marked stages with a small gold alert-bell icon above it, the others reacting with focused, composed attention (concerned but not panicked). Diverse public-sector/healthcare staff, consistent flat-illustration character style matching the course's established visuals. Color palette: deep EU blue (#003399) dominant, gold (#FFCC00) accent reserved for the alert icon and small highlight details on the timeline, off-white neutral background (#F5F7FA). Rule-of-thirds composition with the wall display on the upper-right third and the team on the lower-left third, clear and uncluttered, generous negative space. Soft natural lighting, professional and approachable educational mood, no photorealism, clean minimalist vector style. The image must not contain any readable text; the timeline and any screen elements must show abstract shapes and lines only."
+
+![Flat geometric illustration of a hospital crisis-response team gathered around a workstation, pointing at a wall display showing a three-stage timeline with a small alert icon, in EU blue and gold on a neutral background.](materials/4-lecture/assets/images/preview-card.png)
+
+</section>
+
+### 5. Who's Responsible? Governance & Consequences
+
+**Type:** lecture
+
+**Summary:**
+
+This unit delivers LO4 — the "who's personally on the hook" question Unit 1 flagged for decision-makers, and that Unit 2's essential-vs-important classification set up (different supervision regimes) without explaining. Like Unit 4, it's explanation-weighted: governance and liability content sounds abstract and "someone else's problem" unless made concrete about what a manager is actually required to do, and what happens if they don't.
+
+Reuses Stadtverwaltung Nordholm (see `## Didactics` → `__Recurring Case Examples:__`), self-recapped independently of Unit 1 — this time the story isn't the false alarm but a compliance review some months later, giving municipal leadership a governance decision to make.
+
+Known stumbling block: two groups tend to disengage for opposite reasons. Non-managers assume "governance" doesn't apply to them at all (it does — Unit 1's "everyone is part of the reporting chain" point resurfaces here). Managers may assume liability is abstract and theoretical unless shown the concrete escalation ladder — warning → binding instruction → suspension → personal liability — that precedes any fine.
+
+**Content:**
+
+1. Hook: Stadtverwaltung Nordholm, self-recapped, some months after Unit 1's false alarm — a scheduled compliance review raises an uncomfortable question in the mayor's office: if that Monday morning had been real, who would have been personally responsible?
+   <!-- IMAGE: flat-illustration hero scene of municipal leadership reviewing a governance/compliance report in a meeting room, EU blue/gold palette -->
+2. Governance duty (Art. 20): management bodies of essential and important entities must approve the Art. 21 risk-management measures, oversee their implementation, and can be held personally liable for the entity's infringements of Art. 21 — plus a training duty covering both the management body and, more broadly, all staff.
+3. Who "management body" means in practice — mayors, department heads, boards, executive leadership — not IT, and not compliance officers alone.
+4. Two supervision regimes, explained concretely (callback to Unit 2's essential-vs-important distinction): essential entities face proactive, ex-ante oversight — routine on-site inspections and regular security audits (Art. 32); important entities face reactive, ex-post oversight only, triggered by evidence of non-compliance (Art. 33).
+5. The enforcement ladder, before any fine: warnings → binding instructions with remediation deadlines → (for essential entities specifically) temporary suspension of certifications or services, or temporary suspension of a named manager from their duties, if instructions go unmet (Art. 32(4)–(5)).
+   <!-- IMAGE: icon-ladder diagram of the enforcement escalation: warning → binding instruction → suspension → fine -->
+6. Sanctions recap and completion (callback to Unit 1's preview): up to €10 million or 2% of turnover for essential entities, €7 million or 1.4% for important entities — plus the aggravating factors that make a fine worse: repeated violations, failing to report an incident, ignoring binding instructions, obstructing audits, submitting false information (Art. 34(7)).
+7. Worked example: Nordholm's compliance review surfaces a documentation gap — walk through what a binding instruction and remediation deadline look like in practice, and what happens if it's ignored.
+
+**Activities:**
+
+1. Self-check: identify who in your own organization would be the "management body" responsible for Art. 20 approval and oversight — is that clear today, or is it assumed and undefined?
+2. Reflection: which stage of the enforcement ladder (warning, binding instruction, suspension, fine) would actually change behavior in your organization, and why that one?
+
+**References:**
+
+1. Directive (EU) 2022/2555 (NIS2), Art. 20 (governance, management-body liability, training duty) — `data/cybersichert.pdf`
+2. Directive (EU) 2022/2555 (NIS2), Art. 32–33 (supervisory and enforcement measures for essential vs. important entities) — `data/cybersichert.pdf`
+3. Directive (EU) 2022/2555 (NIS2), Art. 34 (fines and aggravating factors) — `data/cybersichert.pdf`
+4. Course Agenda — `journal.md` → `## Agenda`
+
+#### Images
+
+<section>
+
+#### preview-card
+
+* __Datei:__ materials/5-lecture/assets/images/preview-card.png
+* __Status:__ prompt-ready
+* __Alt-Text:__ Flat geometric illustration of municipal leadership seated around a meeting table reviewing an abstract compliance report, with a small balance-scale motif on the wall behind them, in EU blue and gold on a neutral background.
+* __Prompt:__
+  "A flat, geometric vector illustration of Stadtverwaltung Nordholm's leadership — a mayor figure and two department heads — seated around a meeting table in a municipal office, looking down together at an abstract compliance report document on the table, expressions calm and serious. On the wall behind them hangs a small framed balance-scale motif in gold, subtly signaling accountability. Diverse public-sector staff in business-casual clothing, consistent flat-illustration character style matching the course's established visuals. Color palette: deep EU blue (#003399) dominant, gold (#FFCC00) accent reserved for the balance-scale motif and small highlight details, off-white neutral background (#F5F7FA). Rule-of-thirds composition with the meeting table spanning the lower two-thirds and the wall motif in the upper third, clear and uncluttered, generous negative space. Soft natural lighting, professional and approachable educational mood, no photorealism, clean minimalist vector style. The image must not contain any readable text; the report and any documents must show abstract shapes and lines only."
+
+![Flat geometric illustration of municipal leadership seated around a meeting table reviewing an abstract compliance report, with a small balance-scale motif on the wall behind them, in EU blue and gold on a neutral background.](materials/5-lecture/assets/images/preview-card.png)
+
+</section>
+
+### 6. Your NIS2 Readiness Score
+
+**Type:** exercise
+
+**Summary:**
+
+This is the capstone unit, delivering LO5 — turning everything covered in Units 2–5 into one computed, personal number via the reactive-input calculator pattern already validated in `## Templates` → `### Reactive JavaScript Inputs`. Unlike the other units, it's learner-facing rather than case-driven: per `## Didactics` → `__Recurring Case Examples:__`, no fictional organization carries this unit — Stadtverwaltung Nordholm's own tally may optionally appear as a worked example alongside the learner's live inputs, not as the primary vehicle.
+
+Because units are reorderable and self-contained, this unit can't assume the learner completed Units 2–5 in order, or at all, before arriving here. Each score component needs a one-line reminder of what it's asking and why, not just a bare input — otherwise a learner who jumped straight to Unit 6 gets a number with no meaning behind it.
+
+Known stumbling block: turning "how compliant am I" into a single percentage risks implying false precision or a pass/fail grade — directly cutting against the course's stated error culture (nobody passes or fails). The framing must keep the score positioned as a self-diagnosis snapshot, explicitly revisitable, never a certification.
+
+**Content:**
+
+1. Hook: no fictional organization this time — a direct address to the learner: "You've done the thinking. Let's turn it into one number."
+2. Recap: what the score is built from — four components, one per learning objective already covered.
+   1. Scope clarity (Unit 2) — do you know your entity type, and why?
+   2. Risk-management coverage (Unit 3) — how many of the 10 Art. 21 measures are in place? (reuses the Unit 3 self-assessment worksheet)
+   3. Incident-reporting readiness (Unit 4) — do you know who to report to, and the 24h/72h/1-month timeline?
+   4. Governance clarity (Unit 5) — is your organization's Art. 20 management-body responsibility clearly assigned?
+3. Interactive calculator: one reactive input per component (sliders/selects per `## Templates` → `### Reactive JavaScript Inputs`), combining into a single live-updating readiness score plus a `<lia-chart>` visualization broken down by component — not just one aggregate number, so the learner sees where the gaps actually are.
+4. Worked example (optional, secondary): Stadtverwaltung Nordholm's own tally shown alongside the learner's, purely as an illustration of what a partial score looks like in practice — not a benchmark to beat.
+5. Interpretation guidance: what a low score means (a starting point, not a failure) and what a high score doesn't mean (NIS2 compliance is never "done" — the Art. 21 measures must be reassessed as risk evolves).
+6. Closing: course wrap-up — pointers back to the relevant unit for whichever component scored lowest, and a final reminder that the score is private and revisitable, not a record kept anywhere.
+
+**Activities:**
+
+1. Complete the interactive NIS2 Readiness Score calculator using your own honest inputs.
+2. Reflection: pick the one component that scored lowest — what's the single next action you'd take in the next month to move it up?
+
+**References:**
+
+1. Course Agenda — `journal.md` → `## Agenda`
+2. `## Templates` → `### Reactive JavaScript Inputs` — implementation pattern for the calculator
+3. Directive (EU) 2022/2555 (NIS2), Art. 21 (risk-management measures, referenced in the score) — `data/cybersichert.pdf`
+
+#### Images
+
+<section>
+
+#### preview-card
+
+* __Datei:__ materials/6-exercise/assets/images/preview-card.png
+* __Status:__ prompt-ready
+* __Alt-Text:__ Flat geometric illustration of a person seated at a desk looking at a tablet showing an abstract gauge chart mid-fill, in EU blue and gold on a neutral background.
+* __Prompt:__
+  "A flat, geometric vector illustration of a single diverse, gender-ambiguous person in smart-casual clothing, seated at a tidy desk, looking down at a tablet propped in front of them that displays an abstract speedometer-style gauge chart with a gold needle pointing to roughly the midpoint, their expression calm and reflective rather than anxious. No other people — an individual, personal framing distinct from the organization-based scenes elsewhere in the course. Consistent flat-illustration character style matching the course's established visuals. Color palette: deep EU blue (#003399) dominant, gold (#FFCC00) accent reserved for the gauge needle and a small highlight detail, off-white neutral background (#F5F7FA). Rule-of-thirds composition with the person slightly left of center and the tablet screen in the lower-right third, clear and uncluttered, generous negative space. Soft natural lighting, professional, encouraging, and approachable educational mood, no photorealism, clean minimalist vector style. The image must not contain any readable text or numbers; the tablet screen must show only the abstract gauge shape."
+
+![Flat geometric illustration of a person seated at a desk looking at a tablet showing an abstract gauge chart mid-fill, in EU blue and gold on a neutral background.](materials/6-exercise/assets/images/preview-card.png)
+
+</section>
 
 <!-- One subsection per session, structured like this:
 

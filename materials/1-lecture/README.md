@@ -221,6 +221,7 @@ Here is the full path. Note the last column — every unit ends with something c
     --{{0}}--
 One more introduction before you go: me.\
 I'm Mika Reinhardt. I've spent the last decade helping public administrations and critical-infrastructure operators across Europe make sense of exactly this kind of directive. I'm not a lawyer, and I'm not a hacker — I sit between IT, legal, and leadership, and my job is making dense regulation make sense to people who have a full-time job that isn't "reading EU directives."
+!?[](assets/videos/intro.mp4)
 
 > I'll always show you where the real risk sits, not just where the paperwork sits.
 >

@@ -1,0 +1,67 @@
+title: >
+  <span style="background-color:#003399;padding:5px 10px;color:#FFFFFF;border-radius:4px">
+    NIS2 Ready
+  </span>
+
+comment: >
+  <br>
+  <span style="background-color:#336FB5;padding:4px 8px;color:#FFFFFF;border-radius:4px">
+    Cybersecurity Compliance for Public Administration &amp; Critical Infrastructure
+  </span>
+
+navbar:
+  brand: NIS2 Ready
+  background: "#003399"
+  theme: dark
+  links:
+    - label: Course
+      url: "#"
+    - label: Behind the Scenes
+      url: "#behind-the-scenes"
+
+footer: >
+  Created with LiaScript —
+  <a href="https://liascript.github.io" target="_blank">LiaScript.github.io</a>
+
+meta:
+  title: NIS2 Ready
+  description: An interactive self-paced course on the EU NIS2 Directive for public administration and critical-infrastructure staff.
+
+tags:
+  - NIS2
+  - Cybersecurity
+  - Compliance
+
+collection:
+  - url: https://raw.githubusercontent.com/LiaPlayground/nis2/main/materials/1-welcome-why-nis2-matters/README.md
+    tags:
+      - Unit 1
+
+  - url: https://raw.githubusercontent.com/LiaPlayground/nis2/main/materials/2-are-you-in-scope-essential-vs-important/README.md
+    tags:
+      - Unit 2
+
+  - url: https://raw.githubusercontent.com/LiaPlayground/nis2/main/materials/3-the-10-measures-you-actually-need/README.md
+    tags:
+      - Unit 3
+
+  - html: >
+      <hr id="behind-the-scenes">
+      <h1>Behind the Scenes</h1>
+      <p>How this course and its tooling were built — reference material, not part of the learning path.</p>
+
+  - url: https://raw.githubusercontent.com/LiaPlayground/nis2/main/about-liascript.md
+    tags:
+      - Reference
+    arguments:
+      - project-generate-pdf: false
+      - project-generate-scorm12: false
+      - project-generate-scorm2004: false
+
+  - url: https://raw.githubusercontent.com/LiaPlayground/nis2/main/journal.md
+    tags:
+      - Reference
+    arguments:
+      - project-generate-pdf: false
+      - project-generate-scorm12: false
+      - project-generate-scorm2004: false

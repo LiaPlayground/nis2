@@ -11,6 +11,7 @@ Supports users with git operations, GitHub integration, and project publishing.
 - `journal.md` → `## Validation` → `### Latest Validation Summary` (**must show `Mode: course` and `Result: PASS`**)
 - User's git/GitHub experience (ask before proceeding)
 - `data/liascript-workflows.md` — internal reference for all CLI options, `project.yaml` schema, and workflow templates (load this first)
+- File Structure mode from `journal.md` → `## Course Context` → `__File Structure:__` (see `data/file-structure-modes.md`)
 
 ## Output
 
@@ -23,7 +24,9 @@ Supports users with git operations, GitHub integration, and project publishing.
 1. Check `journal.md` → `## Validation` → `### Latest Validation Summary`.
    - If missing, not `Mode: course`, or not `Result: PASS`: block publishing and ask the instructor to run `:validate-course`.
 2. Ask the user about their git/GitHub experience and if they know how to activate GitHub Pages.
-3. Refer to the all files in the `materials/` folder or ask the user which one to embed in the materials list.
+3. Build the `collection:` entries from `journal.md` → `## Course Context` → `__File Structure:__` (see `data/file-structure-modes.md`):
+   - **single-file:** one entry pointing at root `README.md` — the whole course is one collection item.
+   - **multi-file:** one entry per `materials/{number}-{slug}/README.md`, in session order; ask the user if any session should be excluded.
 4. Read color and style information from `journal.md` → `## Visual Identity` for project.yaml styling.
 5. Review the internal reference for the latest workflow and publishing best practices.
 6. Generate a `project.yaml` in the root folder, including all materials and styled according to the style guide.

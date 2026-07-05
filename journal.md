@@ -172,7 +172,7 @@ flowchart LR
 
 ### Open Blockers
 
-None — all six unit skeletons are complete. Units 1–2 have full material drafted, each in its own folder with per-session assets (`materials/1-lecture/README.md`, `materials/2-exercise/README.md`); Units 3–6 still need `:promote-session`. No `:validate-course` run yet. Logo not yet generated (`:create-logo`).
+None — all six unit skeletons are complete. Units 1–3 have full material drafted, each in its own folder with per-session assets (`materials/1-welcome-why-nis2-matters/README.md`, `materials/2-are-you-in-scope-essential-vs-important/README.md`, `materials/3-the-10-measures-you-actually-need/README.md`); Units 4–6 still need `:promote-session`. No `:validate-course` run yet. Logo not yet generated (`:create-logo`).
 
 </div>
 
@@ -205,6 +205,10 @@ None — all six unit skeletons are complete. Units 1–2 have full material dra
   3. Pacing: learner-driven
   4. Assessment defaults: self-check quizzes
 
+* __File Structure:__
+  1. Mode: multi-file — see `data/file-structure-modes.md`
+  2. Session folder naming: `{number}-{slug}` (e.g. `materials/1-welcome-why-nis2-matters/`)
+
 * __Conventions & Standards:__
   1. Language: en
   2. Tone: formal
@@ -217,7 +221,7 @@ None — all six unit skeletons are complete. Units 1–2 have full material dra
   - Checklists: native multi-choice (`[[X]]`) or survey-matrix syntax — no template needed
   - Videos: native `!?[title](url)` embedding — no template needed
   - Diagrams: Mermaid template (already imported), see `## Templates` → `### Mermaid`
-  - Interactive calculator (e.g. "NIS2 Readiness Score"): native reactive `<script input=... output=...>` pattern, see `## Templates` → `### Reactive JavaScript Inputs`; `<lia-chart>` charting confirmed to work natively (no extra import). Verified working in Unit 3 (`materials/3-exercise/README.md`): two `range` sliders driving a live-recomputing `<lia-chart>` bar chart. Reactive `@input(`Name`)` reads only resolve **inside** a `<script>` block — never place a bare `@input(...)` as standalone markdown text (it will not update). A slider shows its own value via `@input` returned inside its own `<script ...>@input</script>` tag; no separate text reference is needed.
+  - Interactive calculator (e.g. "NIS2 Readiness Score"): native reactive `<script input=... output=...>` pattern, see `## Templates` → `### Reactive JavaScript Inputs`; `<lia-chart>` charting confirmed to work natively (no extra import). Verified working in Unit 3 (`materials/3-the-10-measures-you-actually-need/README.md`): two `range` sliders driving a live-recomputing `<lia-chart>` bar chart. Reactive `@input(`Name`)` reads only resolve **inside** a `<script>` block — never place a bare `@input(...)` as standalone markdown text (it will not update). A slider shows its own value via `@input` returned inside its own `<script ...>@input</script>` tag; no separate text reference is needed.
   - __Interactive-element marker (course convention):__ immediately before any non-obvious interactive element (reactive sliders, live `<lia-chart>`, calculators), place a short `[!TIP]` alert with a leading 👉 and a title of the form "This one is interactive — …" telling the learner to interact and what will happen live. Do NOT mark self-explanatory standard interactions (quizzes, checklists, `<details>` boxes) — a marker there is noise. Purpose: consistent learner cue + repeated "this is interactive" signal for the LiaScript showcase. First applied in Unit 3.
   - No further template imports needed at this time
   - Fixed heading depth for all materials: `#` Course Title (once) → `##` Chapter (new slide) → `###` Section (bare, no container needed) → `####` Subsection, always wrapped in `<section>…</section>` (belongs to its `###` Section). No headings deeper than `####` are used in this course. See corrected rule in `data/liascript-cheat-sheet.md` → "Additional Rule: Subheadings within a Slide".
@@ -438,12 +442,12 @@ More community templates can be found at [topics/liascript-template](https://git
 
   | # | Title | Type | Duration | Learning Objective | Material |
   |---|-------|------|----------|--------------------|----------|
-  | 1 | Welcome & Why NIS2 Matters | lecture | 25 min | Sets up course rhythm and stakes; grounds the rest of the course | materials/1-lecture/README.md |
-  | 2 | Are You in Scope? Essential vs. Important Entities | exercise | 40 min | LO1 — determine whether your organization/role falls under NIS2 (Art. 2–3, Annex I–II) | materials/2-exercise/README.md |
-  | 3 | The 10 Measures You Actually Need | exercise | 50 min | LO2 — explain and apply the Art. 21 risk-management measures | materials/3-exercise/README.md |
-  | 4 | Handling & Reporting Incidents | lecture | 45 min | LO3 — apply the incident-reporting process and timeline (Art. 23) | materials/4-lecture/README.md |
-  | 5 | Who's Responsible? Governance & Consequences | lecture | 40 min | LO4 — assess governance/liability implications and sanctions (Art. 20, 32–34) | materials/5-lecture/README.md |
-  | 6 | Your NIS2 Readiness Score | exercise | 35 min | LO5 — use a self-assessment checklist/calculator to evaluate readiness | materials/6-exercise/README.md |
+  | 1 | Welcome & Why NIS2 Matters | lecture | 25 min | Sets up course rhythm and stakes; grounds the rest of the course | materials/1-welcome-why-nis2-matters/README.md |
+  | 2 | Are You in Scope? Essential vs. Important Entities | exercise | 40 min | LO1 — determine whether your organization/role falls under NIS2 (Art. 2–3, Annex I–II) | materials/2-are-you-in-scope-essential-vs-important/README.md |
+  | 3 | The 10 Measures You Actually Need | exercise | 50 min | LO2 — explain and apply the Art. 21 risk-management measures | materials/3-the-10-measures-you-actually-need/README.md |
+  | 4 | Handling & Reporting Incidents | lecture | 45 min | LO3 — apply the incident-reporting process and timeline (Art. 23) | materials/4-handling-reporting-incidents/README.md |
+  | 5 | Who's Responsible? Governance & Consequences | lecture | 40 min | LO4 — assess governance/liability implications and sanctions (Art. 20, 32–34) | materials/5-whos-responsible-governance-consequences/README.md |
+  | 6 | Your NIS2 Readiness Score | exercise | 35 min | LO5 — use a self-assessment checklist/calculator to evaluate readiness | materials/6-your-nis2-readiness-score/README.md |
 
 ---
 
@@ -455,7 +459,7 @@ _Managed by `:create-session`, `:promote-session`, `:coauthor-materials`, and `:
 |---|-------|------|----------|----------|------|-------|
 | 1 | Welcome & Why NIS2 Matters | lecture | ✅ | ✅ | ❌ | |
 | 2 | Are You in Scope? Essential vs. Important Entities | exercise | ✅ | ✅ | ❌ | |
-| 3 | The 10 Measures You Actually Need | exercise | ✅ | ✅ | ❌ | material at materials/3-exercise/README.md; adds first interactive `<script>` coverage widget + survey matrix; hero image still prompt-ready |
+| 3 | The 10 Measures You Actually Need | exercise | ✅ | ✅ | ❌ | material at materials/3-the-10-measures-you-actually-need/README.md; adds first interactive `<script>` coverage widget + survey matrix; hero image still prompt-ready |
 | 4 | Handling & Reporting Incidents | lecture | ✅ | ❌ | ❌ | |
 | 5 | Who's Responsible? Governance & Consequences | lecture | ✅ | ❌ | ❌ | |
 | 6 | Your NIS2 Readiness Score | exercise | ✅ | ❌ | ❌ | |
@@ -499,13 +503,13 @@ Known stumbling block: learners who assume "this is legal, therefore it's not fo
 
 #### incident-monday-morning-hero
 
-* __Datei:__ materials/1-lecture/assets/images/incident-monday-morning-hero.png
+* __Datei:__ materials/1-welcome-why-nis2-matters/assets/images/incident-monday-morning-hero.png
 * __Status:__ generated
 * __Alt-Text:__ Flat geometric illustration of a public-sector IT team in a modern municipal office reacting to amber warning indicators on large wall monitors, rendered in EU blue and gold on a neutral background.
 * __Prompt:__
   "A flat, geometric vector illustration of a small public-sector IT team in a modern municipal administration office on an early Monday morning, gathered around a desk and looking up at large wall-mounted monitors showing abstract amber warning indicators and a stylized login screen with alert symbols — concerned but composed, not panicked. Diverse public-sector staff in business-casual clothing, consistent flat-illustration character style. Color palette: deep EU blue (#003399) as the dominant color, gold (#FFCC00) accents reserved for the warning indicators and small highlights, off-white neutral background (#F5F7FA). Rule-of-thirds composition with the monitors on the upper-right third and the team on the lower-left third, clear and uncluttered, generous negative space. Soft natural morning lighting, professional and approachable educational mood, no photorealism, no dark 'hooded hacker' imagery, clean minimalist vector style. The image must not contain any readable text; any unavoidable screen elements must be abstract shapes only."
 
-![Flat geometric illustration of a public-sector IT team in a modern municipal office reacting to amber warning indicators on large wall monitors, rendered in EU blue and gold on a neutral background.](materials/1-lecture/assets/images/incident-monday-morning-hero.png)
+![Flat geometric illustration of a public-sector IT team in a modern municipal office reacting to amber warning indicators on large wall monitors, rendered in EU blue and gold on a neutral background.](materials/1-welcome-why-nis2-matters/assets/images/incident-monday-morning-hero.png)
 
 </section>
 
@@ -513,13 +517,13 @@ Known stumbling block: learners who assume "this is legal, therefore it's not fo
 
 #### probably-not-me-staff-lineup
 
-* __Datei:__ materials/1-lecture/assets/images/probably-not-me-staff-lineup.png
+* __Datei:__ materials/1-welcome-why-nis2-matters/assets/images/probably-not-me-staff-lineup.png
 * __Status:__ generated
 * __Alt-Text:__ Flat geometric illustration of four workers side by side — a public administrator, a nurse, a bus driver, and an IT technician — each with a small blue-and-gold shield symbol floating above them.
 * __Prompt:__
   "A flat, geometric vector illustration of four diverse workers standing side by side in a friendly lineup, each representing a sector covered by EU cybersecurity rules: a public administrator holding a document folder, a nurse in scrubs with a stethoscope, a bus driver with a cap, and an IT technician with a laptop. Above each person floats one identical small shield icon in deep EU blue (#003399) with a gold (#FFCC00) outline accent, visually connecting all four. Consistent flat-illustration character style, diverse in gender, age, and ethnicity. Color palette: deep EU blue (#003399) dominant, gold (#FFCC00) accents only on the shields and small details, off-white neutral background (#F5F7FA). Balanced horizontal composition with even spacing and generous negative space, clear and uncluttered. Soft natural lighting, professional, warm, and approachable educational mood, no photorealism, clean minimalist vector style. The image must not contain any readable text."
 
-![Flat geometric illustration of four workers side by side — a public administrator, a nurse, a bus driver, and an IT technician — each with a small blue-and-gold shield symbol floating above them.](materials/1-lecture/assets/images/probably-not-me-staff-lineup.png)
+![Flat geometric illustration of four workers side by side — a public administrator, a nurse, a bus driver, and an IT technician — each with a small blue-and-gold shield symbol floating above them.](materials/1-welcome-why-nis2-matters/assets/images/probably-not-me-staff-lineup.png)
 
 </section>
 
@@ -527,13 +531,13 @@ Known stumbling block: learners who assume "this is legal, therefore it's not fo
 
 #### mika-reinhardt-guide-portrait
 
-* __Datei:__ materials/1-lecture/assets/images/mika-reinhardt-guide-portrait.png
+* __Datei:__ materials/1-welcome-why-nis2-matters/assets/images/mika-reinhardt-guide-portrait.png
 * __Status:__ generated
 * __Alt-Text:__ Flat geometric illustration of Mika Reinhardt, a friendly compliance coach, seated at a desk between a legal codebook, a network diagram, and an organizational chart.
 * __Prompt:__
   "A flat, geometric vector illustration of a friendly, approachable compliance coach in their mid-forties, gender-ambiguous, with short practical hair and smart-casual clothing (blazer over a plain shirt, no tie), seated confidently at a tidy desk and facing the viewer with a calm, warm expression. The desk composition places three symbolic objects around the person: a thick legal codebook on one side, a framed abstract network diagram on the wall behind, and a small organizational chart on a stand on the other side — visually positioning the person between law, IT, and leadership. Consistent flat-illustration character style. Color palette: deep EU blue (#003399) dominant, a single gold (#FFCC00) accent (e.g. a pen or a bookmark ribbon), off-white neutral background (#F5F7FA). Rule-of-thirds composition with the person slightly off-center, clear and uncluttered, generous negative space. Soft natural lighting, professional, trustworthy, and approachable educational mood, no photorealism, clean minimalist vector style. The image must not contain any readable text; the book, diagram, and chart must show abstract shapes and lines only."
 
-![Flat geometric illustration of Mika Reinhardt, a friendly compliance coach, seated at a desk between a legal codebook, a network diagram, and an organizational chart.](materials/1-lecture/assets/images/mika-reinhardt-guide-portrait.png)
+![Flat geometric illustration of Mika Reinhardt, a friendly compliance coach, seated at a desk between a legal codebook, a network diagram, and an organizational chart.](materials/1-welcome-why-nis2-matters/assets/images/mika-reinhardt-guide-portrait.png)
 
 </section>
 
@@ -541,14 +545,14 @@ Known stumbling block: learners who assume "this is legal, therefore it's not fo
 
 #### preview-card
 
-* __Datei:__ materials/1-lecture/assets/images/preview-card.png
+* __Datei:__ materials/1-welcome-why-nis2-matters/assets/images/preview-card.png
 * __Status:__ generated
 * __Alt-Text:__ Flat geometric illustration of Mika Reinhardt standing in a bright open doorway with a welcoming gesture, a path of six stepping stones leading into the distance behind them, in EU blue and gold on a neutral background.
 * __Prompt:__
   "A flat, geometric vector illustration of Mika Reinhardt — a friendly, approachable compliance coach in their mid-forties, gender-ambiguous, short practical hair, smart-casual blazer, matching the character design used elsewhere in this course — standing in a bright open doorway or threshold, one arm extended in a warm, welcoming gesture toward the viewer. Behind them, a soft abstract pathway of six evenly spaced stepping-stone shapes leads away into the distance, suggesting the six units ahead. No other characters. Consistent flat-illustration character style matching the course's established visuals. Color palette: deep EU blue (#003399) dominant, gold (#FFCC00) accent on the stepping stones and a small detail on Mika's clothing, off-white neutral background (#F5F7FA). Rule-of-thirds composition with Mika slightly left of center and the path leading right into the background, clear and uncluttered, generous negative space. Soft natural lighting, professional, warm, and approachable educational mood, no photorealism, clean minimalist vector style. The image must not contain any readable text."
-* __Note:__ Referenced via the LiaScript `logo:` header field in `materials/1-lecture/README.md`, not inline in the material body.
+* __Note:__ Referenced via the LiaScript `logo:` header field in `materials/1-welcome-why-nis2-matters/README.md`, not inline in the material body.
 
-![Flat geometric illustration of Mika Reinhardt standing in a bright open doorway with a welcoming gesture, a path of six stepping stones leading into the distance behind them, in EU blue and gold on a neutral background.](materials/1-lecture/assets/images/preview-card.png)
+![Flat geometric illustration of Mika Reinhardt standing in a bright open doorway with a welcoming gesture, a path of six stepping stones leading into the distance behind them, in EU blue and gold on a neutral background.](materials/1-welcome-why-nis2-matters/assets/images/preview-card.png)
 
 </section>
 
@@ -591,13 +595,13 @@ Known stumbling block: learners tend to treat "in scope" as size-only (like GDPR
 
 #### nahverkehr-control-room-hero
 
-* __Datei:__ materials/2-exercise/assets/images/nahverkehr-control-room-hero.png
+* __Datei:__ materials/2-are-you-in-scope-essential-vs-important/assets/images/nahverkehr-control-room-hero.png
 * __Status:__ generated
 * __Alt-Text:__ Flat geometric illustration of a diverse public-transport control-room team studying an abstract route network map with a small shield icon overlay, rendered in EU blue and gold on a neutral background.
 * __Prompt:__
   "A flat, geometric vector illustration of a diverse public-transport control-room team — three operators in smart-casual uniforms — standing and seated at a control desk, looking up together at a large wall-mounted display showing an abstract, stylized transit network map (simple lines and node dots suggesting bus and tram routes), with one small shield icon overlaid near the center of the map. The team's expression is attentive and curious, not alarmed — echoing a routine operational check, not a crisis. Diverse public-sector staff in business-casual clothing, consistent flat-illustration character style. Color palette: deep EU blue (#003399) as the dominant color, gold (#FFCC00) accent reserved for the shield icon and small highlight details, off-white neutral background (#F5F7FA). Rule-of-thirds composition with the wall display on the upper-right third and the control-room team on the lower-left third, clear and uncluttered, generous negative space. Soft natural lighting, professional and approachable educational mood, no photorealism, clean minimalist vector style. The image must not contain any readable text; the network map and any screen elements must show abstract shapes, dots, and lines only."
 
-![Flat geometric illustration of a diverse public-transport control-room team studying an abstract route network map with a small shield icon overlay, rendered in EU blue and gold on a neutral background.](materials/2-exercise/assets/images/nahverkehr-control-room-hero.png)
+![Flat geometric illustration of a diverse public-transport control-room team studying an abstract route network map with a small shield icon overlay, rendered in EU blue and gold on a neutral background.](materials/2-are-you-in-scope-essential-vs-important/assets/images/nahverkehr-control-room-hero.png)
 
 </section>
 
@@ -605,14 +609,14 @@ Known stumbling block: learners tend to treat "in scope" as size-only (like GDPR
 
 #### preview-card
 
-* __Datei:__ materials/2-exercise/assets/images/preview-card.png
+* __Datei:__ materials/2-are-you-in-scope-essential-vs-important/assets/images/preview-card.png
 * __Status:__ generated
 * __Alt-Text:__ Flat geometric illustration of a transit-operations staff member standing between a bus and a tram, comparing the two with a clipboard, with a small shield-and-checkmark icon floating above, rendered in EU blue and gold on a neutral background.
 * __Prompt:__
   "A flat, geometric vector illustration of a Nordholm Nahverkehr staff member in a smart-casual uniform standing in a depot yard between a simplified side-elevation bus and a simplified side-elevation tram, holding an abstract clipboard and looking back and forth between the two vehicles as if comparing them. A small shield icon with a gold checkmark floats above the tram, marking it as the relevant one. Consistent flat-illustration character style matching the course's established visuals, diverse representation. Color palette: deep EU blue (#003399) dominant for the vehicles and uniform, gold (#FFCC00) accent reserved for the shield-and-checkmark motif, off-white neutral background (#F5F7FA). Rule-of-thirds composition with the staff member centered and the two vehicles flanking left and right, clear and uncluttered, generous negative space. Soft natural lighting, professional and approachable educational mood, no photorealism, clean minimalist vector style. The image must not contain any readable text; the bus and tram must be simple abstract geometric shapes, not detailed vehicles."
-* __Note:__ Referenced via the LiaScript `logo:` header field in `materials/2-exercise/README.md`, not inline in the material body.
+* __Note:__ Referenced via the LiaScript `logo:` header field in `materials/2-are-you-in-scope-essential-vs-important/README.md`, not inline in the material body.
 
-![Flat geometric illustration of a transit-operations staff member standing between a bus and a tram, comparing the two with a clipboard, with a small shield-and-checkmark icon floating above, rendered in EU blue and gold on a neutral background.](materials/2-exercise/assets/images/preview-card.png)
+![Flat geometric illustration of a transit-operations staff member standing between a bus and a tram, comparing the two with a clipboard, with a small shield-and-checkmark icon floating above, rendered in EU blue and gold on a neutral background.](materials/2-are-you-in-scope-essential-vs-important/assets/images/preview-card.png)
 
 </section>
 
@@ -666,13 +670,13 @@ Known stumbling block: learners with no IT background may read "ten measures" an
 
 #### klinikum-compliance-review-hero
 
-* __Datei:__ materials/3-exercise/assets/images/klinikum-compliance-review-hero.png
+* __Datei:__ materials/3-the-10-measures-you-actually-need/assets/images/klinikum-compliance-review-hero.png
 * __Status:__ prompt-ready
 * __Alt-Text:__ Flat geometric illustration of a hospital IT and facilities team reviewing an abstract checklist against server racks and ward equipment, rendered in EU blue and gold on a neutral background.
 * __Prompt:__
   "A flat, geometric vector illustration of a hospital IT lead and a facilities technician standing together in a server and equipment room adjacent to a hospital ward, both looking down at an abstract checklist clipboard held by the IT lead, which shows a small gold shield icon in one corner. Behind them, a row of server racks and pieces of abstract medical-adjacent equipment (rendered as simple geometric shapes, not detailed machinery) line the wall. Diverse public-sector/healthcare staff in practical work attire (the IT lead in a blazer over smart-casual wear, the facilities technician in a utility vest), consistent flat-illustration character style. Color palette: deep EU blue (#003399) as the dominant color, gold (#FFCC00) accent reserved for the shield icon and small highlight details on the server racks, off-white neutral background (#F5F7FA). Rule-of-thirds composition with the server racks on the right third and the two-person team on the left two-thirds, clear and uncluttered, generous negative space. Soft natural lighting, professional and approachable educational mood, no photorealism, clean minimalist vector style. The image must not contain any readable text; the checklist, racks, and equipment must show abstract shapes and lines only."
 
-![Flat geometric illustration of a hospital IT and facilities team reviewing an abstract checklist against server racks and ward equipment, rendered in EU blue and gold on a neutral background.](materials/3-exercise/assets/images/klinikum-compliance-review-hero.png)
+![Flat geometric illustration of a hospital IT and facilities team reviewing an abstract checklist against server racks and ward equipment, rendered in EU blue and gold on a neutral background.](materials/3-the-10-measures-you-actually-need/assets/images/klinikum-compliance-review-hero.png)
 
 </section>
 
@@ -680,13 +684,13 @@ Known stumbling block: learners with no IT background may read "ten measures" an
 
 #### preview-card
 
-* __Datei:__ materials/3-exercise/assets/images/preview-card.png
+* __Datei:__ materials/3-the-10-measures-you-actually-need/assets/images/preview-card.png
 * __Status:__ prompt-ready
 * __Alt-Text:__ Flat geometric illustration of a hospital IT lead and facilities technician standing before a wall-mounted board showing a grid of ten small icons, in EU blue and gold on a neutral background.
 * __Prompt:__
   "A flat, geometric vector illustration of a Klinikum Ostheide IT lead and a facilities technician standing together in a hospital corridor, both looking up and pointing at a large wall-mounted board that displays a neat 2-row-by-5-column grid of ten small abstract icons (simple line-icon representations only — a lock, a backup arrow, a key, a document, a handshake, a gear, a chain link, a padlock-shield, a person silhouette, a clock), with one icon on the board highlighted in gold. Diverse public-sector/healthcare staff in practical work attire, consistent flat-illustration character style matching the course's established visuals. Color palette: deep EU blue (#003399) dominant, lighter institutional blue (#336FB5) for the icon grid, gold (#FFCC00) accent reserved for the one highlighted icon, off-white neutral background (#F5F7FA). Rule-of-thirds composition with the board on the right two-thirds and the two-person team on the left third, clear and uncluttered, generous negative space. Soft natural lighting, professional and approachable educational mood, no photorealism, clean minimalist vector style. The image must not contain any readable text; the board and its icons must show abstract shapes and lines only."
 
-![Flat geometric illustration of a hospital IT lead and facilities technician standing before a wall-mounted board showing a grid of ten small icons, in EU blue and gold on a neutral background.](materials/3-exercise/assets/images/preview-card.png)
+![Flat geometric illustration of a hospital IT lead and facilities technician standing before a wall-mounted board showing a grid of ten small icons, in EU blue and gold on a neutral background.](materials/3-the-10-measures-you-actually-need/assets/images/preview-card.png)
 
 </section>
 
@@ -733,13 +737,13 @@ Known stumbling block: learners tend to treat the 24h/72h/1-month deadlines as t
 
 #### preview-card
 
-* __Datei:__ materials/4-lecture/assets/images/preview-card.png
+* __Datei:__ materials/4-handling-reporting-incidents/assets/images/preview-card.png
 * __Status:__ prompt-ready
 * __Alt-Text:__ Flat geometric illustration of a hospital crisis-response team gathered around a workstation, pointing at a wall display showing a three-stage timeline with a small alert icon, in EU blue and gold on a neutral background.
 * __Prompt:__
   "A flat, geometric vector illustration of a small Klinikum Ostheide crisis-response team — two or three staff in practical work attire — gathered around a workstation, one team member pointing at a wall-mounted display showing a simple abstract timeline divided into three marked stages with a small gold alert-bell icon above it, the others reacting with focused, composed attention (concerned but not panicked). Diverse public-sector/healthcare staff, consistent flat-illustration character style matching the course's established visuals. Color palette: deep EU blue (#003399) dominant, gold (#FFCC00) accent reserved for the alert icon and small highlight details on the timeline, off-white neutral background (#F5F7FA). Rule-of-thirds composition with the wall display on the upper-right third and the team on the lower-left third, clear and uncluttered, generous negative space. Soft natural lighting, professional and approachable educational mood, no photorealism, clean minimalist vector style. The image must not contain any readable text; the timeline and any screen elements must show abstract shapes and lines only."
 
-![Flat geometric illustration of a hospital crisis-response team gathered around a workstation, pointing at a wall display showing a three-stage timeline with a small alert icon, in EU blue and gold on a neutral background.](materials/4-lecture/assets/images/preview-card.png)
+![Flat geometric illustration of a hospital crisis-response team gathered around a workstation, pointing at a wall display showing a three-stage timeline with a small alert icon, in EU blue and gold on a neutral background.](materials/4-handling-reporting-incidents/assets/images/preview-card.png)
 
 </section>
 
@@ -785,13 +789,13 @@ Known stumbling block: two groups tend to disengage for opposite reasons. Non-ma
 
 #### preview-card
 
-* __Datei:__ materials/5-lecture/assets/images/preview-card.png
+* __Datei:__ materials/5-whos-responsible-governance-consequences/assets/images/preview-card.png
 * __Status:__ prompt-ready
 * __Alt-Text:__ Flat geometric illustration of municipal leadership seated around a meeting table reviewing an abstract compliance report, with a small balance-scale motif on the wall behind them, in EU blue and gold on a neutral background.
 * __Prompt:__
   "A flat, geometric vector illustration of Stadtverwaltung Nordholm's leadership — a mayor figure and two department heads — seated around a meeting table in a municipal office, looking down together at an abstract compliance report document on the table, expressions calm and serious. On the wall behind them hangs a small framed balance-scale motif in gold, subtly signaling accountability. Diverse public-sector staff in business-casual clothing, consistent flat-illustration character style matching the course's established visuals. Color palette: deep EU blue (#003399) dominant, gold (#FFCC00) accent reserved for the balance-scale motif and small highlight details, off-white neutral background (#F5F7FA). Rule-of-thirds composition with the meeting table spanning the lower two-thirds and the wall motif in the upper third, clear and uncluttered, generous negative space. Soft natural lighting, professional and approachable educational mood, no photorealism, clean minimalist vector style. The image must not contain any readable text; the report and any documents must show abstract shapes and lines only."
 
-![Flat geometric illustration of municipal leadership seated around a meeting table reviewing an abstract compliance report, with a small balance-scale motif on the wall behind them, in EU blue and gold on a neutral background.](materials/5-lecture/assets/images/preview-card.png)
+![Flat geometric illustration of municipal leadership seated around a meeting table reviewing an abstract compliance report, with a small balance-scale motif on the wall behind them, in EU blue and gold on a neutral background.](materials/5-whos-responsible-governance-consequences/assets/images/preview-card.png)
 
 </section>
 
@@ -837,13 +841,13 @@ Known stumbling block: turning "how compliant am I" into a single percentage ris
 
 #### preview-card
 
-* __Datei:__ materials/6-exercise/assets/images/preview-card.png
+* __Datei:__ materials/6-your-nis2-readiness-score/assets/images/preview-card.png
 * __Status:__ prompt-ready
 * __Alt-Text:__ Flat geometric illustration of a person seated at a desk looking at a tablet showing an abstract gauge chart mid-fill, in EU blue and gold on a neutral background.
 * __Prompt:__
   "A flat, geometric vector illustration of a single diverse, gender-ambiguous person in smart-casual clothing, seated at a tidy desk, looking down at a tablet propped in front of them that displays an abstract speedometer-style gauge chart with a gold needle pointing to roughly the midpoint, their expression calm and reflective rather than anxious. No other people — an individual, personal framing distinct from the organization-based scenes elsewhere in the course. Consistent flat-illustration character style matching the course's established visuals. Color palette: deep EU blue (#003399) dominant, gold (#FFCC00) accent reserved for the gauge needle and a small highlight detail, off-white neutral background (#F5F7FA). Rule-of-thirds composition with the person slightly left of center and the tablet screen in the lower-right third, clear and uncluttered, generous negative space. Soft natural lighting, professional, encouraging, and approachable educational mood, no photorealism, clean minimalist vector style. The image must not contain any readable text or numbers; the tablet screen must show only the abstract gauge shape."
 
-![Flat geometric illustration of a person seated at a desk looking at a tablet showing an abstract gauge chart mid-fill, in EU blue and gold on a neutral background.](materials/6-exercise/assets/images/preview-card.png)
+![Flat geometric illustration of a person seated at a desk looking at a tablet showing an abstract gauge chart mid-fill, in EU blue and gold on a neutral background.](materials/6-your-nis2-readiness-score/assets/images/preview-card.png)
 
 </section>
 

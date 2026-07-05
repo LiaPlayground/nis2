@@ -145,7 +145,7 @@ Add an exclamation mark in front, and the link becomes an image. This is standar
 
 **`![ ]( )` — an image.** The `!` means "show this."
 
-![A flat blue shield icon](https://raw.githubusercontent.com/LiaPlayground/nis2/main/materials/1-lecture/assets/images/probably-not-me-staff-lineup.png)
+![A flat blue shield icon](https://raw.githubusercontent.com/LiaPlayground/nis2/main/materials/1-welcome-why-nis2-matters/assets/images/probably-not-me-staff-lineup.png)
 
 </section>
 

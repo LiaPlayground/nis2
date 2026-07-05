@@ -247,7 +247,7 @@ In every environment the agent introduces itself, reads `journal.md` if it exist
 | `:manage-templates {name?}` | Add & document LiaScript template imports |
 | `:update-dashboard` | Regenerate the derived `## Dashboard` |
 | `:create-session {n} {type} {title?}` | Create a session skeleton |
-| `:promote-session {n} {type}` | Expand skeleton into `materials/{n}-{type}.md` |
+| `:promote-session {n} {type}` | Expand skeleton into a material document (`materials/{n}-{slug}/README.md` in multi-file mode, or a `##` chapter in root `README.md` in single-file mode — see `specs/data/file-structure-modes.md`) |
 | `:coauthor-materials` | Interactive content co-authoring in persona |
 | `:quick-fix {n} {type} {description}` | Targeted single-issue correction |
 | `:validate-course [{n} {type}]` | Full course check, or single-session check |
@@ -298,8 +298,8 @@ specs/
   workflows/           ← course-development.yaml (the master workflow)
 
 journal.md             ← project state (single source of truth)
-materials/             ← generated LiaScript course materials
-assets/                ← generated visual assets & prompts
+materials/             ← generated LiaScript course materials (multi-file mode only)
+assets/                ← generated visual assets & prompts (single-file mode; nested per session under materials/ in multi-file mode)
 
 CLAUDE.md              ← generated: Claude Code config
 .github/copilot-instructions.md  ← generated: Copilot config

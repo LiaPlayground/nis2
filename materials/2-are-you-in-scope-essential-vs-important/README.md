@@ -203,23 +203,32 @@ Three quick questions, not graded, just a gut-check on the two-step test itself.
 - [(X)] Check the sector first (Annex I/II), then check size
 - [( )] Check size first, then check the sector
 - [( )] There is no fixed order — either works
+******
 
 > The order matters: size only becomes relevant once the sector question is settled. Reversing it is exactly the GDPR-style mistake this unit corrects.
+
+******
 
 **2. An organization is medium-sized, operates in an Annex II sector, and has no named exception. What is it?**
 
 - [( )] Essential entity
 - [(X)] Important entity
 - [( )] Out of scope
+******
 
 > Annex II entities are always, at most, "important" — Annex I large enterprises (or a named exception) are the only routes to "essential."
+
+******
 
 **3. True or false: "important" entities have fewer cybersecurity obligations than "essential" entities.**
 
 - [( )] True
 - [(X)] False
+******
 
 > False — the Art. 21 measures and Art. 23 reporting duties are the same for both. Only the supervision regime differs (proactive vs. reactive).
+
+******
 
 ### Before You Go: One Quick Reflection
 

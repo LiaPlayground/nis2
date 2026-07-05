@@ -37,13 +37,34 @@ collection:
     tags:
       - Unit 1
 
+  - html: >
+      <p class="extra-downloads">
+        Also available as:
+        <a href="downloads/welcome-why-nis2-matters/welcome-why-nis2-matters-xapi.zip">xAPI package</a> ·
+        <a href="downloads/welcome-why-nis2-matters/welcome-why-nis2-matters-android.apk">Android app</a>
+      </p>
+
   - url: https://raw.githubusercontent.com/LiaPlayground/nis2/main/materials/2-are-you-in-scope-essential-vs-important/README.md
     tags:
       - Unit 2
 
+  - html: >
+      <p class="extra-downloads">
+        Also available as:
+        <a href="downloads/are-you-in-scope-essential-vs-important/are-you-in-scope-essential-vs-important-xapi.zip">xAPI package</a> ·
+        <a href="downloads/are-you-in-scope-essential-vs-important/are-you-in-scope-essential-vs-important-android.apk">Android app</a>
+      </p>
+
   - url: https://raw.githubusercontent.com/LiaPlayground/nis2/main/materials/3-the-10-measures-you-actually-need/README.md
     tags:
       - Unit 3
+
+  - html: >
+      <p class="extra-downloads">
+        Also available as:
+        <a href="downloads/the-10-measures-you-actually-need/the-10-measures-you-actually-need-xapi.zip">xAPI package</a> ·
+        <a href="downloads/the-10-measures-you-actually-need/the-10-measures-you-actually-need-android.apk">Android app</a>
+      </p>
 
   - html: >
       <hr id="behind-the-scenes">

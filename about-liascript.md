@@ -305,7 +305,6 @@ So here is the whole argument, compressed. Everything you saw in the NIS2 course
 - [[X]] Interaction is a language feature, not a plugin
 - [[X]] One source file exports to many formats
 - [[ ]] You need a proprietary editor and a server to run it
-
 *************
 
 Exactly the point: none of it needs a proprietary tool or a backend. That is the whole idea.

@@ -172,7 +172,7 @@ flowchart LR
 
 ### Open Blockers
 
-None — all six unit skeletons are complete. Units 1–2 have full material drafted, each in its own folder with per-session assets (`materials/1-lecture/README.md`, `materials/2-exersize/README.md` — note the folder-name typo flagged below); Units 3–6 still need `:promote-session`. No `:validate-course` run yet. Logo not yet generated (`:create-logo`).
+None — all six unit skeletons are complete. Units 1–2 have full material drafted, each in its own folder with per-session assets (`materials/1-lecture/README.md`, `materials/2-exercise/README.md`); Units 3–6 still need `:promote-session`. No `:validate-course` run yet. Logo not yet generated (`:create-logo`).
 
 </div>
 
@@ -217,7 +217,8 @@ None — all six unit skeletons are complete. Units 1–2 have full material dra
   - Checklists: native multi-choice (`[[X]]`) or survey-matrix syntax — no template needed
   - Videos: native `!?[title](url)` embedding — no template needed
   - Diagrams: Mermaid template (already imported), see `## Templates` → `### Mermaid`
-  - Interactive calculator (e.g. "NIS2 Readiness Score"): native reactive `<script input=... output=...>` pattern, see `## Templates` → `### Reactive JavaScript Inputs`; `<lia-chart>` charting confirmed to work natively (no extra import)
+  - Interactive calculator (e.g. "NIS2 Readiness Score"): native reactive `<script input=... output=...>` pattern, see `## Templates` → `### Reactive JavaScript Inputs`; `<lia-chart>` charting confirmed to work natively (no extra import). Verified working in Unit 3 (`materials/3-exercise/README.md`): two `range` sliders driving a live-recomputing `<lia-chart>` bar chart. Reactive `@input(`Name`)` reads only resolve **inside** a `<script>` block — never place a bare `@input(...)` as standalone markdown text (it will not update). A slider shows its own value via `@input` returned inside its own `<script ...>@input</script>` tag; no separate text reference is needed.
+  - __Interactive-element marker (course convention):__ immediately before any non-obvious interactive element (reactive sliders, live `<lia-chart>`, calculators), place a short `[!TIP]` alert with a leading 👉 and a title of the form "This one is interactive — …" telling the learner to interact and what will happen live. Do NOT mark self-explanatory standard interactions (quizzes, checklists, `<details>` boxes) — a marker there is noise. Purpose: consistent learner cue + repeated "this is interactive" signal for the LiaScript showcase. First applied in Unit 3.
   - No further template imports needed at this time
   - Fixed heading depth for all materials: `#` Course Title (once) → `##` Chapter (new slide) → `###` Section (bare, no container needed) → `####` Subsection, always wrapped in `<section>…</section>` (belongs to its `###` Section). No headings deeper than `####` are used in this course. See corrected rule in `data/liascript-cheat-sheet.md` → "Additional Rule: Subheadings within a Slide".
 
@@ -438,7 +439,7 @@ More community templates can be found at [topics/liascript-template](https://git
   | # | Title | Type | Duration | Learning Objective | Material |
   |---|-------|------|----------|--------------------|----------|
   | 1 | Welcome & Why NIS2 Matters | lecture | 25 min | Sets up course rhythm and stakes; grounds the rest of the course | materials/1-lecture/README.md |
-  | 2 | Are You in Scope? Essential vs. Important Entities | exercise | 40 min | LO1 — determine whether your organization/role falls under NIS2 (Art. 2–3, Annex I–II) | materials/2-exersize/README.md ⚠️ |
+  | 2 | Are You in Scope? Essential vs. Important Entities | exercise | 40 min | LO1 — determine whether your organization/role falls under NIS2 (Art. 2–3, Annex I–II) | materials/2-exercise/README.md |
   | 3 | The 10 Measures You Actually Need | exercise | 50 min | LO2 — explain and apply the Art. 21 risk-management measures | materials/3-exercise/README.md |
   | 4 | Handling & Reporting Incidents | lecture | 45 min | LO3 — apply the incident-reporting process and timeline (Art. 23) | materials/4-lecture/README.md |
   | 5 | Who's Responsible? Governance & Consequences | lecture | 40 min | LO4 — assess governance/liability implications and sanctions (Art. 20, 32–34) | materials/5-lecture/README.md |
@@ -454,7 +455,7 @@ _Managed by `:create-session`, `:promote-session`, `:coauthor-materials`, and `:
 |---|-------|------|----------|----------|------|-------|
 | 1 | Welcome & Why NIS2 Matters | lecture | ✅ | ✅ | ❌ | |
 | 2 | Are You in Scope? Essential vs. Important Entities | exercise | ✅ | ✅ | ❌ | |
-| 3 | The 10 Measures You Actually Need | exercise | ✅ | ❌ | ❌ | |
+| 3 | The 10 Measures You Actually Need | exercise | ✅ | ✅ | ❌ | material at materials/3-exercise/README.md; adds first interactive `<script>` coverage widget + survey matrix; hero image still prompt-ready |
 | 4 | Handling & Reporting Incidents | lecture | ✅ | ❌ | ❌ | |
 | 5 | Who's Responsible? Governance & Consequences | lecture | ✅ | ❌ | ❌ | |
 | 6 | Your NIS2 Readiness Score | exercise | ✅ | ❌ | ❌ | |
@@ -590,13 +591,13 @@ Known stumbling block: learners tend to treat "in scope" as size-only (like GDPR
 
 #### nahverkehr-control-room-hero
 
-* __Datei:__ materials/2-exersize/assets/images/nahverkehr-control-room-hero.png
+* __Datei:__ materials/2-exercise/assets/images/nahverkehr-control-room-hero.png
 * __Status:__ generated
 * __Alt-Text:__ Flat geometric illustration of a diverse public-transport control-room team studying an abstract route network map with a small shield icon overlay, rendered in EU blue and gold on a neutral background.
 * __Prompt:__
   "A flat, geometric vector illustration of a diverse public-transport control-room team — three operators in smart-casual uniforms — standing and seated at a control desk, looking up together at a large wall-mounted display showing an abstract, stylized transit network map (simple lines and node dots suggesting bus and tram routes), with one small shield icon overlaid near the center of the map. The team's expression is attentive and curious, not alarmed — echoing a routine operational check, not a crisis. Diverse public-sector staff in business-casual clothing, consistent flat-illustration character style. Color palette: deep EU blue (#003399) as the dominant color, gold (#FFCC00) accent reserved for the shield icon and small highlight details, off-white neutral background (#F5F7FA). Rule-of-thirds composition with the wall display on the upper-right third and the control-room team on the lower-left third, clear and uncluttered, generous negative space. Soft natural lighting, professional and approachable educational mood, no photorealism, clean minimalist vector style. The image must not contain any readable text; the network map and any screen elements must show abstract shapes, dots, and lines only."
 
-![Flat geometric illustration of a diverse public-transport control-room team studying an abstract route network map with a small shield icon overlay, rendered in EU blue and gold on a neutral background.](materials/2-exersize/assets/images/nahverkehr-control-room-hero.png)
+![Flat geometric illustration of a diverse public-transport control-room team studying an abstract route network map with a small shield icon overlay, rendered in EU blue and gold on a neutral background.](materials/2-exercise/assets/images/nahverkehr-control-room-hero.png)
 
 </section>
 
@@ -604,14 +605,14 @@ Known stumbling block: learners tend to treat "in scope" as size-only (like GDPR
 
 #### preview-card
 
-* __Datei:__ materials/2-exersize/assets/images/preview-card.png
+* __Datei:__ materials/2-exercise/assets/images/preview-card.png
 * __Status:__ generated
 * __Alt-Text:__ Flat geometric illustration of a transit-operations staff member standing between a bus and a tram, comparing the two with a clipboard, with a small shield-and-checkmark icon floating above, rendered in EU blue and gold on a neutral background.
 * __Prompt:__
   "A flat, geometric vector illustration of a Nordholm Nahverkehr staff member in a smart-casual uniform standing in a depot yard between a simplified side-elevation bus and a simplified side-elevation tram, holding an abstract clipboard and looking back and forth between the two vehicles as if comparing them. A small shield icon with a gold checkmark floats above the tram, marking it as the relevant one. Consistent flat-illustration character style matching the course's established visuals, diverse representation. Color palette: deep EU blue (#003399) dominant for the vehicles and uniform, gold (#FFCC00) accent reserved for the shield-and-checkmark motif, off-white neutral background (#F5F7FA). Rule-of-thirds composition with the staff member centered and the two vehicles flanking left and right, clear and uncluttered, generous negative space. Soft natural lighting, professional and approachable educational mood, no photorealism, clean minimalist vector style. The image must not contain any readable text; the bus and tram must be simple abstract geometric shapes, not detailed vehicles."
-* __Note:__ Referenced via the LiaScript `logo:` header field in `materials/2-exersize/README.md`, not inline in the material body.
+* __Note:__ Referenced via the LiaScript `logo:` header field in `materials/2-exercise/README.md`, not inline in the material body.
 
-![Flat geometric illustration of a transit-operations staff member standing between a bus and a tram, comparing the two with a clipboard, with a small shield-and-checkmark icon floating above, rendered in EU blue and gold on a neutral background.](materials/2-exersize/assets/images/preview-card.png)
+![Flat geometric illustration of a transit-operations staff member standing between a bus and a tram, comparing the two with a clipboard, with a small shield-and-checkmark icon floating above, rendered in EU blue and gold on a neutral background.](materials/2-exercise/assets/images/preview-card.png)
 
 </section>
 
@@ -892,6 +893,7 @@ _Read-scope rule: Coauthor and specialist agents are direct `###` subsections; e
   4. Favor tables, diagrams, checklists, and short interactive elements over long prose blocks — production quality matters as much as correctness for this project.
   5. Whenever a point in the material would benefit from a visual, insert an inline placeholder comment `<!-- IMAGE: {short description of the desired image} -->` directly at that point in the LiaScript text (invisible on render, doesn't disrupt slide/heading structure). Do not write a full image prompt inline — the Artist-Agent later turns each placeholder into a concrete prompt via `:create-image {number} {type} {description}` and files it under that session's `#### Images` block. After a co-authoring pass, list all newly inserted placeholders so the instructor can hand them to the Artist-Agent.
   6. Use the recurring case examples defined in `## Didactics` → `__Recurring Case Examples:__` (Stadtverwaltung Nordholm, Nordholm Nahverkehr, Klinikum Ostheide) instead of inventing new fictional organizations. Re-establish the organization in 1–2 sentences in each unit's hook — never assume the learner has seen it in a prior unit.
+  7. Before any non-obvious interactive element (reactive `<script>` sliders, live `<lia-chart>`, calculators), insert the course's interactive-element marker: a short `[!TIP]` alert led by 👉 with a "This one is interactive — …" title (see `## Course Context` → `__LiaScript conventions:__`). Do not mark self-explanatory interactions (quizzes, checklists, `<details>`). Keep the reactive-input syntax rules from that same conventions list (no bare `@input(...)` in markdown text).
 * __Preferred Interaction Style:__
   practical + conversational (mixed): direct "you" address, short punchy framing sentences followed by structured explanations, no unexplained jargon.
 * __Project-Specific Rules:__
@@ -993,3 +995,29 @@ _Each note is one append-only `### {Type}: {Descriptive Title} ({YYYY-MM-DD})` s
   1. Unit 1's skeleton was revised to remove the "unresolved, referenced later" cliffhanger language and to name Stadtverwaltung Nordholm explicitly as a self-contained scenario.
   2. Coauthor's `## Agents` → `### Coauthor` behavior additions now instruct reuse of this cast instead of inventing new fictional organizations.
   3. Future `:create-session` and `:coauthor-materials` passes for Units 2–6 must pull the assigned organization from `## Didactics` → `__Recurring Case Examples:__` and re-establish it locally.
+
+### Decision: Repository Serves A Dual Purpose — Sample Course And Tooling Showcase (2026-07-05)
+
+* __Type:__ decision
+* __Topic:__ The overarching purpose of this repository and the audience of its material, made explicit
+* __Related:__ Outline, README
+* __Source:__ chat discussion
+
+* __Context:__
+  This repository is being prepared to promote LiaScript to (German) public-sector / government decision-makers. Until now the dual intent lived only in the maintainers' heads: the README described only the generic Teaching-Agent tooling, and `journal.md` described only the NIS2 course — nowhere was it written that this specific repository is meant to demonstrate *both* a finished course *and* the tools that produced it. The README was also noted to jump too quickly into technical realization without first stating purpose and audience.
+
+* __Options considered:__
+  1. Leave purpose implicit (status quo) — lowest effort, but an outsider (or the maintainers months later) cannot tell what the repo is for or who the material targets; rejected.
+  2. Record purpose only internally (journal decision) — captures the "why" but keeps it invisible to anyone reading the README; partial.
+  3. Record purpose in both the README (visible, up top, before the technical details) and as a versioned journal decision (the reasoning) — makes the goal externally visible and internally traceable, at the cost of light duplication. Chosen.
+
+* __Decision:__
+  Option 3. Two goals are now stated explicitly: (1) a solid standalone NIS2 sample course (six units), and (2) a separate, self-referential LiaScript document explaining the tooling (LiaScript + Teaching-Agent + `liaex` exporter) that points at concrete course features as live proof. A new "Purpose & Audience of This Repository" section was added to the top of the README, before the technical description, quoting the course's target audience verbatim from `## Outline`. Build order agreed: course first (Units 3–6), tooling document second. Course language stays English for now (EU-breadth signal); a German version is a possible later step. The course is deliberately built *with* the Teaching-Agent so the tooling document can authentically claim it.
+
+* __Rationale:__
+  The two strands address two audiences in the same room — the course convinces decision-makers on content, the tooling document convinces implementers on the "how." The course is the proof; the tooling document explains the vendor-independent, standards-based method. Stating purpose and audience before technical realization directly addresses the feedback that the README went too fast into implementation.
+
+* __Consequences:__
+  1. README now opens (after the intro) with a "Purpose & Audience of This Repository" section; the rest of the README is explicitly framed as describing the generic tooling, with a pointer to `journal.md` for the course itself.
+  2. The tooling-showcase document is a new, tracked deliverable to be produced after Units 3–6 are complete; it should be authored as a LiaScript document and reference concrete course features.
+  3. Course-material depth stays calibrated to the beginner, mixed, non-specialist audience (see finished Units 1–2): plain-language first, encapsulated legal/technical precision, no two-track deep-dives.

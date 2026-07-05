@@ -8,6 +8,30 @@ It is **editor-agnostic**: the same specs build into configurations for Claude C
 
 ---
 
+## Purpose & Audience of This Repository
+
+> **Read this before the technical details below.** This repository is not only a piece of software — it is a deliberate demonstration, built to make the case for LiaScript to public-sector decision-makers.
+
+This repository serves **two goals at once**, and both matter:
+
+1. **A solid sample course — "NIS2 Ready."** A complete, self-paced course (six units) on the EU NIS2 Directive that stands on its own as a real training product. NIS2 is chosen deliberately: it governs public administration and critical infrastructure themselves, so the course teaches its audience exactly the compliance topic they must currently implement.
+2. **A demonstration of the tooling.** A separate, self-referential LiaScript document explains the three tools used to build the course — **LiaScript** itself, the **Teaching-Agent** multi-agent system, and the **`liaex` exporter** — and points at concrete features in the course as live proof. It shows *how* an interactive, accessible, vendor-independent Open Educational Resource is produced.
+
+The two goals reinforce each other: the course is the *proof*, and the tooling document explains *how it was made* — with open, standards-based, vendor-independent tools that a public-sector team can adopt itself.
+
+### Who the course material is for
+
+Taken verbatim from the course definition (`journal.md` → `## Outline` → *Target Audience*):
+
+> Employees across ministries, public administrations, and critical-infrastructure organizations (energy, health, digital infrastructure, transport, etc.) that fall under the EU NIS2 Directive — a mixed audience of decision-makers, IT/security staff, and general employees, with no deep technical or legal background assumed.
+
+Accordingly, the material is written at a **beginner** level: every legal or technical term is paraphrased in plain language before it is named, and no prior technical or legal background is assumed.
+
+> [!NOTE]
+> The rest of this README describes the **generic Teaching-Agent tooling** that produced the course. For the current state and contents of the NIS2 course itself, see [`journal.md`](./journal.md).
+
+---
+
 ## Table of Contents
 
 - [How It Works](#how-it-works)

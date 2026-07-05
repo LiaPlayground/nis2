@@ -86,6 +86,7 @@ collection:
       <p>How this course and its tooling were built — reference material, not part of the learning path. No downloadable export formats — browse online only.</p>
 
   - url: https://raw.githubusercontent.com/LiaPlayground/nis2/main/about-liascript.md
+    comment: How this course was built — LiaScript, the Teaching-Agent multi-agent system, and the liaex exporter, explained through concrete features used in the course.
     tags:
       - Reference
     arguments:
@@ -94,6 +95,7 @@ collection:
       - project-generate-scorm2004: false
 
   - url: https://raw.githubusercontent.com/LiaPlayground/nis2/main/journal.md
+    comment: The project's own planning journal — course context, didactics, agenda, session drafts, and agent memory, kept live throughout development.
     tags:
       - Reference
     arguments:

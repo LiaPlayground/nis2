@@ -1,6 +1,8 @@
 <!--
 color: <span style="display:inline-block;width:1.5rem;height:1.5rem;background-color:@0;border:1px solid #ccc;border-radius:2px;vertical-align:middle;"></span> `@0`
 
+comment:  The project's own planning journal for "NIS2 Ready" — course context, didactics, visual identity, agenda, session drafts, validation state, and agent memory, kept live throughout development. Read this to see how the course was actually built, not just the finished result.
+
 import: https://raw.githubusercontent.com/liaScript/mermaid_template/master/README.md
 
 @style

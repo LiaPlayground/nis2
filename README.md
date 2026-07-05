@@ -278,8 +278,8 @@ In every environment the agent introduces itself, reads `journal.md` if it exist
 | Command | Purpose |
 |---------|---------|
 | `:manage-git` | Stage, commit, push, diff, resolve conflicts |
-| `:create-project` | Generate `project.yaml` + GitHub Pages workflow |
-| `:update-project` | Update publishing config & redeploy |
+| `:create-project` | Multi-file: generate `project.yaml` + GitHub Pages workflow. Single-file: push to GitHub, hand back the LiaScript viewer link (no project.yaml/Pages) |
+| `:update-project` | Multi-file: update publishing config & redeploy. Single-file: push the update (viewer link stays the same) |
 
 ---
 

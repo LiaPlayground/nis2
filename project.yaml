@@ -37,43 +37,13 @@ collection:
     tags:
       - Unit 1
 
-  - html: >
-      <p class="extra-downloads">
-        Also available as:
-        <a href="downloads/welcome-why-nis2-matters/welcome-why-nis2-matters-scorm1.2.zip">SCORM 1.2</a> ·
-        <a href="downloads/welcome-why-nis2-matters/welcome-why-nis2-matters-scorm2004.zip">SCORM 2004</a> ·
-        <a href="downloads/welcome-why-nis2-matters/welcome-why-nis2-matters-xapi.zip">xAPI</a> ·
-        <a href="downloads/welcome-why-nis2-matters/welcome-why-nis2-matters-pdf.pdf">PDF</a> ·
-        <a href="downloads/welcome-why-nis2-matters/welcome-why-nis2-matters-android.apk">Android app</a>
-      </p>
-
   - url: https://raw.githubusercontent.com/LiaPlayground/nis2/main/materials/2-are-you-in-scope-essential-vs-important/README.md
     tags:
       - Unit 2
 
-  - html: >
-      <p class="extra-downloads">
-        Also available as:
-        <a href="downloads/are-you-in-scope-essential-vs-important/are-you-in-scope-essential-vs-important-scorm1.2.zip">SCORM 1.2</a> ·
-        <a href="downloads/are-you-in-scope-essential-vs-important/are-you-in-scope-essential-vs-important-scorm2004.zip">SCORM 2004</a> ·
-        <a href="downloads/are-you-in-scope-essential-vs-important/are-you-in-scope-essential-vs-important-xapi.zip">xAPI</a> ·
-        <a href="downloads/are-you-in-scope-essential-vs-important/are-you-in-scope-essential-vs-important-pdf.pdf">PDF</a> ·
-        <a href="downloads/are-you-in-scope-essential-vs-important/are-you-in-scope-essential-vs-important-android.apk">Android app</a>
-      </p>
-
   - url: https://raw.githubusercontent.com/LiaPlayground/nis2/main/materials/3-the-10-measures-you-actually-need/README.md
     tags:
       - Unit 3
-
-  - html: >
-      <p class="extra-downloads">
-        Also available as:
-        <a href="downloads/the-10-measures-you-actually-need/the-10-measures-you-actually-need-scorm1.2.zip">SCORM 1.2</a> ·
-        <a href="downloads/the-10-measures-you-actually-need/the-10-measures-you-actually-need-scorm2004.zip">SCORM 2004</a> ·
-        <a href="downloads/the-10-measures-you-actually-need/the-10-measures-you-actually-need-xapi.zip">xAPI</a> ·
-        <a href="downloads/the-10-measures-you-actually-need/the-10-measures-you-actually-need-pdf.pdf">PDF</a> ·
-        <a href="downloads/the-10-measures-you-actually-need/the-10-measures-you-actually-need-android.apk">Android app</a>
-      </p>
 
   - html: >
       <hr id="behind-the-scenes">
@@ -83,7 +53,15 @@ collection:
   - url: https://raw.githubusercontent.com/LiaPlayground/nis2/main/about-liascript.md
     tags:
       - Reference
+    arguments:
+      - project-generate-pdf: false
+      - project-generate-scorm12: false
+      - project-generate-scorm2004: false
 
   - url: https://raw.githubusercontent.com/LiaPlayground/nis2/main/journal.md
     tags:
       - Reference
+    arguments:
+      - project-generate-pdf: false
+      - project-generate-scorm12: false
+      - project-generate-scorm2004: false

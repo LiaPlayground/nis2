@@ -24,62 +24,24 @@ jobs:
       - name: Install LiaScript Exporter
         run: npm install -g @liascript/exporter
 
-      - name: Pull LiaScript exporter Docker image (for Android APK builds)
-        run: docker pull liascript/exporter
-
-      # liaex's --project-generate-pdf/scorm12/scorm2004 fetch each course over its
-      # raw.githubusercontent.com URL and do NOT reliably resolve that course's local
-      # relative assets (images, videos) while doing so — confirmed by testing: manual
-      # per-file builds from a LOCAL path with explicit -p include assets correctly,
-      # project-generate output did not. So every download format is now built the same,
-      # reliable way: a plain liaex call against the local file, with -p pinned to that
-      # course's own folder. None of the five formats are generated via project-generate-*.
-      - name: Build project catalog website (index.html only, no auto-generated downloads)
-        run: liaex -i project.yaml --format project --output index --project-search
-
-      # Every course is built from ONLY its own materials/{n}-{slug}/ folder (-p pins the
-      # pack path explicitly instead of relying on defaults). Every course writes into its
-      # own dist/{slug}/ folder so one course's build can never pick up or overwrite
-      # another course's files, or leftovers from a previous run.
-      - name: Build per-course export packages (SCORM 1.2, SCORM 2004, xAPI, PDF, Android APK)
+      # The exporter's --project-generate-* flags build every card themselves (SCORM
+      # generation clones each course's repo to resolve relative assets correctly; PDF
+      # renders straight from the fetched course). Output lands in ./assets/pdf,
+      # ./assets/scorm12, ./assets/scorm2004 — matching the download links index.html
+      # points to, so those folders must be copied to gh-pages as-is, not flattened.
+      - name: Build project website with per-course PDF & SCORM downloads
         run: |
-          set -euo pipefail
-
-          declare -A COURSES=(
-            [welcome-why-nis2-matters]="materials/1-welcome-why-nis2-matters"
-            [are-you-in-scope-essential-vs-important]="materials/2-are-you-in-scope-essential-vs-important"
-            [the-10-measures-you-actually-need]="materials/3-the-10-measures-you-actually-need"
-          )
-
-          rm -rf dist
-          mkdir -p dist
-
-          for slug in "${!COURSES[@]}"; do
-            dir="${COURSES[$slug]}"
-            outdir="dist/$slug"
-            mkdir -p "$outdir"
-
-            echo "== Building $slug from $dir =="
-
-            liaex -i "$dir/README.md" -f scorm1.2 -o "$outdir/$slug-scorm1.2" -p "$dir"
-            liaex -i "$dir/README.md" -f scorm2004 -o "$outdir/$slug-scorm2004" -p "$dir"
-            liaex -i "$dir/README.md" -f xapi -o "$outdir/$slug-xapi" -p "$dir" --xapi-zip
-            liaex -i "$dir/README.md" -f pdf -o "$outdir/$slug-pdf" --pdf-timeout 50000 -p "$dir"
-
-            docker run --rm \
-              -v "$(pwd)/$dir":/work \
-              -v "$(pwd)/$outdir":/output \
-              liascript/exporter \
-              liaex -f android -i /work/README.md \
-                --android-appId "io.github.liaplayground.nis2.${slug//-/}" \
-                --output "/output/$slug-android"
-          done
+          liaex -i project.yaml --format project --output index \
+            --project-generate-pdf --pdf-timeout 60000 \
+            --project-generate-scorm12 \
+            --project-generate-scorm2004 \
+            --project-search
 
       - name: Assemble deployment directory
         run: |
-          mkdir -p gh-pages-deploy/downloads
+          mkdir -p gh-pages-deploy
           cp index.html gh-pages-deploy/
-          cp -r dist/* gh-pages-deploy/downloads/
+          [ -d assets ] && cp -r assets gh-pages-deploy/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

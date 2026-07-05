@@ -9,12 +9,12 @@ comment: >
     Cybersecurity Compliance for Public Administration &amp; Critical Infrastructure
   </span>
   <br><br>
-  <p style="max-width:640px;margin:0 auto;">
+  <span style="margin:0 auto; background-color:rgba(255,255,255,0.8); padding:4px 8px;">
     A free, interactive, self-paced course (6 units, ~4&ndash;6 hours) for employees across
     ministries, public administrations, and critical-infrastructure organizations who fall
     under the EU NIS2 Directive &mdash; decision-makers, IT/security staff, and general
     employees alike, no prior technical or legal background required.
-  </p>
+  </span>
 
 logo: assets/images/hero.png
 

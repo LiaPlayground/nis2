@@ -1004,7 +1004,7 @@ _Each note is one append-only `### {Type}: {Descriptive Title} ({YYYY-MM-DD})` s
 * __Source:__ chat discussion
 
 * __Context:__
-  This repository is being prepared to promote LiaScript to (German) public-sector / government decision-makers. Until now the dual intent lived only in the maintainers' heads: the README described only the generic Teaching-Agent tooling, and `journal.md` described only the NIS2 course — nowhere was it written that this specific repository is meant to demonstrate *both* a finished course *and* the tools that produced it. The README was also noted to jump too quickly into technical realization without first stating purpose and audience.
+  This repository is a worked example showing the LiaScript toolchain in practice, using a NIS2 compliance course as the concrete case (the wider motivation is outreach toward the public sector, but the README is deliberately framed as a factual "tool shown by example," not as a sales pitch). Until now the dual intent lived only in the maintainers' heads: the README described only the generic Teaching-Agent tooling, and `journal.md` described only the NIS2 course — nowhere was it written that this specific repository is meant to demonstrate *both* a finished course *and* the tools that produced it. The README was also noted to jump too quickly into technical realization without first stating purpose and audience, and an early draft of the new section read too promotional ("make the case … to decision-makers") and was rewritten in a more neutral, defensive register.
 
 * __Options considered:__
   1. Leave purpose implicit (status quo) — lowest effort, but an outsider (or the maintainers months later) cannot tell what the repo is for or who the material targets; rejected.

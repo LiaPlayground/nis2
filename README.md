@@ -10,14 +10,14 @@ It is **editor-agnostic**: the same specs build into configurations for Claude C
 
 ## Purpose & Audience of This Repository
 
-> **Read this before the technical details below.** This repository is not only a piece of software — it is a deliberate demonstration, built to make the case for LiaScript to public-sector decision-makers.
+> **Read this before the technical details below.** This repository is a worked example: it shows the LiaScript toolchain in practice, using a NIS2 compliance course as the concrete case.
 
-This repository serves **two goals at once**, and both matter:
+The repository has **two layers**:
 
-1. **A solid sample course — "NIS2 Ready."** A complete, self-paced course (six units) on the EU NIS2 Directive that stands on its own as a real training product. NIS2 is chosen deliberately: it governs public administration and critical infrastructure themselves, so the course teaches its audience exactly the compliance topic they must currently implement.
-2. **A demonstration of the tooling.** A separate, self-referential LiaScript document explains the three tools used to build the course — **LiaScript** itself, the **Teaching-Agent** multi-agent system, and the **`liaex` exporter** — and points at concrete features in the course as live proof. It shows *how* an interactive, accessible, vendor-independent Open Educational Resource is produced.
+1. **A sample course — "NIS2 Ready."** A complete, self-paced course (six units) on the EU NIS2 Directive that works as a real training resource on its own. NIS2 was chosen as a fitting example because it concerns public administration and critical infrastructure, so the subject matter is directly relevant to the sectors LiaScript courses are often written for.
+2. **The tooling behind it.** A separate LiaScript document walks through the tools used to build the course — **LiaScript** itself, the **Teaching-Agent** multi-agent system, and the **`liaex` exporter** — and refers to concrete features in the course as examples. It documents *how* an interactive, accessible, standards-based Open Educational Resource is produced.
 
-The two goals reinforce each other: the course is the *proof*, and the tooling document explains *how it was made* — with open, standards-based, vendor-independent tools that a public-sector team can adopt itself.
+In short: the course is the example, and the tooling document explains how it was made — with open, standards-based, vendor-independent tools.
 
 ### Who the course material is for
 

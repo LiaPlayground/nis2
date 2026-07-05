@@ -8,6 +8,15 @@ comment: >
   <span style="background-color:#336FB5;padding:4px 8px;color:#FFFFFF;border-radius:4px">
     Cybersecurity Compliance for Public Administration &amp; Critical Infrastructure
   </span>
+  <br><br>
+  <p style="max-width:640px;margin:0 auto;">
+    A free, interactive, self-paced course (6 units, ~4&ndash;6 hours) for employees across
+    ministries, public administrations, and critical-infrastructure organizations who fall
+    under the EU NIS2 Directive &mdash; decision-makers, IT/security staff, and general
+    employees alike, no prior technical or legal background required.
+  </p>
+
+logo: assets/images/hero.png
 
 navbar:
   brand: NIS2 Ready
@@ -24,8 +33,14 @@ footer: >
   <a href="https://liascript.github.io" target="_blank">LiaScript.github.io</a>
 
 meta:
-  title: NIS2 Ready
-  description: An interactive self-paced course on the EU NIS2 Directive for public administration and critical-infrastructure staff.
+  title: NIS2 Ready — Cybersecurity Compliance for Public Administration & Critical Infrastructure
+  description: >
+    An interactive, self-paced course (6 units, ~4-6 hours) on the EU NIS2 Directive
+    (2022/2555) for public administration and critical-infrastructure staff. Learn whether
+    your organization is in scope, the concrete cybersecurity measures it requires, how to
+    handle and report incidents, who's liable if things go wrong, and calculate your own
+    NIS2 Readiness Score.
+  image: https://raw.githubusercontent.com/LiaPlayground/nis2/main/assets/images/hero.png
 
 tags:
   - NIS2
@@ -33,6 +48,26 @@ tags:
   - Compliance
 
 collection:
+  - html: >
+      <h2>What You'll Learn</h2>
+      <p>Six self-paced units, roughly four to six hours total &mdash; take them in order,
+      or jump straight to the one your role needs most:</p>
+      <ol>
+        <li><strong>Welcome &amp; Why NIS2 Matters</strong> (lecture, 25 min) &mdash; sets up
+        the course rhythm and the stakes.</li>
+        <li><strong>Are You in Scope? Essential vs. Important Entities</strong> (exercise,
+        40 min) &mdash; determine whether your organization falls under NIS2.</li>
+        <li><strong>The 10 Measures You Actually Need</strong> (exercise, 50 min) &mdash; the
+        Art. 21 risk-management measures, translated into plain language.</li>
+        <li><strong>Handling &amp; Reporting Incidents</strong> (lecture, 45 min) &mdash; the
+        24h / 72h / 1-month incident-reporting timeline.</li>
+        <li><strong>Who's Responsible? Governance &amp; Consequences</strong> (lecture,
+        40 min) &mdash; liability and sanctions under NIS2.</li>
+        <li><strong>Your NIS2 Readiness Score</strong> (exercise, 35 min) &mdash; a live,
+        interactive self-assessment calculator.</li>
+      </ol>
+      <p><em>Units 4&ndash;6 are still in development and will appear below once published.</em></p>
+
   - url: https://raw.githubusercontent.com/LiaPlayground/nis2/main/materials/1-welcome-why-nis2-matters/README.md
     tags:
       - Unit 1

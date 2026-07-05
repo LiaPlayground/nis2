@@ -5,6 +5,8 @@ version:  1.0.0
 language: en
 narrator: English Female
 
+edit:     true
+
 logo:     assets/images/preview-card.png
 
 comment:  Unit 3 of "NIS2 Ready" — the ten Art. 21 risk-management measures, translated into plain language and mapped onto a real IT/OT environment and your own area of responsibility.

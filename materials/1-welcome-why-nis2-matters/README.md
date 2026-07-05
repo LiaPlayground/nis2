@@ -5,6 +5,8 @@ version:  1.1.0
 language: en
 narrator: English Female
 
+edit:     true
+
 logo:     assets/images/preview-card.png
 
 comment:  Unit 1 of "NIS2 Ready" — orientation to the EU NIS2 Directive and why it matters for public administration and critical infrastructure.

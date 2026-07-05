@@ -347,7 +347,7 @@ None — all six unit skeletons are complete. Units 1–3 have full material dra
   3. Monospace (article references, code): IBM Plex Mono
 
 * __Example Prompts:__
-  1. Logo: "A modern, minimalist flat-design logo combining a subtle shield silhouette with a circular ring of small connected nodes evoking the EU stars motif, in deep EU blue (#003399) with a single gold (#FFCC00) accent, clean geometric lines, scalable vector style, professional and trustworthy, no text."
+  1. Logo: "A modern, minimalist flat-design logo for a cybersecurity compliance course: a stylized shield silhouette at the center, encircled by a ring of twelve small connected nodes subtly evoking the EU stars motif without reproducing the official EU emblem — symbolizing security, networked critical infrastructure, and EU-wide regulation. Rendered in deep EU blue (#003399) as the dominant color, with a single gold (#FFCC00) accent on one node or along the shield's edge. Clean geometric lines, flat vector style, no gradients, no photorealism, no text. Professional, trustworthy, and approachable — not cold corporate blue without warmth. Must remain legible and recognizable at favicon size (16×16px) as well as at large scale."
   2. Course image: "A flat, geometric illustration of public-sector employees collaboratively reviewing a digital security checklist in a modern government office, EU blue and gold accent color scheme, soft neutral background, rule-of-thirds composition, soft natural lighting, professional and approachable educational mood, clean vector illustration style."
   3. Diagram: "A clean flat-style infographic showing the NIS2 incident-reporting timeline (24h early warning → 72h notification → 1 month final report), EU blue timeline bar with gold accent milestone markers, minimalist icons, high-contrast accessible colors, English labels."
 
@@ -691,6 +691,20 @@ Known stumbling block: learners with no IT background may read "ten measures" an
   "A flat, geometric vector illustration of a Klinikum Ostheide IT lead and a facilities technician standing together in a hospital corridor, both looking up and pointing at a large wall-mounted board that displays a neat 2-row-by-5-column grid of ten small abstract icons (simple line-icon representations only — a lock, a backup arrow, a key, a document, a handshake, a gear, a chain link, a padlock-shield, a person silhouette, a clock), with one icon on the board highlighted in gold. Diverse public-sector/healthcare staff in practical work attire, consistent flat-illustration character style matching the course's established visuals. Color palette: deep EU blue (#003399) dominant, lighter institutional blue (#336FB5) for the icon grid, gold (#FFCC00) accent reserved for the one highlighted icon, off-white neutral background (#F5F7FA). Rule-of-thirds composition with the board on the right two-thirds and the two-person team on the left third, clear and uncluttered, generous negative space. Soft natural lighting, professional and approachable educational mood, no photorealism, clean minimalist vector style. The image must not contain any readable text; the board and its icons must show abstract shapes and lines only."
 
 ![Flat geometric illustration of a hospital IT lead and facilities technician standing before a wall-mounted board showing a grid of ten small icons, in EU blue and gold on a neutral background.](materials/3-the-10-measures-you-actually-need/assets/images/preview-card.png)
+
+</section>
+
+<section>
+
+#### ten-measures-icon-grid
+
+* __Datei:__ materials/3-the-10-measures-you-actually-need/assets/images/ten-measures-icon-grid.png
+* __Status:__ prompt-ready
+* __Alt-Text:__ Flat geometric infographic showing a 2x5 grid of ten abstract icons representing NIS2 Article 21 risk-management measures, split into two color-coded groups for organizational and technical measures, in EU blue and gold on a neutral background.
+* __Prompt:__
+  "A flat, geometric infographic-style illustration showing a clean 2-row-by-5-column grid of ten small abstract icons, each representing one NIS2 Article 21 risk-management measure (a document with a magnifying glass for risk analysis, an alert bell for incident handling, a backup cloud-arrow for business continuity, a linked-chain icon for supply chain security, a wrench-and-shield for secure system development, a checklist for effectiveness assessment, a graduation cap for training and cyber hygiene, a key for cryptography, a person-badge for HR security and access control, and a fingerprint-lock for multi-factor authentication). The grid is visually split into two clearly separated color-coded clusters: icons representing organizational/people/process measures rendered in deep EU blue (#003399), and icons representing technical measures rendered in lighter institutional blue (#336FB5), with a single thin gold (#FFCC00) connecting line subtly linking the two clusters to show they are part of one unified framework. Clean geometric line-icon style, generous even spacing, off-white neutral background (#F5F7FA), rule-of-thirds composition with the grid centered and slightly upper-frame, professional and approachable educational mood, no photorealism, no gradients, no readable text or labels — icons must be self-contained abstract pictograms only."
+
+![Flat geometric infographic showing a 2x5 grid of ten abstract icons representing NIS2 Article 21 risk-management measures, split into two color-coded groups for organizational and technical measures, in EU blue and gold on a neutral background.](materials/3-the-10-measures-you-actually-need/assets/images/ten-measures-icon-grid.png)
 
 </section>
 

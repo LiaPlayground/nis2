@@ -92,6 +92,8 @@ Here they are — all ten, from Art. 21(2), points (a) to (j). For each one: the
 | 9  | Control who has access to what — staff security, access rights, knowing your assets      | HR security, access control & asset management (i)              | Both           |
 | 10 | Make logins hard to fake, and keep a communication channel that survives an emergency    | Multi-factor authentication & secured emergency comms (j)       | Technical      |
 
+![Flat geometric infographic showing a 2x5 grid of ten abstract icons representing NIS2 Article 21 risk-management measures, split into two color-coded groups for organizational and technical measures, in EU blue and gold on a neutral background.](assets/images/ten-measures-icon-grid.png)
+
     --{{1}}--
 Notice the last column. Count the ones that aren't purely technical — risk rules, supplier management, effectiveness checks, training, access policies. That's most of the list. This is exactly why "hand it to IT and forget it" fails a compliance review.
 
@@ -268,23 +270,32 @@ Three quick questions, not graded — a gut-check on how the ten measures actual
 - [( )] Every organization must implement all ten to the same technical standard
 - [(X)] The measures scale to your organization's size, exposure, and risk
 - [( )] Small organizations are exempt from the measures entirely
+******
 
 > Proportionality is the whole point: same ten categories, implementation sized to you. It's neither "one identical standard for all" nor "small = exempt."
+
+******
 
 **2. Which of these is *not* primarily an IT-department task?**
 
 - [( )] Multi-factor authentication on system logins
 - [( )] Encryption of sensitive data
 - [(X)] Supply-chain security in supplier contracts
+******
 
 > Supply-chain security lives in procurement and contracts — a classic organizational measure. It's the kind of item that quietly fails a review because "IT will handle it," when IT never sees the contract.
+
+******
 
 **3. True or false: buying the right security product is enough to satisfy Art. 21.**
 
 - [( )] True
 - [(X)] False
+******
 
 > False — Art. 21 names no products at all. Several measures (risk rules, training, supplier management, effectiveness checks) can't be bought; they have to be organized and owned.
+
+******
 
 ### Before You Go: One Quick Reflection
 

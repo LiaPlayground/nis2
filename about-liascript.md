@@ -21,7 +21,6 @@ import: https://raw.githubusercontent.com/liaScript/mermaid_template/master/READ
 
 ---
 
-      {{1}}
 > The tool is called [**LiaScript**](https://liascript.github.io/). Over the next sections we'll build up what it is in plain terms, then show how the whole course was actually written with the help of AI, and finally how one text file becomes every format an institution might need.
 >
 > 0. **Why not just PowerPoint or PDF?** — the cracks in the ordinary approach
@@ -58,11 +57,11 @@ At its heart, LiaScript is just plain text — the kind of simple, readable writ
 **LiaScript is plain text — brought to life by three ideas.** Each one appears below as a live example: on top the plain text an author writes, underneath, that very same text running as an interactive page. You don't need to change anything — just look at both halves.
 
 ```markdown
-# 1 · What Is LiaScript?
+## 1 · What Is LiaScript?
 
-At its heart, LiaScript is just plain text — the kind of simple, 
-readable writing you'd type in any text editor, with a few small 
-...
+At its heart, LiaScript is just plain text — the kind of simple, readable writing you'd type 
+in any text editor, with a few small formatting marks like a star for a bold word or a dash 
+for a list. ...
 ```
 
 ### Idea 1 — Separation of content and presentation
@@ -276,8 +275,9 @@ So here is the whole argument, compressed. Everything you saw in the NIS2 course
 - [[X]] Interaction is a language feature, not a plugin
 - [[X]] One source file exports to many formats
 - [[ ]] You need a proprietary editor and a server to run it
-*************
 
-Exactly the point: none of it needs a proprietary tool or a backend. That is the whole idea.
+***********************************************
 
-*************
+The first three are the whole idea; the last one is exactly what LiaScript avoids — an ordinary text file, opened in a browser, is all it takes.
+
+***********************************************

@@ -83,9 +83,9 @@ __Current step:__ <span class="dashboard-status dashboard-status-current">Materi
 
 __Course validation:__ <span class="dashboard-status dashboard-status-blocked">not run</span>
 
-__Sessions complete:__ 0 / 6 (6 / 6 skeletons, 2 materials drafted)
+__Sessions complete:__ 0 / 6 (6 / 6 skeletons, 3 materials drafted)
 
-__Last updated:__ 2026-07-04
+__Last updated:__ 2026-07-06
 
 </div>
 
@@ -93,9 +93,9 @@ __Last updated:__ 2026-07-04
 
 ### Next Commands
 
-1. `:promote-session 3 exercise` (draft full material for Unit 3's skeleton)
-2. `:validate-course 1 lecture` and `:validate-course 2 exercise` (spot-check drafted materials before writing more)
-3. `:promote-session 4 lecture` (draft full material for Unit 4's skeleton)
+1. `:promote-session 4 lecture` (draft full material for Unit 4's skeleton)
+2. `:validate-course 3 exercise` (spot-check Unit 3's new interactive elements — chart, survey matrix, grid)
+3. `:promote-session 5 lecture` (draft full material for Unit 5's skeleton)
 
 </div>
 
@@ -108,7 +108,7 @@ __Last updated:__ 2026-07-04
 | --- | --- |
 | Course context | <span class="dashboard-status dashboard-status-done">done</span> |
 | Templates | <span class="dashboard-status dashboard-status-done">done</span> |
-| Materials | <span class="dashboard-status dashboard-status-current">2 / 6 (6 / 6 skeletons)</span> |
+| Materials | <span class="dashboard-status dashboard-status-current">3 / 6 (6 / 6 skeletons)</span> |
 | Course validation | <span class="dashboard-status dashboard-status-blocked">not run</span> |
 | Persona reviews | <span class="dashboard-status dashboard-status-current">optional</span> |
 
@@ -163,7 +163,7 @@ flowchart LR
 |---|-------|------|----------|----------|------|
 | 1 | Welcome & Why NIS2 Matters | lecture | ✅ | ✅ | ❌ |
 | 2 | Are You in Scope? Essential vs. Important Entities | exercise | ✅ | ✅ | ❌ |
-| 3 | The 10 Measures You Actually Need | exercise | ✅ | ❌ | ❌ |
+| 3 | The 10 Measures You Actually Need | exercise | ✅ | ✅ | ❌ |
 | 4 | Handling & Reporting Incidents | lecture | ✅ | ❌ | ❌ |
 | 5 | Who's Responsible? Governance & Consequences | lecture | ✅ | ❌ | ❌ |
 | 6 | Your NIS2 Readiness Score | exercise | ✅ | ❌ | ❌ |

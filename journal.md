@@ -83,7 +83,7 @@ __Current step:__ <span class="dashboard-status dashboard-status-current">Materi
 
 __Course validation:__ <span class="dashboard-status dashboard-status-blocked">not run</span>
 
-__Sessions complete:__ 0 / 6 (6 / 6 skeletons, 3 materials drafted)
+__Sessions complete:__ 0 / 6 (6 / 6 skeletons, 4 materials drafted)
 
 __Last updated:__ 2026-07-06
 
@@ -93,9 +93,9 @@ __Last updated:__ 2026-07-06
 
 ### Next Commands
 
-1. `:promote-session 4 lecture` (draft full material for Unit 4's skeleton)
-2. `:validate-course 3 exercise` (spot-check Unit 3's new interactive elements — chart, survey matrix, grid)
-3. `:promote-session 5 lecture` (draft full material for Unit 5's skeleton)
+1. `:promote-session 5 lecture` (draft full material for Unit 5's skeleton)
+2. `:validate-course 4 lecture` (spot-check Unit 4's new Mermaid timeline and significance test)
+3. `:promote-session 6 exercise` (draft full material for Unit 6's skeleton, incl. the Readiness Score calculator)
 
 </div>
 
@@ -108,7 +108,7 @@ __Last updated:__ 2026-07-06
 | --- | --- |
 | Course context | <span class="dashboard-status dashboard-status-done">done</span> |
 | Templates | <span class="dashboard-status dashboard-status-done">done</span> |
-| Materials | <span class="dashboard-status dashboard-status-current">3 / 6 (6 / 6 skeletons)</span> |
+| Materials | <span class="dashboard-status dashboard-status-current">4 / 6 (6 / 6 skeletons)</span> |
 | Course validation | <span class="dashboard-status dashboard-status-blocked">not run</span> |
 | Persona reviews | <span class="dashboard-status dashboard-status-current">optional</span> |
 
@@ -164,7 +164,7 @@ flowchart LR
 | 1 | Welcome & Why NIS2 Matters | lecture | ✅ | ✅ | ❌ |
 | 2 | Are You in Scope? Essential vs. Important Entities | exercise | ✅ | ✅ | ❌ |
 | 3 | The 10 Measures You Actually Need | exercise | ✅ | ✅ | ❌ |
-| 4 | Handling & Reporting Incidents | lecture | ✅ | ❌ | ❌ |
+| 4 | Handling & Reporting Incidents | lecture | ✅ | ✅ | ❌ |
 | 5 | Who's Responsible? Governance & Consequences | lecture | ✅ | ❌ | ❌ |
 | 6 | Your NIS2 Readiness Score | exercise | ✅ | ❌ | ❌ |
 
@@ -174,7 +174,7 @@ flowchart LR
 
 ### Open Blockers
 
-None — all six unit skeletons are complete. Units 1–3 have full material drafted, each in its own folder with per-session assets (`materials/1-welcome-why-nis2-matters/README.md`, `materials/2-are-you-in-scope-essential-vs-important/README.md`, `materials/3-the-10-measures-you-actually-need/README.md`); Units 4–6 still need `:promote-session`. No `:validate-course` run yet. Logo not yet generated (`:create-logo`).
+None — all six unit skeletons are complete. Units 1–4 have full material drafted, each in its own folder with per-session assets (`materials/1-welcome-why-nis2-matters/README.md`, `materials/2-are-you-in-scope-essential-vs-important/README.md`, `materials/3-the-10-measures-you-actually-need/README.md`, `materials/4-handling-reporting-incidents/README.md`); Units 5–6 still need `:promote-session`. Unit 4 has one newly inserted `<!-- IMAGE -->` placeholder (hero scene) not yet handed to Artist-Agent. No `:validate-course` run yet. Logo not yet generated (`:create-logo`).
 
 </div>
 
@@ -463,7 +463,7 @@ _Managed by `:create-session`, `:promote-session`, `:coauthor-materials`, and `:
 | 1 | Welcome & Why NIS2 Matters | lecture | ✅ | ✅ | ❌ | |
 | 2 | Are You in Scope? Essential vs. Important Entities | exercise | ✅ | ✅ | ❌ | |
 | 3 | The 10 Measures You Actually Need | exercise | ✅ | ✅ | ❌ | material at materials/3-the-10-measures-you-actually-need/README.md; adds first interactive `<script>` coverage widget + survey matrix; hero image still prompt-ready |
-| 4 | Handling & Reporting Incidents | lecture | ✅ | ❌ | ❌ | |
+| 4 | Handling & Reporting Incidents | lecture | ✅ | ✅ | ❌ | material at materials/4-handling-reporting-incidents/README.md; adds Mermaid reporting-timeline diagram; hero image still placeholder (not yet prompted) |
 | 5 | Who's Responsible? Governance & Consequences | lecture | ✅ | ❌ | ❌ | |
 | 6 | Your NIS2 Readiness Score | exercise | ✅ | ❌ | ❌ | |
 

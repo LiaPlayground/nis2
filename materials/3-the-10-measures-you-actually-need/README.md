@@ -2,14 +2,14 @@
 author:   André Dietrich
 email:    LiaScript@web.de
 version:  2.0.0
-language: en
-narrator: English Female
+language: de
+narrator: Deutsch Female
 
 edit:     true
 
 logo:     assets/images/preview-card.png
 
-comment:  Unit 3 of "NIS2 Ready" — the ten Art. 21 risk-management measures, translated into plain language and mapped onto a real IT/OT environment and your own area of responsibility.
+comment:  Einheit 3 von „NIS2 Ready" — die zehn Risikomanagementmaßnahmen nach Art. 21, in Alltagssprache übersetzt und auf eine reale IT-/OT-Umgebung sowie den eigenen Verantwortungsbereich übertragen.
 
 import: https://raw.githubusercontent.com/liaScript/mermaid_template/master/README.md
 
@@ -26,116 +26,116 @@ import: https://raw.githubusercontent.com/liaScript/mermaid_template/master/READ
 @end
 -->
 
-# The 10 Measures You Actually Need
+# Die 10 Maßnahmen, die Sie wirklich brauchen
 
     --{{0}}--
-Welcome back. This is the unit where "comply with NIS2" stops being a slogan and becomes a list of ten concrete things. In the next fifty minutes we'll translate each of them out of legal language, watch a hospital apply a few of them for real, and then — the part that matters most — you'll mark where your own organization stands on each one.
+Willkommen zurück. Dies ist die Einheit, in der aus „NIS2 einhalten" kein Schlagwort mehr ist, sondern eine Liste von zehn konkreten Dingen wird. In den nächsten fünfzig Minuten übersetzen wir jede dieser Maßnahmen aus der Rechtssprache heraus, sehen zu, wie ein Krankenhaus einige davon tatsächlich anwendet, und dann — der wichtigste Teil — markieren Sie, wo Ihre eigene Organisation bei jeder einzelnen steht.
 
-> **NIS2 Ready — Cybersecurity Compliance for Public Administration & Critical Infrastructure**
+> **NIS2 Ready — Cybersicherheits-Compliance für die öffentliche Verwaltung und kritische Infrastrukturen**
 >
-> *Unit 3 of 6 · exercise · ~50 minutes · builds on Units 1–2, but stands on its own*
+> *Einheit 3 von 6 · Übung · ~50 Minuten · baut auf den Einheiten 1–2 auf, funktioniert aber auch für sich allein*
 
-## Klinikum Ostheide Doesn't Know Where to Start
+## Das Klinikum Ostheide weiß nicht, wo es anfangen soll
 
-![Flat geometric illustration of a hospital IT and facilities team reviewing an abstract checklist against server racks and ward equipment, rendered in EU blue and gold on a neutral background.](assets/images/klinikum-compliance-review-hero.png)
+![Flach-geometrische Illustration eines Krankenhaus-IT- und Facility-Teams, das eine abstrakte Checkliste vor Serverschränken und Stationsgeräten prüft, gerendert in EU-Blau und Gold auf neutralem Hintergrund.](assets/images/klinikum-compliance-review-hero.png)
 
     --{{0}}--
-Let's meet this unit's case organization before we meet the list.
+Lernen wir die Beispielorganisation dieser Einheit kennen, bevor wir uns die Liste ansehen.
 
-**Klinikum Ostheide** is a regional hospital network — several sites, patient-records systems, medical devices on the wards, and the building systems that keep an operating theatre running. Under NIS2 it's an in-scope health-sector entity. It has nothing to do with the Nordholm organizations from earlier units; you don't need to have met them.
+Das **Klinikum Ostheide** ist ein regionaler Krankenhausverbund — mehrere Standorte, Patientenaktensysteme, Medizingeräte auf den Stationen und die Gebäudetechnik, die einen Operationssaal am Laufen hält. Unter NIS2 ist es eine in den Anwendungsbereich fallende Einrichtung des Gesundheitssektors. Es hat nichts mit den Nordholm-Organisationen aus früheren Einheiten zu tun; Sie müssen diese nicht kennengelernt haben.
 
     --{{1}}--
-Its interim IT lead has just been handed a task that sounds simple and isn't: "get us ready for our first NIS2 compliance review." The directive says the organization must take *appropriate and proportionate* risk-management measures — ten categories of them. On paper that's four words. In practice, "ten measures, risk-appropriate" feels abstract until someone translates it into *this* hospital, with *these* systems.
+Der Interims-IT-Leiter hat gerade eine Aufgabe übertragen bekommen, die einfach klingt und es nicht ist: „Machen Sie uns fit für unsere erste NIS2-Compliance-Prüfung." Die Richtlinie sagt, die Organisation müsse *geeignete und verhältnismäßige* Risikomanagementmaßnahmen ergreifen — zehn Kategorien davon. Auf dem Papier sind das vier Worte. In der Praxis fühlt sich „zehn Maßnahmen, risikoangemessen" abstrakt an, bis jemand es auf *dieses* Krankenhaus mit *diesen* Systemen übersetzt.
 
       {{1}}
-> [!WARNING] "Ten measures, risk-appropriate" — where do you even begin?
-> The interim IT lead isn't missing knowledge. They're missing a *translation*: from a legal catalogue into "what does this actually mean I have to do here, on Monday, in this building?"
+> [!WARNING] „Zehn Maßnahmen, risikoangemessen" — wo fängt man da überhaupt an?
+> Dem Interims-IT-Leiter fehlt kein Wissen. Ihm fehlt eine *Übersetzung*: von einem Rechtskatalog zu „was heißt das eigentlich konkret, was ich hier, am Montag, in diesem Gebäude tun muss?"
 
     --{{2}}--
-That translation is this whole unit. And here's the first thing to get straight, because it's the single most common misread of these ten measures.
+Diese Übersetzung ist diese ganze Einheit. Und hier ist das Erste, was klargestellt werden muss, denn es ist das mit Abstand häufigste Missverständnis dieser zehn Maßnahmen.
 
-### This Is Not Just an IT Department Problem
-
-    --{{0}}--
-When people hear "ten cybersecurity measures," they picture firewalls and servers and think: *that's IT's job, not mine.* Some of the ten are indeed technical. But several are squarely organizational — who's allowed to do what, who gets trained, what happens when a supplier fails. Those aren't solved in a server room.
-
-> [!IMPORTANT] Keep this in mind for the whole unit
-> Of the ten measures, roughly half are **organizational or people-focused**, not technical: governance, training, access policies, supplier management, business continuity. If you're not in IT, this list is still about you — and the worked example below will keep flagging which measures are org-wide, not IT-only.
-
-## What Art. 21 Actually Requires
+### Das ist nicht nur ein Problem der IT-Abteilung
 
     --{{0}}--
-Before the list itself, one framing sentence — because it changes how you read all ten.
+Wenn Menschen „zehn Cybersicherheitsmaßnahmen" hören, denken sie an Firewalls und Server und denken: *Das ist Sache der IT, nicht meine.* Einige der zehn sind tatsächlich technisch. Aber mehrere sind eindeutig organisatorisch — wer darf was tun, wer wird geschult, was passiert, wenn ein Lieferant ausfällt. Diese werden nicht in einem Serverraum gelöst.
 
-NIS2 does **not** hand you a shopping list of products to buy. It doesn't name a single tool, brand, or certificate. It requires measures that are *appropriate and proportionate* to your actual risk — sized to how big you are, how exposed you are, and how bad an incident would be.
+> [!IMPORTANT] Behalten Sie das für die gesamte Einheit im Hinterkopf
+> Von den zehn Maßnahmen sind rund die Hälfte **organisatorisch oder personenbezogen**, nicht technisch: Governance, Schulung, Zugriffsrichtlinien, Lieferantenmanagement, Betriebskontinuität. Wenn Sie nicht in der IT arbeiten, betrifft Sie diese Liste trotzdem — und das durchgearbeitete Beispiel weiter unten wird immer wieder kennzeichnen, welche Maßnahmen die gesamte Organisation betreffen und nicht nur die IT.
+
+## Was Art. 21 tatsächlich verlangt
+
+    --{{0}}--
+Vor der Liste selbst noch ein einordnender Satz — denn er verändert, wie Sie alle zehn lesen.
+
+NIS2 händigt Ihnen **keine** Einkaufsliste von Produkten aus, die Sie kaufen sollen. Es nennt kein einziges Werkzeug, keine Marke, kein Zertifikat. Es verlangt Maßnahmen, die *geeignet und verhältnismäßig* zu Ihrem tatsächlichen Risiko sind — bemessen daran, wie groß Sie sind, wie exponiert Sie sind und wie schwerwiegend ein Vorfall wäre.
 
     --{{1}}--
-That word — proportionate — is doing a lot of work, and it's good news.
+Dieses Wort — verhältnismäßig — leistet viel Arbeit, und das ist eine gute Nachricht.
 
       {{1}}
-> [!NOTE] "Appropriate and proportionate" — the legal phrase, once
-> This is **Art. 21(1)**. It means a small municipal office and a large hospital network can both satisfy the *same* measure with very different implementations. Nobody expects a 40-person authority to run a 24/7 security operations centre. The obligation scales to you. *(We come back to what that looks like near the end of this unit.)*
+> [!NOTE] „Geeignet und verhältnismäßig" — die Rechtsformulierung, einmalig
+> Das ist **Art. 21 Abs. 1**. Es bedeutet, dass ein kleines kommunales Amt und ein großer Krankenhausverbund beide *dieselbe* Maßnahme mit sehr unterschiedlicher Umsetzung erfüllen können. Niemand erwartet von einer Behörde mit 40 Personen, dass sie ein 24/7-Security-Operations-Center betreibt. Die Pflicht skaliert mit Ihnen. *(Wir kommen gegen Ende dieser Einheit darauf zurück, wie das aussieht.)*
 
-## The Ten Measures, in Plain Language
+## Die zehn Maßnahmen, in einfacher Sprache
 
     --{{0}}--
-Here they are — all ten, from Art. 21(2), points (a) to (j). For each one: the everyday meaning first, then the formal name in brackets so you recognize it later. Read down the "What it means for you" column; the bracketed terms are there for reference, not for memorizing.
+Hier sind sie — alle zehn, aus Art. 21 Abs. 2, Buchstaben (a) bis (j). Für jede: zuerst die alltägliche Bedeutung, dann der formale Name in Klammern, damit Sie ihn später wiedererkennen. Lesen Sie die Spalte „Was das für Sie bedeutet" von oben nach unten; die Begriffe in Klammern stehen zur Referenz da, nicht zum Auswendiglernen.
 
-| #  | What it means for you (plain language)                                                   | Formal category (Art. 21(2))                                    | Mostly…        |
+| #  | Was das für Sie bedeutet (einfache Sprache)                                              | Formale Kategorie (Art. 21 Abs. 2)                              | Überwiegend…   |
 |----|------------------------------------------------------------------------------------------|-----------------------------------------------------------------|----------------|
-| 1  | Know what could go wrong, and write down the rules for keeping systems safe              | Risk analysis & information-system security policies (a)        | Organizational |
-| 2  | Have a plan for *when* something goes wrong — not just *if*                              | Incident handling (b)                                           | Both           |
-| 3  | Be able to keep running (and recover) after a disruption — backups, disaster recovery    | Business continuity & crisis management (c)                     | Both           |
-| 4  | Make sure the suppliers and services you depend on aren't your weak link                 | Supply-chain security (d)                                       | Organizational |
-| 5  | Build and buy systems securely, and deal with vulnerabilities when they surface          | Security in acquisition, development & maintenance (e)          | Technical      |
-| 6  | Check that your measures actually work — don't just assume they do                       | Assessing the effectiveness of measures (f)                     | Organizational |
-| 7  | Teach people basic cyber hygiene, and train them                                         | Cyber hygiene & security training (g)                           | People         |
-| 8  | Use encryption where it makes sense, with clear rules for it                             | Cryptography & encryption policies (h)                          | Technical      |
-| 9  | Control who has access to what — staff security, access rights, knowing your assets      | HR security, access control & asset management (i)              | Both           |
-| 10 | Make logins hard to fake, and keep a communication channel that survives an emergency    | Multi-factor authentication & secured emergency comms (j)       | Technical      |
+| 1  | Wissen, was schiefgehen könnte, und die Regeln zum sicheren Betrieb der Systeme festhalten | Risikoanalyse & Sicherheit für Informationssysteme (a)          | Organisatorisch |
+| 2  | Einen Plan haben für den Fall, *wenn* etwas schiefgeht — nicht nur *falls*                | Bewältigung von Sicherheitsvorfällen (b)                        | Beides         |
+| 3  | Nach einer Störung weiterlaufen (und wiederherstellen) können — Backups, Notfallwiederherstellung | Aufrechterhaltung des Betriebs & Krisenmanagement (c)           | Beides         |
+| 4  | Sicherstellen, dass die Lieferanten und Dienste, von denen Sie abhängen, nicht Ihr Schwachpunkt sind | Sicherheit der Lieferkette (d)                                  | Organisatorisch |
+| 5  | Systeme sicher erwerben und entwickeln und Schwachstellen begegnen, wenn sie auftauchen   | Sicherheit bei Erwerb, Entwicklung & Wartung (e)               | Technisch      |
+| 6  | Prüfen, dass Ihre Maßnahmen tatsächlich wirken — nicht einfach annehmen, dass sie es tun  | Bewertung der Wirksamkeit der Maßnahmen (f)                     | Organisatorisch |
+| 7  | Menschen grundlegende Cyberhygiene vermitteln und sie schulen                             | Cyberhygiene & Schulungen (g)                                   | Personen       |
+| 8  | Verschlüsselung dort einsetzen, wo es sinnvoll ist, mit klaren Regeln dafür               | Kryptografie & Verschlüsselung (h)                             | Technisch      |
+| 9  | Steuern, wer worauf Zugriff hat — Personalsicherheit, Zugriffsrechte, die eigenen Anlagen kennen | Personalsicherheit, Zugriffskontrolle & Anlagenmanagement (i)  | Beides         |
+| 10 | Anmeldungen fälschungssicher machen und einen Kommunikationskanal erhalten, der einen Notfall übersteht | Multi-Faktor-Authentifizierung & gesicherte Notfallkommunikation (j) | Technisch |
 
-![Flat geometric infographic showing a 2x5 grid of ten abstract icons representing NIS2 Article 21 risk-management measures, split into two color-coded groups for organizational and technical measures, in EU blue and gold on a neutral background.](assets/images/ten-measures-icon-grid.png)
+![Flach-geometrische Infografik mit einem 2x5-Raster aus zehn abstrakten Symbolen, die die NIS2-Risikomanagementmaßnahmen nach Artikel 21 darstellen, aufgeteilt in zwei farblich codierte Gruppen für organisatorische und technische Maßnahmen, in EU-Blau und Gold auf neutralem Hintergrund.](assets/images/ten-measures-icon-grid.png)
 
     --{{1}}--
-Notice the last column. Count the ones that aren't purely technical — risk rules, supplier management, effectiveness checks, training, access policies. That's most of the list. This is exactly why "hand it to IT and forget it" fails a compliance review.
+Beachten Sie die letzte Spalte. Zählen Sie die Maßnahmen, die nicht rein technisch sind — Risikoregeln, Lieferantenmanagement, Wirksamkeitsprüfungen, Schulung, Zugriffsrichtlinien. Das ist der Großteil der Liste. Genau deshalb scheitert „an die IT übergeben und vergessen" bei einer Compliance-Prüfung.
 
       {{1}}
-> [!TIP] The one-line test for whether a measure is "yours"
-> Ask: *could this fail because of a decision, a habit, or a gap in responsibility — rather than a missing piece of technology?* If yes, it's at least partly an organizational measure, and it needs an owner outside IT.
+> [!TIP] Der Ein-Satz-Test, ob eine Maßnahme „Ihre" ist
+> Fragen Sie: *Könnte dies wegen einer Entscheidung, einer Gewohnheit oder einer Lücke in der Verantwortung scheitern — statt wegen fehlender Technik?* Wenn ja, ist es zumindest teilweise eine organisatorische Maßnahme, und sie braucht eine verantwortliche Person außerhalb der IT.
 
-## A Quick Feel for Where You Stand
+## Ein schneller Eindruck davon, wo Sie stehen
 
     --{{0}}--
-Before the worked example, a thirty-second interactive aside — and your first taste of something you'll do properly in Unit 6. Don't overthink it: of the ten measures, roughly how many are genuinely **in place**, how many are only **partial** (started, or untested), and let the rest fall into **missing**. Move the two sliders and watch your picture take shape.
+Vor dem durchgearbeiteten Beispiel ein interaktiver Dreißig-Sekunden-Exkurs — und ein erster Vorgeschmack auf etwas, das Sie in Einheit 6 richtig machen werden. Denken Sie nicht zu viel nach: Wie viele der zehn Maßnahmen sind wirklich **vorhanden**, wie viele nur **teilweise** (begonnen oder ungetestet), und der Rest fällt dann in **fehlt**. Bewegen Sie die beiden Schieberegler und beobachten Sie, wie Ihr Bild Gestalt annimmt.
 
 <section>
 
-> [!TIP] 👉 This one is interactive — drag the sliders
-> The two sliders below are live. As you move them, the bar chart underneath recomputes and recolors instantly, and "missing" fills in the remainder for you. Try it — nothing here is saved or graded.
+> [!TIP] 👉 Diese Übung ist interaktiv — ziehen Sie an den Schiebereglern
+> Die beiden Schieberegler unten sind live. Während Sie sie bewegen, berechnet und färbt sich das Balkendiagramm darunter sofort neu, und „fehlt" füllt den Rest für Sie auf. Probieren Sie es aus — hier wird nichts gespeichert oder bewertet.
 
-Measures genuinely **in place** (working, and you could show evidence):
+Maßnahmen, die wirklich **vorhanden** sind (funktionierend, und Sie könnten Nachweise vorlegen):
 
-<script input="range" value="3" min="0" max="10" step="1" output="InPlace">@input</script> in place
+<script input="range" value="3" min="0" max="10" step="1" output="InPlace">@input</script> vorhanden
 
-Measures only **partial** (started, incomplete, or untested):
+Maßnahmen, die nur **teilweise** vorhanden sind (begonnen, unvollständig oder ungetestet):
 
-<script input="range" value="2" min="0" max="10" step="1" output="Partial">@input</script> partial
+<script input="range" value="2" min="0" max="10" step="1" output="Partial">@input</script> teilweise
 
 <script style="display: inline-block; width: 100%">
 let inplace = @input(`InPlace`)
 let partial = @input(`Partial`)
-// keep the two sliders honest: they can't sum to more than ten
+// beide Regler ehrlich halten: zusammen nie mehr als zehn
 let capped_partial = Math.min(partial, 10 - inplace)
 let missing = Math.max(0, 10 - inplace - capped_partial)
 let option = {
   title: {
-    text: "Your ten NIS2 measures, right now",
+    text: "Ihre zehn NIS2-Maßnahmen, jetzt gerade",
     left: "center",
     textStyle: { fontSize: 15 }
   },
   tooltip: { trigger: "axis" },
-  xAxis: { type: "category", data: ["In place", "Partial", "Missing"] },
-  yAxis: { type: "value", max: 10, minInterval: 1, name: "measures" },
+  xAxis: { type: "category", data: ["Vorhanden", "Teilweise", "Fehlt"] },
+  yAxis: { type: "value", max: 10, minInterval: 1, name: "Maßnahmen" },
   series: [{
     type: "bar",
     barWidth: "55%",
@@ -151,18 +151,18 @@ let option = {
 </script>
 
     --{{1}}--
-Whatever shape that chart just took — a wall of red, a healthy block of green, or something in between — it's a snapshot, not a grade. The point isn't the exact numbers; it's that "compliant / not compliant" was always a false choice. Readiness is a spectrum, and you can see today where on it you sit.
+Welche Gestalt dieses Diagramm gerade angenommen hat — eine Wand aus Rot, ein gesunder Block aus Grün oder etwas dazwischen — es ist eine Momentaufnahme, keine Note. Es geht nicht um die genauen Zahlen; es geht darum, dass „konform / nicht konform" immer eine falsche Wahl war. Bereitschaft ist ein Spektrum, und Sie können heute sehen, wo darauf Sie sich befinden.
 
       {{1}}
-> [!NOTE] Look at what just happened here
-> Two sliders, a live bar chart that recolors and recomputes as you drag, "missing" filling in the remainder automatically — and **all of it is about a dozen lines of plain text inside this document**. No app, no server, no plugin, no separate tool. Double-click the chart in LiaScript to see the code behind it. In Unit 6 this same idea grows into your full **NIS2 Readiness Score**.
+> [!NOTE] Sehen Sie sich an, was hier gerade passiert ist
+> Zwei Schieberegler, ein Live-Balkendiagramm, das sich neu färbt und neu berechnet, während Sie ziehen, „fehlt", das den Rest automatisch auffüllt — und **all das ist etwa ein Dutzend Zeilen einfacher Text in diesem Dokument**. Keine App, kein Server, kein Plugin, kein separates Werkzeug. Doppelklicken Sie in LiaScript auf das Diagramm, um den Code dahinter zu sehen. In Einheit 6 wächst dieselbe Idee zu Ihrem vollständigen **NIS2-Readiness-Score** heran.
 
 </section>
 
-## Worked Example: Klinikum Ostheide Applies Four of the Ten
+## Durchgearbeitetes Beispiel: Das Klinikum Ostheide wendet vier der zehn an
 
     --{{0}}--
-Let's stop listing and start applying. Here are four of the ten measures, worked through against Klinikum Ostheide's actual environment — showing the *reasoning*, not just ticking a box. Read across all four: notice how the same directive produces four completely different kinds of work — testing a backup, deliberately *not* over-securing, writing a contract clause, and training people.
+Hören wir auf aufzulisten und fangen wir an anzuwenden. Hier sind vier der zehn Maßnahmen, durchgearbeitet an der tatsächlichen Umgebung des Klinikums Ostheide — sie zeigen die *Überlegung*, nicht nur das Abhaken eines Kästchens. Lesen Sie alle vier: Beachten Sie, wie dieselbe Richtlinie vier völlig unterschiedliche Arten von Arbeit hervorbringt — ein Backup testen, bewusst *nicht* übersichern, eine Vertragsklausel formulieren und Menschen schulen.
 
 <section>
 
@@ -170,147 +170,147 @@ Let's stop listing and start applying. Here are four of the ten measures, worked
 
 <div style="border: 1px solid #d7e0ea; border-top: 4px solid #1B7A44; border-radius: 8px; padding: 1rem; background: #ffffff;">
 
-#### Measure 3 — Business continuity: the patient-records backup
+#### Maßnahme 3 — Aufrechterhaltung des Betriebs: das Patientenakten-Backup
 
-Klinikum Ostheide keeps electronic patient records. If those records are encrypted by ransomware on a Friday night, can the wards still function on Saturday morning?
+Das Klinikum Ostheide führt elektronische Patientenakten. Wenn diese Akten an einem Freitagabend durch Ransomware verschlüsselt werden, können die Stationen am Samstagmorgen noch funktionieren?
 
-- **Appropriate implementation:** regular, *tested* backups kept offline or isolated, plus a recovery procedure a stressed night-shift team could actually follow.
-- **Why "tested" matters:** a backup nobody has ever restored is a hope, not a plan. This is business *continuity*, not "a backup somewhere."
+- **Geeignete Umsetzung:** regelmäßige, *getestete* Backups, offline oder isoliert aufbewahrt, plus ein Wiederherstellungsverfahren, dem ein gestresstes Nachtschicht-Team tatsächlich folgen könnte.
+- **Warum „getestet" wichtig ist:** ein Backup, das noch nie jemand wiederhergestellt hat, ist eine Hoffnung, kein Plan. Das ist *Aufrechterhaltung* des Betriebs, nicht „ein Backup irgendwo".
 
 </div>
 
 <div style="border: 1px solid #d7e0ea; border-top: 4px solid #003399; border-radius: 8px; padding: 1rem; background: #ffffff;">
 
-#### Measure 10 — MFA for clinical-staff logins
+#### Maßnahme 10 — MFA für Anmeldungen des klinischen Personals
 
-Clinicians log into sensitive systems, often from shared workstations, often in a hurry.
+Klinisches Personal meldet sich an sensiblen Systemen an, oft an gemeinsam genutzten Arbeitsplätzen, oft in Eile.
 
-- **Appropriate implementation:** multi-factor authentication on clinical systems — a second factor beyond a password, chosen so it doesn't slow down emergency care.
-- **The proportionality tension:** security that blocks a clinician mid-resuscitation is the *wrong* security. Here "appropriate" explicitly means fast — the measure and patient safety are designed together.
+- **Geeignete Umsetzung:** Multi-Faktor-Authentifizierung an klinischen Systemen — ein zweiter Faktor über das Passwort hinaus, so gewählt, dass er die Notfallversorgung nicht verlangsamt.
+- **Das Spannungsfeld der Verhältnismäßigkeit:** Sicherheit, die eine Ärztin mitten in der Reanimation blockiert, ist die *falsche* Sicherheit. Hier bedeutet „geeignet" ausdrücklich schnell — die Maßnahme und die Patientensicherheit werden gemeinsam entworfen.
 
 </div>
 
 <div style="border: 1px solid #d7e0ea; border-top: 4px solid #8A6D00; border-radius: 8px; padding: 1rem; background: #ffffff;">
 
-#### Measure 4 — Supply-chain security: the device vendor
+#### Maßnahme 4 — Sicherheit der Lieferkette: der Geräte-Lieferant
 
-A modern hospital runs on outside equipment — imaging systems, monitoring devices, their remote-maintenance links.
+Ein modernes Krankenhaus lebt von externer Ausrüstung — Bildgebungssystemen, Überwachungsgeräten, deren Fernwartungszugängen.
 
-- **Appropriate implementation:** know which suppliers can reach into your systems, and hold them to security expectations in the *contract* — their weak password becomes your incident.
-- **Why it's organizational:** solved in procurement and contracts, not a firewall rule. Often nobody in IT even *sees* the vendor's remote-access channel until it's the entry point.
+- **Geeignete Umsetzung:** wissen, welche Lieferanten in Ihre Systeme hineingreifen können, und sie im *Vertrag* auf Sicherheitserwartungen verpflichten — ihr schwaches Passwort wird zu Ihrem Sicherheitsvorfall.
+- **Warum es organisatorisch ist:** gelöst im Einkauf und in Verträgen, nicht durch eine Firewall-Regel. Oft *sieht* niemand in der IT den Fernzugangskanal des Lieferanten überhaupt, bis er das Einfallstor ist.
 
 </div>
 
 <div style="border: 1px solid #d7e0ea; border-top: 4px solid #C0392B; border-radius: 8px; padding: 1rem; background: #ffffff;">
 
-#### Measure 7 — Cyber hygiene & training: everyone
+#### Maßnahme 7 — Cyberhygiene & Schulung: alle
 
-The person who clicks the convincing phishing email is usually not in IT.
+Die Person, die auf die überzeugende Phishing-E-Mail klickt, ist meist nicht in der IT.
 
-- **Appropriate implementation:** basic, recurring training for *all* staff — spotting suspicious messages, reporting fast, not reusing passwords — plus the leadership training NIS2 requires (Unit 5).
-- **The point:** this measure has no server in it at all. It's the clearest proof that NIS2 compliance is an organization-wide job.
+- **Geeignete Umsetzung:** grundlegende, wiederkehrende Schulung für *alle* Mitarbeitenden — verdächtige Nachrichten erkennen, schnell melden, Passwörter nicht wiederverwenden — plus die Schulung der Leitung, die NIS2 verlangt (Einheit 5).
+- **Der Kernpunkt:** diese Maßnahme enthält überhaupt keinen Server. Sie ist der klarste Beweis dafür, dass NIS2-Compliance eine organisationsweite Aufgabe ist.
 
 </div>
 
 </div>
 
     --{{1}}--
-Four measures, four very different shapes — one about testing backups, one about *not* over-securing, one about contracts, one about people. That variety is the real lesson: "ten measures" is not ten IT tasks.
+Vier Maßnahmen, vier sehr unterschiedliche Gestalten — eine über das Testen von Backups, eine über das *Nicht*-Übersichern, eine über Verträge, eine über Menschen. Diese Vielfalt ist die eigentliche Lehre: „zehn Maßnahmen" sind nicht zehn IT-Aufgaben.
 
       {{1}}
-> [!NOTE] Proportionality in one sentence
-> A large hospital network tests backups across many sites and audits dozens of vendors; a 40-person municipal office might test one backup and manage three suppliers. **Same measures, sized to the organization** — that's Art. 21 working as intended.
+> [!NOTE] Verhältnismäßigkeit in einem Satz
+> Ein großer Krankenhausverbund testet Backups über viele Standorte hinweg und prüft Dutzende von Lieferanten; ein kommunales Amt mit 40 Personen testet vielleicht ein Backup und verwaltet drei Lieferanten. **Dieselben Maßnahmen, bemessen auf die Organisation** — so wirkt Art. 21 wie beabsichtigt.
 
 </section>
 
-## Now Map the Ten Against Your Own Area
+## Ordnen Sie nun die zehn Ihrem eigenen Bereich zu
 
     --{{0}}--
-Here's the exercise this unit is built around. For each of the ten measures, mark where your organization — or the part of it you're responsible for — actually stands today. Be honest: a wall of "missing" is a *useful* result, not a failure. It's a to-do list you didn't have five minutes ago.
+Hier ist die Übung, um die herum diese Einheit aufgebaut ist. Markieren Sie für jede der zehn Maßnahmen, wo Ihre Organisation — oder der Teil, für den Sie verantwortlich sind — heute tatsächlich steht. Seien Sie ehrlich: eine Wand aus „fehlt" ist ein *nützliches* Ergebnis, kein Scheitern. Es ist eine To-do-Liste, die Sie vor fünf Minuten noch nicht hatten.
 
     --{{1}}--
-Use the three columns: **In place** (working, and you could show evidence), **Partial** (started, incomplete, or untested), **Missing** (not really there yet).
+Nutzen Sie die drei Spalten: **vorhanden** (funktionierend, und Sie könnten Nachweise vorlegen), **teilweise** (begonnen, unvollständig oder ungetestet), **fehlt** (noch nicht wirklich vorhanden).
 
       {{1}}
 <section>
 
-[( In place )( Partial )( Missing )]
-[                                  ] 1 — Risk rules & security policies written down
-[                                  ] 2 — A plan for handling incidents when they happen
-[                                  ] 3 — Tested backups & a recovery / continuity plan
-[                                  ] 4 — Supplier / supply-chain security in contracts
-[                                  ] 5 — Secure system acquisition & vulnerability handling
-[                                  ] 6 — Checking that the measures actually work
-[                                  ] 7 — Cyber-hygiene basics & staff training
-[                                  ] 8 — Encryption used where it makes sense
-[                                  ] 9 — Access control, HR security & asset inventory
-[                                  ] 10 — Multi-factor logins & emergency communications
+[( vorhanden )( teilweise )( fehlt )]
+[                                  ] 1 — Risikoregeln & Sicherheitsrichtlinien schriftlich festgehalten
+[                                  ] 2 — Ein Plan zur Bewältigung von Vorfällen, wenn sie eintreten
+[                                  ] 3 — Getestete Backups & ein Wiederherstellungs-/Kontinuitätsplan
+[                                  ] 4 — Lieferanten-/Lieferkettensicherheit in Verträgen
+[                                  ] 5 — Sicherer Systemerwerb & Umgang mit Schwachstellen
+[                                  ] 6 — Prüfung, ob die Maßnahmen tatsächlich wirken
+[                                  ] 7 — Cyberhygiene-Grundlagen & Mitarbeiterschulung
+[                                  ] 8 — Verschlüsselung eingesetzt, wo sie sinnvoll ist
+[                                  ] 9 — Zugriffskontrolle, Personalsicherheit & Anlageninventar
+[                                  ] 10 — Multi-Faktor-Anmeldungen & Notfallkommunikation
 
     --{{0}}--
-Now the two follow-ups that turn the grid into action.
+Nun die zwei Anschlussfragen, die aus dem Raster Handeln machen.
 
-Pick **one** measure you marked "Missing" or "Partial". What is the single smallest next step that would move it forward — and who would own it?
-
-[[___ ___ ___]]
-
-Which of the ten surprised you by being more *organizational* than technical — something you'd previously have assumed was "IT's problem"?
+Wählen Sie **eine** Maßnahme, die Sie mit „fehlt" oder „teilweise" markiert haben. Was ist der einzelne kleinste nächste Schritt, der sie voranbringen würde — und wer wäre dafür verantwortlich?
 
 [[___ ___ ___]]
 
-> [!NOTE] Not graded, not filed anywhere
-> This worksheet is a private self-diagnosis. Nothing here is scored or stored beyond your own browser — it exists to give you a starting map, not a report card.
+Welche der zehn hat Sie überrascht, weil sie eher *organisatorisch* als technisch ist — etwas, von dem Sie zuvor angenommen hätten, es sei „ein Problem der IT"?
+
+[[___ ___ ___]]
+
+> [!NOTE] Nicht bewertet, nirgends abgelegt
+> Dieses Arbeitsblatt ist eine private Selbstdiagnose. Nichts hier wird über Ihren eigenen Browser hinaus bewertet oder gespeichert — es dient dazu, Ihnen eine Ausgangskarte zu geben, kein Zeugnis.
 
 </section>
 
-## Wrap-Up & Self-Check
+## Zusammenfassung & Selbsttest
 
     --{{0}}--
-Three quick questions, not graded — a gut-check on how the ten measures actually work.
+Drei kurze Fragen, nicht bewertet — ein Bauchgefühl-Check, wie die zehn Maßnahmen tatsächlich wirken.
 
-**1. What does "appropriate and proportionate" mean for the Art. 21 measures?**
+**1. Was bedeutet „geeignet und verhältnismäßig" für die Maßnahmen nach Art. 21?**
 
-- [( )] Every organization must implement all ten to the same technical standard
-- [(X)] The measures scale to your organization's size, exposure, and risk
-- [( )] Small organizations are exempt from the measures entirely
+- [( )] Jede Organisation muss alle zehn nach demselben technischen Standard umsetzen
+- [(X)] Die Maßnahmen skalieren mit Größe, Exponiertheit und Risiko Ihrer Organisation
+- [( )] Kleine Organisationen sind von den Maßnahmen vollständig befreit
 ******
 
-> Proportionality is the whole point: same ten categories, implementation sized to you. It's neither "one identical standard for all" nor "small = exempt."
-
-******
-
-**2. Which of these is *not* primarily an IT-department task?**
-
-- [( )] Multi-factor authentication on system logins
-- [( )] Encryption of sensitive data
-- [(X)] Supply-chain security in supplier contracts
-******
-
-> Supply-chain security lives in procurement and contracts — a classic organizational measure. It's the kind of item that quietly fails a review because "IT will handle it," when IT never sees the contract.
+> Verhältnismäßigkeit ist der ganze Kern: dieselben zehn Kategorien, die Umsetzung auf Sie bemessen. Es ist weder „ein identischer Standard für alle" noch „klein = befreit".
 
 ******
 
-**3. True or false: buying the right security product is enough to satisfy Art. 21.**
+**2. Welche dieser Aufgaben ist *nicht* in erster Linie Sache der IT-Abteilung?**
 
-- [( )] True
-- [(X)] False
+- [( )] Multi-Faktor-Authentifizierung bei System-Anmeldungen
+- [( )] Verschlüsselung sensibler Daten
+- [(X)] Sicherheit der Lieferkette in Lieferantenverträgen
 ******
 
-> False — Art. 21 names no products at all. Several measures (risk rules, training, supplier management, effectiveness checks) can't be bought; they have to be organized and owned.
+> Die Sicherheit der Lieferkette lebt im Einkauf und in Verträgen — eine klassische organisatorische Maßnahme. Es ist die Art von Punkt, der bei einer Prüfung leise durchfällt, weil „das macht die IT schon", obwohl die IT den Vertrag nie sieht.
 
 ******
 
-### Before You Go: One Quick Reflection
+**3. Richtig oder falsch: Das richtige Sicherheitsprodukt zu kaufen, reicht aus, um Art. 21 zu erfüllen.**
 
-Look back at your self-assessment grid. If a compliance review happened next month, which single measure would you least want them to look at closely — and what's stopping you from fixing it first?
+- [( )] Richtig
+- [(X)] Falsch
+******
+
+> Falsch — Art. 21 nennt überhaupt keine Produkte. Mehrere Maßnahmen (Risikoregeln, Schulung, Lieferantenmanagement, Wirksamkeitsprüfungen) lassen sich nicht kaufen; sie müssen organisiert und verantwortet werden.
+
+******
+
+### Bevor Sie gehen: eine kurze Reflexion
+
+Blicken Sie zurück auf Ihr Selbstbewertungs-Raster. Wenn nächsten Monat eine Compliance-Prüfung stattfände, welche einzelne Maßnahme würden Sie am wenigsten gerne genau unter die Lupe genommen sehen — und was hindert Sie daran, sie zuerst zu beheben?
 
 [[___ ___ ___]]
 
-### Up Next
+### Als Nächstes
 
-**Unit 4 — Handling & Reporting Incidents.** We'll stay with Klinikum Ostheide — but this time the incident is real, not a drill. When the Monday-morning moment *isn't* a false alarm, NIS2 puts a clock on you: 24 hours, 72 hours, one month. Unit 4 shows exactly what's due, and when.
+**Einheit 4 — Bewältigung und Meldung von Sicherheitsvorfällen.** Wir bleiben beim Klinikum Ostheide — aber diesmal ist der Vorfall echt, keine Übung. Wenn der Montagmorgen-Moment *kein* Fehlalarm ist, stellt Ihnen NIS2 eine Uhr: 24 Stunden, 72 Stunden, ein Monat. Einheit 4 zeigt genau, was wann fällig ist.
 
-**References:**
+**Quellen:**
 
-1. Directive (EU) 2022/2555 (NIS2), Art. 21 (cybersecurity risk-management measures, incl. points a–j) — `data/cybersichert.pdf`
-2. Directive (EU) 2022/2555 (NIS2), Art. 20 (governance — management-body approval/oversight, expanded in Unit 5) — `data/cybersichert.pdf`
-3. Course Agenda — `journal.md` → `## Agenda`
+1. Richtlinie (EU) 2022/2555 (NIS2), Art. 21 (Risikomanagementmaßnahmen im Bereich der Cybersicherheit, inkl. Buchstaben a–j) — `data/cybersichert.pdf`
+2. Richtlinie (EU) 2022/2555 (NIS2), Art. 20 (Governance — Billigung/Überwachung durch das Leitungsorgan, in Einheit 5 vertieft) — `data/cybersichert.pdf`
+3. Kursagenda — `journal.md` → `## Agenda`

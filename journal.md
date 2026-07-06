@@ -195,7 +195,7 @@ None — all six unit skeletons are complete. Units 1–3 have full material dra
 
 * __Course Type:__
   1. Type: self-paced
-  2. Working Title: NIS2 Ready — Cybersecurity Compliance for Public Administration & Critical Infrastructure
+  2. Working Title: NIS2 Ready — Cybersicherheits-Compliance für öffentliche Verwaltung & kritische Infrastruktur
 
 * __Terminology:__
   1. sessions-called: unit
@@ -212,10 +212,11 @@ None — all six unit skeletons are complete. Units 1–3 have full material dra
   2. Session folder naming: `{number}-{slug}` (e.g. `materials/1-welcome-why-nis2-matters/`)
 
 * __Conventions & Standards:__
-  1. Language: en
+  1. Language: de
   2. Tone: formal
-  3. Person: you
+  3. Person: Sie
   4. Accessibility: required
+  5. NIS2 terminology: use the official German Amtsfassung of Directive (EU) 2022/2555 — *wesentliche Einrichtung* (essential entity), *wichtige Einrichtung* (important entity), *erheblicher Sicherheitsvorfall* (significant incident), *Risikomanagementmaßnahmen* (risk-management measures), *Anhang I/II* (Annex I/II), *Leitungsorgan* (management body), *Sicherheit der Lieferkette* (supply-chain security). Verbatim quotes from the directive text stay in English and are marked as quotes.
 
 * __LiaScript conventions:__
   - Knowledge checks: native quiz syntax (single/multi-choice, text, matrix) — no template needed
@@ -237,52 +238,52 @@ None — all six unit skeletons are complete. Units 1–3 have full material dra
 ## Outline
 
 * __Title:__
-  NIS2 Ready — Cybersecurity Compliance for Public Administration & Critical Infrastructure
+  NIS2 Ready — Cybersicherheits-Compliance für öffentliche Verwaltung & kritische Infrastruktur
 
 * __Target Audience:__
-  Employees across ministries, public administrations, and critical-infrastructure organizations (energy, health, digital infrastructure, transport, etc.) that fall under the EU NIS2 Directive — a mixed audience of decision-makers, IT/security staff, and general employees, with no deep technical or legal background assumed.
+  Mitarbeitende in Ministerien, öffentlichen Verwaltungen und Organisationen der kritischen Infrastruktur (Energie, Gesundheit, digitale Infrastruktur, Verkehr usw.), die unter die EU-NIS2-Richtlinie fallen — ein gemischtes Publikum aus Entscheidungsträgerinnen und Entscheidungsträgern, IT-/Sicherheitspersonal und allgemeinen Beschäftigten, ohne vorausgesetztes tiefes technisches oder juristisches Vorwissen.
 
 * __Time Commitment:__
-  ~4–6 hours total, split into short self-paced units (20–40 min each) that fit around daily work.
+  Insgesamt ca. 4–6 Stunden, aufgeteilt in kurze, selbstgesteuerte Einheiten (je 20–40 Min.), die sich in den Arbeitsalltag einfügen.
 
 * __Abstract:__
-  This course introduces the EU NIS2 Directive (2022/2555) and translates its legal requirements into practical, actionable guidance for public-sector and critical-infrastructure organizations. Learners explore why NIS2 exists, whether their organization is affected, what concrete cybersecurity measures it requires, how to handle and report incidents, and what happens if obligations are ignored. Through interactive scenarios, checklists, and diagrams, the course turns a dense legal text into a confident, practical understanding — enabling participants to act, not just comply on paper.
+  Dieser Kurs führt in die EU-NIS2-Richtlinie (2022/2555) ein und übersetzt ihre rechtlichen Anforderungen in praxisnahe, umsetzbare Orientierung für Organisationen der öffentlichen Verwaltung und der kritischen Infrastruktur. Die Teilnehmenden erfahren, warum NIS2 existiert, ob ihre Organisation betroffen ist, welche konkreten Cybersicherheitsmaßnahmen gefordert sind, wie Sicherheitsvorfälle zu behandeln und zu melden sind und welche Folgen die Missachtung der Pflichten hat. Über interaktive Szenarien, Checklisten und Diagramme wird ein dichter Rechtstext in ein sicheres, praktisches Verständnis überführt — damit die Teilnehmenden handeln können und nicht nur auf dem Papier Compliance erfüllen.
 
 * __Learning Objectives:__
-  1. Determine whether your organization or role falls under NIS2 as an "essential" or "important" entity, based on the sector criteria in Art. 2–3 and Annexes I–II.
-  2. Explain the core cybersecurity risk-management measures required by Art. 21 (the 10-point catalogue) and translate them into concrete actions for your own area of responsibility.
-  3. Apply the incident-reporting process and timeline (Art. 23) to a realistic incident scenario — knowing what to report, to whom, and by when.
-  4. Assess the governance and management-liability implications of NIS2 (Art. 20), including the consequences of non-compliance (sanctions, Art. 32–34).
-  5. Use a self-assessment checklist to evaluate your own organization's current NIS2 readiness.
+  1. Bestimmen, ob Ihre Organisation oder Rolle als „wesentliche" oder „wichtige" Einrichtung unter NIS2 fällt — anhand der Sektorkriterien in Art. 2–3 und den Anhängen I–II.
+  2. Die zentralen Risikomanagementmaßnahmen für Cybersicherheit nach Art. 21 (der 10-Punkte-Katalog) erläutern und in konkrete Handlungen für den eigenen Verantwortungsbereich übersetzen.
+  3. Den Melde­prozess und die Meldefristen (Art. 23) auf ein realistisches Vorfallszenario anwenden — wissen, was, an wen und bis wann zu melden ist.
+  4. Die Auswirkungen von NIS2 auf Governance und die Haftung der Leitung (Art. 20) einschätzen, einschließlich der Folgen von Verstößen (Sanktionen, Art. 32–34).
+  5. Anhand einer Selbstbewertungs-Checkliste die aktuelle NIS2-Readiness der eigenen Organisation bewerten.
 
 ---
 
 ## Didactics
 
 * __Didactic Concept:__
-  Modular, learner-driven units built around a fixed rhythm: Hook (a realistic ministry/critical-infrastructure scenario) → Example → Explanation (tied back to the actual article text) → Task/Checklist → Self-Check Quiz. Scaffolding follows a "relevance first, detail second" principle — each unit opens by establishing why it matters before going into specifics. Error culture is low-stakes: quizzes are for self-diagnosis, not grading; nobody "passes" or "fails," mistakes are treated as part of learning.
+  Modulare, selbstgesteuerte Einheiten mit festem Rhythmus: Aufhänger (ein realistisches Szenario aus Verwaltung/kritischer Infrastruktur) → Beispiel → Erläuterung (mit Rückbezug auf den tatsächlichen Artikeltext) → Aufgabe/Checkliste → Selbstkontroll-Quiz. Das Scaffolding folgt dem Prinzip „Relevanz zuerst, Details danach" — jede Einheit beginnt damit, die Bedeutung zu klären, bevor es ins Detail geht. Die Fehlerkultur ist niedrigschwellig: Quizze dienen der Selbstdiagnose, nicht der Bewertung; niemand „besteht" oder „fällt durch", Fehler werden als Teil des Lernens verstanden.
 
 * __Professor Persona:__
-  Mika Reinhardt — a cybersecurity compliance coach who has spent the last decade helping public administrations and infrastructure operators across Europe translate EU regulation into everyday practice. Not a lawyer, not a hacker — someone who sits between IT, legal, and leadership, and specializes in making dense directives make sense to people who aren't specialists. Speaks with calm, practical confidence, favors concrete examples over legalese, and treats every learner as capable of understanding this material without being talked down to.
+  Mika Reinhardt — Coach für Cybersicherheits-Compliance, der seit einem Jahrzehnt öffentliche Verwaltungen und Infrastrukturbetreiber in ganz Europa dabei unterstützt, EU-Regulierung in den Arbeitsalltag zu übersetzen. Weder Jurist noch Hacker — jemand, der zwischen IT, Recht und Leitung steht und darauf spezialisiert ist, dichte Richtlinien für Nicht-Fachleute verständlich zu machen. Spricht mit ruhiger, praktischer Souveränität, bevorzugt konkrete Beispiele statt Juristendeutsch und traut jeder und jedem Lernenden zu, dieses Material zu verstehen — ohne von oben herab zu belehren.
 
 * __Teaching Style:__
-  practical + conversational (mixed). Shows up in the material as: direct "you" address, real-world scenarios instead of abstract legal language, short punchy framing sentences followed by structured explanations, legal/technical terms always paraphrased in plain language before being named, and a general refusal to hide behind jargon.
+  praktisch + gesprächsnah (gemischt). Zeigt sich im Material als: direkte „Sie"-Anrede, reale Szenarien statt abstrakter Rechtssprache, kurze prägnante Einstiegssätze gefolgt von strukturierten Erläuterungen, juristische/technische Begriffe werden stets zuerst in Alltagssprache umschrieben, bevor sie benannt werden, und ein grundsätzliches Vermeiden von Fachjargon als Selbstzweck.
 
 * __Course Type:__
-  self-learning, modular. Fully learner-driven — no live sessions; learners control pace and can reorder units within the suggested sequence, and each unit is self-contained enough to stand alone.
+  Selbstlernend, modular. Vollständig selbstgesteuert — keine Live-Sitzungen; die Lernenden bestimmen das Tempo und können die Einheiten innerhalb der vorgeschlagenen Reihenfolge umstellen, und jede Einheit ist so in sich abgeschlossen, dass sie für sich allein steht.
 
 * __Difficulty Level:__
-  beginner. No prior technical or legal background assumed; every concept and term is introduced from scratch. Later units apply these concepts to realistic compliance scenarios (e.g. incident reporting, self-assessment), so complexity builds gently but ends at genuinely practical, applied understanding — not just definitions.
+  Einsteiger. Kein technisches oder juristisches Vorwissen vorausgesetzt; jedes Konzept und jeder Begriff wird von Grund auf eingeführt. Spätere Einheiten wenden diese Konzepte auf realistische Compliance-Szenarien an (z. B. Meldung von Sicherheitsvorfällen, Selbstbewertung), sodass die Komplexität sanft ansteigt, aber bei einem wirklich praktischen, angewandten Verständnis endet — nicht nur bei Definitionen.
 
 * __Persona Voice Sample:__
-  "Let's be honest — nobody wakes up excited to read a 46-article EU directive. So we won't. Instead, we'll start with one question: does NIS2 actually apply to you? Once we've answered that, everything else gets a lot less abstract — it stops being 'the law' and starts being 'the five things my team needs to check before Friday.' I'll show you where the real risk sits, not just where the paperwork sits."
+  „Seien wir ehrlich — niemand steht morgens auf und freut sich darauf, eine EU-Richtlinie mit 46 Artikeln zu lesen. Also tun wir das auch nicht. Stattdessen beginnen wir mit einer einzigen Frage: Gilt NIS2 überhaupt für Sie? Sobald wir die beantwortet haben, wird alles Weitere viel weniger abstrakt — es ist dann nicht mehr ‚das Gesetz', sondern ‚die fünf Dinge, die mein Team bis Freitag prüfen muss'. Ich zeige Ihnen, wo das echte Risiko sitzt, nicht nur, wo die Papierarbeit liegt."
 
 * __Recurring Case Examples:__
-  A small recurring cast of fictional organizations, reused opportunistically across units rather than one continuously-escalating story — chosen to preserve familiarity/continuity without breaking the "self-contained, reorderable unit" requirement from `## Course Context`. Each unit's hook must re-establish the organization in 1–2 sentences (name, sector, one relevant fact) before using it — no unit may assume a learner has seen a previous unit's scenario or outcome.
-  1. __Stadtverwaltung Nordholm__ — a mid-size German municipal administration (public-sector, Annex I). Used for governance/liability and general "does this apply to us" framing. Appears in Unit 1 (hook) and Unit 5 (governance & liability).
-  2. __Nordholm Nahverkehr__ — the city's regional public-transport operator, a subsidiary of Stadtverwaltung Nordholm (transport sector, Annex I; operates both buses and trams — the tram/rail service is what cleanly anchors it in Annex I's transport subsector, since bus-only local transit sits in genuinely grayer territory under some national transpositions). Its medium size makes it a good borderline case for essential-vs-important thresholds. Used in Unit 2 (scope classification).
-  3. __Klinikum Ostheide__ — a regional hospital network (health sector, Annex I), unrelated to the Nordholm city entities. Used in Unit 3 (Art. 21 risk-management measures, concrete IT/OT environment) and Unit 4 (incident handling & reporting, high-stakes timeline).
-  Unit 6 (Readiness Score) is learner-facing and personal — it does not need a fictional org; it may optionally reference Stadtverwaltung Nordholm's tally alongside the learner's own live inputs as a worked example.
+  Ein kleines, wiederkehrendes Ensemble fiktiver Organisationen, das über die Einheiten hinweg gelegentlich wiederverwendet wird — statt einer durchgehend eskalierenden Geschichte, um Vertrautheit/Kontinuität zu wahren, ohne die Anforderung „in sich abgeschlossene, umstellbare Einheit" aus `## Course Context` zu verletzen. Der Aufhänger jeder Einheit muss die Organisation in 1–2 Sätzen neu einführen (Name, Sektor, eine relevante Tatsache), bevor sie verwendet wird — keine Einheit darf voraussetzen, dass Lernende das Szenario oder Ergebnis einer vorherigen Einheit gesehen haben.
+  1. __Stadtverwaltung Nordholm__ — eine mittelgroße deutsche Kommunalverwaltung (öffentlicher Sektor, Anhang I). Verwendet für Governance/Haftung und die allgemeine Rahmung „Gilt das für uns?". Erscheint in Einheit 1 (Aufhänger) und Einheit 5 (Governance & Haftung).
+  2. __Nordholm Nahverkehr__ — der regionale ÖPNV-Betreiber der Stadt, eine Tochtergesellschaft der Stadtverwaltung Nordholm (Sektor Verkehr, Anhang I; betreibt sowohl Busse als auch Straßenbahnen — der Straßenbahn-/Schienenverkehr verankert das Unternehmen eindeutig im Verkehrs-Teilsektor des Anhangs I, da reiner Busverkehr in einigen nationalen Umsetzungen in einer echten Grauzone liegt). Die mittlere Größe macht es zu einem guten Grenzfall für die Schwelle „wesentlich vs. wichtig". Verwendet in Einheit 2 (Einordnung in den Anwendungsbereich).
+  3. __Klinikum Ostheide__ — ein regionaler Klinikverbund (Sektor Gesundheit, Anhang I), ohne Bezug zu den Nordholm-Einrichtungen. Verwendet in Einheit 3 (Risikomanagementmaßnahmen nach Art. 21, konkrete IT-/OT-Umgebung) und Einheit 4 (Behandlung und Meldung von Sicherheitsvorfällen, kritische Fristen).
+  Einheit 6 (Readiness Score) ist lernendenzentriert und persönlich — sie benötigt keine fiktive Organisation; sie kann optional die Bilanz der Stadtverwaltung Nordholm neben den Live-Eingaben der Lernenden als durchgerechnetes Beispiel heranziehen.
 
 ---
 
@@ -438,18 +439,18 @@ More community templates can be found at [topics/liascript-template](https://git
 ## Agenda
 
 * __Overview:__
-  Six self-paced units, roughly four hours total — no filler. We start by figuring out whether NIS2 even applies to you, then walk through what you actually have to do about it, how to handle an incident when one happens, who's on the hook if things go wrong, and finish with a live self-assessment that turns everything you've learned into one number: your NIS2 Readiness Score. Units are learner-driven and can be taken in order or revisited individually.
+  Sechs selbstgesteuerte Einheiten, insgesamt rund vier Stunden — ohne Füllstoff. Wir klären zunächst, ob NIS2 überhaupt für Sie gilt, gehen dann durch, was Sie konkret tun müssen, wie Sie einen Sicherheitsvorfall behandeln, wenn er eintritt, wer bei Verstößen zur Verantwortung gezogen wird, und schließen mit einer Live-Selbstbewertung ab, die alles Gelernte in eine einzige Zahl überführt: Ihren NIS2 Readiness Score. Die Einheiten sind selbstgesteuert und können der Reihe nach oder einzeln bearbeitet werden.
 
 * __Modules / Sessions:__
 
-  | # | Title | Type | Duration | Learning Objective | Material |
-  |---|-------|------|----------|--------------------|----------|
-  | 1 | Welcome & Why NIS2 Matters | lecture | 25 min | Sets up course rhythm and stakes; grounds the rest of the course | materials/1-welcome-why-nis2-matters/README.md |
-  | 2 | Are You in Scope? Essential vs. Important Entities | exercise | 40 min | LO1 — determine whether your organization/role falls under NIS2 (Art. 2–3, Annex I–II) | materials/2-are-you-in-scope-essential-vs-important/README.md |
-  | 3 | The 10 Measures You Actually Need | exercise | 50 min | LO2 — explain and apply the Art. 21 risk-management measures | materials/3-the-10-measures-you-actually-need/README.md |
-  | 4 | Handling & Reporting Incidents | lecture | 45 min | LO3 — apply the incident-reporting process and timeline (Art. 23) | materials/4-handling-reporting-incidents/README.md |
-  | 5 | Who's Responsible? Governance & Consequences | lecture | 40 min | LO4 — assess governance/liability implications and sanctions (Art. 20, 32–34) | materials/5-whos-responsible-governance-consequences/README.md |
-  | 6 | Your NIS2 Readiness Score | exercise | 35 min | LO5 — use a self-assessment checklist/calculator to evaluate readiness | materials/6-your-nis2-readiness-score/README.md |
+  | # | Titel | Typ | Dauer | Lernziel | Material |
+  |---|-------|-----|-------|----------|----------|
+  | 1 | Willkommen & Warum NIS2 wichtig ist | Vortrag | 25 Min. | Etabliert Kursrhythmus und Bedeutung; grundlegt den Rest des Kurses | materials/1-welcome-why-nis2-matters/README.md |
+  | 2 | Fallen Sie in den Anwendungsbereich? Wesentliche vs. wichtige Einrichtungen | Übung | 40 Min. | LZ1 — bestimmen, ob Ihre Organisation/Rolle unter NIS2 fällt (Art. 2–3, Anhang I–II) | materials/2-are-you-in-scope-essential-vs-important/README.md |
+  | 3 | Die 10 Maßnahmen, die Sie wirklich brauchen | Übung | 50 Min. | LZ2 — die Risikomanagementmaßnahmen nach Art. 21 erläutern und anwenden | materials/3-the-10-measures-you-actually-need/README.md |
+  | 4 | Sicherheitsvorfälle behandeln & melden | Vortrag | 45 Min. | LZ3 — Meldeprozess und Fristen (Art. 23) anwenden | materials/4-handling-reporting-incidents/README.md |
+  | 5 | Wer ist verantwortlich? Governance & Konsequenzen | Vortrag | 40 Min. | LZ4 — Governance-/Haftungsfolgen und Sanktionen einschätzen (Art. 20, 32–34) | materials/5-whos-responsible-governance-consequences/README.md |
+  | 6 | Ihr NIS2 Readiness Score | Übung | 35 Min. | LZ5 — mit Selbstbewertungs-Checkliste/Rechner die Readiness bewerten | materials/6-your-nis2-readiness-score/README.md |
 
 ---
 
@@ -913,17 +914,18 @@ _Read-scope rule: Coauthor and specialist agents are direct `###` subsections; e
   4. Favor tables, diagrams, checklists, and short interactive elements over long prose blocks — production quality matters as much as correctness for this project.
   5. Whenever a point in the material would benefit from a visual, insert an inline placeholder comment `<!-- IMAGE: {short description of the desired image} -->` directly at that point in the LiaScript text (invisible on render, doesn't disrupt slide/heading structure). Do not write a full image prompt inline — the Artist-Agent later turns each placeholder into a concrete prompt via `:create-image {number} {type} {description}` and files it under that session's `#### Images` block. After a co-authoring pass, list all newly inserted placeholders so the instructor can hand them to the Artist-Agent.
   6. Use the recurring case examples defined in `## Didactics` → `__Recurring Case Examples:__` (Stadtverwaltung Nordholm, Nordholm Nahverkehr, Klinikum Ostheide) instead of inventing new fictional organizations. Re-establish the organization in 1–2 sentences in each unit's hook — never assume the learner has seen it in a prior unit.
-  7. Before any non-obvious interactive element (reactive `<script>` sliders, live `<lia-chart>`, calculators), insert the course's interactive-element marker: a short `[!TIP]` alert led by 👉 with a "This one is interactive — …" title (see `## Course Context` → `__LiaScript conventions:__`). Do not mark self-explanatory interactions (quizzes, checklists, `<details>`). Keep the reactive-input syntax rules from that same conventions list (no bare `@input(...)` in markdown text).
+  7. Before any non-obvious interactive element (reactive `<script>` sliders, live `<lia-chart>`, calculators), insert the course's interactive-element marker: a short `[!TIP]` alert led by 👉 with a "Dies ist interaktiv — …" title (see `## Course Context` → `__LiaScript conventions:__`). Do not mark self-explanatory interactions (quizzes, checklists, `<details>`). Keep the reactive-input syntax rules from that same conventions list (no bare `@input(...)` in markdown text).
+  8. **Language: German.** All learner-facing material is written in **German** with the formal **"Sie"** register (see the 2026-07-06 decision in `## Notes Backup`). Use the official German NIS2 Amtsfassung terminology from `## Course Context` → `__Conventions & Standards:__` (*wesentliche/wichtige Einrichtung*, *erheblicher Sicherheitsvorfall*, *Risikomanagementmaßnahmen*, *Anhang I/II*, *Leitungsorgan*, *Sicherheit der Lieferkette*). Keep the persona's plain-spoken, practical tone, but in "Sie". Material headers use `language: de` (and a German narrator if a narrator is used). Only genuine verbatim quotes from the directive text stay English and are marked as quotes. Proper names (Stadtverwaltung Nordholm, Nordholm Nahverkehr, Klinikum Ostheide, Mika Reinhardt), article references (Art. 21 etc.), file paths, folder slugs, and LiaScript syntax stay unchanged.
 * __Preferred Interaction Style:__
-  practical + conversational (mixed): direct "you" address, short punchy framing sentences followed by structured explanations, no unexplained jargon.
+  practical + conversational (mixed): direct **"Sie"** address (German), short punchy framing sentences followed by structured explanations, no unexplained jargon.
 * __Project-Specific Rules:__
   1. Course type is self-paced/modular — each unit must be self-contained and reorderable, no assumption of a live session.
   2. Target difficulty is beginner — no prior technical or legal background assumed, but later units should reach genuinely applied, practical depth (not just definitions).
-  3. Language: English, formal tone, "you" address, accessibility required.
+  3. Language: German, formal tone, "Sie" address, official NIS2 Amtsfassung terminology, accessibility required.
   4. Primary source of truth for legal content is the NIS2 directive text at `data/cybersichert.pdf` — verify article references against it rather than general knowledge.
   5. Fixed heading depth, no exceptions: `#` Course Title → `##` Chapter → `###` Section (bare) → `####` Subsection (always inside `<section>…</section>`). Never use `#####` or deeper.
 * __Persona Voice Sample:__
-  "Let's be honest — nobody wakes up excited to read a 46-article EU directive. So we won't. Instead, we'll start with one question: does NIS2 actually apply to you? Once we've answered that, everything else gets a lot less abstract — it stops being 'the law' and starts being 'the five things my team needs to check before Friday.' I'll show you where the real risk sits, not just where the paperwork sits."
+  „Seien wir ehrlich — niemand steht morgens auf und freut sich darauf, eine EU-Richtlinie mit 46 Artikeln zu lesen. Also tun wir das auch nicht. Stattdessen beginnen wir mit einer einzigen Frage: Gilt NIS2 überhaupt für Sie? Sobald wir die beantwortet haben, wird alles Weitere viel weniger abstrakt — es ist dann nicht mehr ‚das Gesetz', sondern ‚die fünf Dinge, die mein Team bis Freitag prüfen muss'. Ich zeige Ihnen, wo das echte Risiko sitzt, nicht nur, wo die Papierarbeit liegt."
 * __Boundaries / Never:__
   1. Do not override base workflow, validation, safety, or epistemic rules.
 
@@ -1041,3 +1043,30 @@ _Each note is one append-only `### {Type}: {Descriptive Title} ({YYYY-MM-DD})` s
   1. README now opens (after the intro) with a "Purpose & Audience of This Repository" section; the rest of the README is explicitly framed as describing the generic tooling, with a pointer to `journal.md` for the course itself.
   2. The tooling-showcase document is a new, tracked deliverable to be produced after Units 3–6 are complete; it should be authored as a LiaScript document and reference concrete course features.
   3. Course-material depth stays calibrated to the beginner, mixed, non-specialist audience (see finished Units 1–2): plain-language first, encapsulated legal/technical precision, no two-track deep-dives.
+
+### Decision: Switch Course And Tooling Document To German (2026-07-06)
+
+* __Type:__ decision
+* __Topic:__ Language of the entire deliverable — course materials, tooling document, and journal configuration
+* __Related:__ Course Context, Didactics, Sessions, README, about-liascript.md
+* __Source:__ chat discussion
+
+* __Context:__
+  The earlier decision (see "Repository Serves A Dual Purpose") set the course language to English as an "EU-breadth signal," with a German version noted only as a possible later step. The upcoming presentation to the (German) public sector will now be delivered **in German**, so the whole deliverable is being switched to German. This supersedes the English-language choice.
+
+* __Options considered:__
+  1. Keep English, present with verbal German commentary — avoids rework but leaves the audience reading English while hearing German; rejected as inconsistent for a public-administration audience.
+  2. Translate everything to German, but anglicize NIS2 terms — rejected: German public administration expects the official German directive terminology.
+  3. Translate everything to German using the **official German Amtsfassung** of Directive (EU) 2022/2555 for all established NIS2 terms, keeping only genuine verbatim quotes from the directive in English. Chosen.
+
+* __Decision:__
+  Option 3. All course materials, the `about-liascript.md` tooling document, and the journal configuration (Course Context, Didactics incl. persona voice, Sessions) move to German. Established NIS2 terminology uses the official German Amtsfassung: *wesentliche Einrichtung* (essential entity), *wichtige Einrichtung* (important entity), *erheblicher Sicherheitsvorfall* (significant incident), *Risikomanagementmaßnahmen* (risk-management measures), *Anhang I/II* (Annex I/II), *Leitungsorgan* (management body), *Sicherheit der Lieferkette* (supply-chain security). Only verbatim quotations lifted directly from the directive text remain in English and are marked as quotes. Course Context `Language:` becomes `de`; material headers use `language: de` and a German narrator where a narrator is used (about-liascript.md keeps TTS off entirely).
+
+* __Rationale:__
+  The audience is German public administration; a German presentation with German reading material is coherent and expected. Using the Amtsfassung terminology (rather than anglicisms) matches how these organizations already refer to their own NIS2 obligations.
+
+* __Consequences:__
+  1. Every material file, the tooling document, and the journal config sections are translated to German; the `Language:` / `language:` fields change from `en` to `de`.
+  2. The persona voice sample and didactic style descriptions are rewritten in German using the **formal "Sie" register** (chosen to fit the public-administration / government audience), replacing the English direct-"you" address. The Mika Reinhardt persona keeps its practical, plain-spoken character but addresses learners with "Sie".
+  3. NIS2 term glossary above becomes the authoritative mapping for all future units, so Units 4–6 must be drafted in German with the same terminology from the start.
+  4. This supersedes the "course language stays English" line in the previous decision record.

@@ -2,157 +2,171 @@
 author:   Sebastian Zug, André Dietrich
 email:    sebastian.zug@informatik.tu-freiberg.de
 version:  0.1.0
-language: en
+language: de
 
-comment:  Behind the scenes of the "NIS2 Ready" course — a gentle, from-scratch introduction to LiaScript, the AI agent workflow, and the liaex exporter, for readers new to all three.
+comment:  Ein Blick hinter die Kulissen des Kurses „NIS2 Ready" — eine behutsame Einführung von Grund auf in LiaScript, den KI-Agenten-Workflow und den liaex-Exporter, für Leserinnen und Leser, die alle drei noch nicht kennen.
 
 import: https://raw.githubusercontent.com/liaScript/mermaid_template/master/README.md
         https://raw.githubusercontent.com/LiaTemplates/LiveEdit-Embeddings/refs/tags/0.0.1/README.md
 
 -->
 
+[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://github.com/LiaPlayground/nis2/blob/main/about-liascript.md)
 
-# Behind the Scenes
+# Ein Blick hinter die Kulissen
 
-> [!IMPORTANT]
-> **You've seen the NIS2 course. Now: the story behind it.**
+                  {{0-1}}
+************************************************
+
+Den ersten Prototypen eines NIS2-Kurs kennen Sie bereits. Er ist interaktiv, barrierearm, in Lernplattformen einsetzbar und bleibt aktuell, während sich die nationale Umsetzung von NIS2 weiterentwickelt. All das geschieht aus einer einzigen Textdatei. Dieses Dokument erklärt, wie das möglich ist.
+
+| Einheit | Direkt aufrufen |
+|---------|-----------------|
+| **1 — Willkommen & Warum NIS2 wichtig ist** | [![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://github.com/LiaPlayground/nis2/blob/main/materials/1-welcome-why-nis2-matters/README.md) |
+| **2 — Fallen Sie in den Anwendungsbereich?** | [![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://github.com/LiaPlayground/nis2/blob/main/materials/2-are-you-in-scope-essential-vs-important/README.md) |
+| **3 — Die 10 Maßnahmen, die Sie wirklich brauchen** | [![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://github.com/LiaPlayground/nis2/blob/main/materials/3-the-10-measures-you-actually-need/README.md) |
+
+> [!TIP]
+> **Was aber ist die Geschichte dahinter?**
+
+************************************************
+
+                  {{1-2}}
+************************************************
+
+> Das Werkzeug, mit dem das Material erstellt wurde, heißt [**LiaScript**](https://liascript.github.io/). In den nächsten Abschnitten bauen wir Schritt für Schritt auf, was es ist, zeigen dann, wie dieser Kurs tatsächlich mit Hilfe von KI geschrieben wurde, und schließlich, wie aus einer einzigen Textdatei jedes Format wird, das eine Institution benötigt.
 >
-> You have just seen a training course on the NIS2 directive. Before we look at how it was made, one honest question — the kind anyone responsible for training actually asks: why go to any trouble at all? 
+> 0. **Warum nicht einfach PowerPoint oder PDF?** — die Risse im gewohnten Vorgehen
+> 1. **Was LiaScript ist** — gezeigt, nicht nur beschrieben, anhand dreierP einfacher Ideen
+> 2. **Wie eine ganze Sprache wächst** — aus ein paar Satzzeichen
+> 3. **LiaScript und KI** — wie dieser Kurs tatsächlich geschrieben wurde
+> 4. **Der Exporter** — eine Textdatei, umgewandelt in jedes Format, das eine Institution braucht
 
----
+************************************************
 
-> The tool is called [**LiaScript**](https://liascript.github.io/). Over the next sections we'll build up what it is in plain terms, then show how the whole course was actually written with the help of AI, and finally how one text file becomes every format an institution might need.
->
-> 0. **Why not just PowerPoint or PDF?** — the cracks in the ordinary approach
-> 1. **What LiaScript is** — shown, not just described, through three simple ideas
-> 2. **How a whole language grows** from a couple of punctuation marks
-> 3. **LiaScript and AI** — how this course was actually written
-> 4. **The exporter** — one text file, turned into every format an institution needs
+## 0 · Warum nicht einfach PowerPoint oder PDF?
 
+Nehmen wir die Frage ernst, denn sie ist der richtige Ausgangspunkt. Stellen Sie sich den NIS2-Kurs auf die gewohnte Weise gebaut vor — als Foliensatz oder als PDF-Handout. Für viele Inhalte wäre das völlig in Ordnung. Doch sehen Sie sich an, was genau dieser Kurs leisten musste, und die Risse zeigen sich schnell.
 
-## 0 · Why Not Just PowerPoint or PDF?
-
-Let's take that seriously, because it's the right starting point. Picture the NIS2 course built the ordinary way — as a slide deck or a PDF handout. For a lot of material, that would be perfectly fine. But look at what this particular course actually needed to do, and the cracks show quickly.
-
-**Imagine this NIS2 course as a PowerPoint or a PDF. Four things it needed — and what happens to each:**
+**Stellen Sie sich diesen NIS2-Kurs als PowerPoint oder PDF vor. Vier Dinge, die er brauchte — und was mit jedem davon geschieht:**
 
 <section>
 
-| The course needed…                          | As PowerPoint / PDF                                  |
-|---------------------------------------------|-----------------------------------------------------|
-| A **live self-assessment** (move a slider, see your readiness score update) | Impossible — a static image of a slider; nothing computes |
-| **Read-aloud accessibility** for mixed, non-expert staff | Bolt-on at best; PDFs are notoriously hard to make accessible |
-| To run inside each agency's **learning system** (Moodle, ILIAS, …) and track completion | A slide deck is not an interactive SCORM package; no real tracking |
-| To **stay current** as national NIS2 implementation evolves | New file, re-sent by email — soon a dozen versions in circulation |
+| Der Kurs brauchte …                          | Als PowerPoint / PDF                                  |
+|----------------------------------------------|-------------------------------------------------------|
+| Eine **Live-Selbstbewertung** (Regler bewegen, Readiness-Score aktualisiert sich) | Unmöglich — ein statisches Bild eines Reglers; nichts rechnet |
+| **Barrierearme Vorlesefunktion** für gemischtes, fachfremdes Personal | Bestenfalls nachgerüstet; PDFs sind bekanntlich schwer barrierefrei zu machen |
+| In den **Lernplattformen** der Behörden (Moodle, ILIAS, …) laufen und Abschlüsse erfassen | Ein Foliensatz ist kein interaktives SCORM-Paket; keine echte Nachverfolgung |
+| **Aktuell bleiben**, während sich die nationale NIS2-Umsetzung weiterentwickelt | Neue Datei, per E-Mail erneut versandt — bald ein Dutzend Versionen im Umlauf |
 
 </section>
 
-> [!NOTE] The point of this whole document
-> Everything you saw in the NIS2 course — the sliders, the live chart, the quizzes, the read-aloud narration — came from a single plain-text file. This document explains, from scratch, how that is possible and why it matters. No technical background assumed.
+> [!NOTE] Der Kern dieses ganzen Dokuments
+> Alles, was Sie im NIS2-Kurs gesehen haben — die Regler, das Live-Diagramm, die Quizze, die Vorlesefunktion — stammte aus einer einzigen Textdatei. Dieses Dokument erklärt von Grund auf, wie das möglich ist und warum es zählt. Kein technisches Vorwissen nötig.
 
-## 1 · What Is LiaScript?
+## 1 · Was ist LiaScript?
 
-At its heart, LiaScript is just plain text — the kind of simple, readable writing you'd type in any text editor, with a few small formatting marks like a star for a bold word or a dash for a list. That's the whole foundation. A course is an ordinary text file that any editor can open and anyone can read and edit — the format stays open and under your control. What turns that plain text into a living, interactive course is three simple ideas — and rather than describe them, we'll let you watch each one happen.
+Im Kern ist ein LiaScript-Kurs einfach eine Textdatei — die Art einfacher, gut lesbarer Schrift, die Sie in jedem Texteditor tippen würden, mit ein paar kleinen Formatierungszeichen wie einem Stern für ein **fettes** Wort oder einem Bindestrich für eine Liste. Den Kurs kann jeder in einem Texteditor öffnen — das Format bleibt offen und unter Ihrer Kontrolle. 
 
-**LiaScript is plain text — brought to life by three ideas.** Each one appears below as a live example: on top the plain text an author writes, underneath, that very same text running as an interactive page. You don't need to change anything — just look at both halves.
+> **LiaScript ist einfacher Text — zum Leben erweckt durch drei Ideen:** 
+> 
+> - Trennung von Inhalt und Darstellung
+> - Interaktivität als Sprachmerkmal
+> - Erweiterbarkeit über ein Modulsystem
 
-```markdown
-## 1 · What Is LiaScript?
+```markdown 
+## 1 · Was ist LiaScript?
 
-At its heart, LiaScript is just plain text — the kind of simple, readable writing you'd type 
-in any text editor, with a few small formatting marks like a star for a bold word or a dash 
-for a list. ...
+Im Kern ist ein LiaScript-Kurs einfach eine Textdatei — die Art einfacher, gut lesbarer Schrift, 
+die Sie in jedem Texteditor tippen würden, mit ein paar kleinen Formatierungszeichen wie einem 
+Stern für ein **fettes** Wort oder einem Bindestrich für eine Liste. Den Kurs kann jeder in einem 
+Texteditor öffnen — das Format bleibt offen und unter Ihrer Kontrolle. 
+
+> **LiaScript ist einfacher Text — zum Leben erweckt durch drei Ideen:** 
+> 
+> - Trennung von Inhalt und Darstellung
+> - Interaktivität als Sprachmerkmal
+> - Erweiterbarkeit über ein Modulsystem
 ```
 
-### Idea 1 — Separation of content and presentation
+### Idee 1 — Trennung von Inhalt und Darstellung
 
-You write *what* you want to say, and leave *how it looks* to the display. The same file becomes a scrollable webpage, a slide deck, a PDF, or a spoken audiobook — the presentation is chosen at display time, separate from your text. In the frame below, notice: the source is pure content — a heading, a list, a sentence — yet it renders as a navigable page with a table of contents (and, on devices where it's available, optional read-aloud).
+Sie schreiben, *was* Sie sagen möchten, und überlassen *wie es aussieht* der Darstellung. Dieselbe Datei wird zur scrollbaren Webseite, zum Foliensatz, zum PDF oder zum gesprochenen Hörbuch — die Darstellung wird zum Anzeigezeitpunkt gewählt, getrennt von Ihrem Text. Achten Sie im Rahmen unten darauf: Die Quelle ist reiner Inhalt — eine Überschrift, eine Liste, ein Satz — und dennoch wird sie als navigierbare Seite mit Inhaltsverzeichnis gerendert (und, auf Geräten, wo verfügbar, optional mit Vorlesefunktion).
 
-**The source describes structure and meaning — the rendering decides the looks.**
+**Die Quelle beschreibt Struktur und Bedeutung — die Darstellung entscheidet über das Aussehen.**
 
 ```markdown @embed.style(height: 480px; min-width: 100%; border: 1px solid #003399; border-radius: 8px)
-# Separation of Content and Presentation
+# Trennung von Inhalt und Darstellung
 
-Nowhere in this text did the author write anything about *how* it should look.
+Nirgends in diesem Text hat die Autorin oder der Autor etwas 
+darüber geschrieben,  *wie* es aussehen soll.
 
-You write plain content like this:
+Sie schreiben schlichten Inhalt wie diesen:
 
-- a heading
-- a list
-- a **bold** word
+- eine Überschrift
+- eine Liste
+- ein **fettes** Wort
 
-...and the reader's device decides the rest: light or dark mode, a slide view or a scroll view, on screen or in print.
-
-## A second slide
-
-The same file becomes a webpage, a presentation, and a PDF — from one source.
+... und das Gerät der Lesenden entscheidet den Rest: heller
+oder dunkler Modus, Folien- oder Scroll-Ansicht, am Bildschirm,
+im Druck oder als Übersetzung.
 ```
 
-That is the first idea in one frame: the author controlled meaning, the medium controlled appearance.
+> [!NOTE] Warum das zählt
+> Das ist die erste Idee in einem Rahmen: Die Autorin bestimmte die Bedeutung, das Medium bestimmte das Aussehen.
 
-> [!NOTE] Why this matters
-> Separation of content and presentation is what lets one source file serve every channel — and what makes the text survive when today's tools are gone.
+### Idee 2 — Interaktivität: der Schritt von Markdown zu LiaScript
 
-### Idea 2 — Interactivity: the step from Markdown to LiaScript
-
-This is the exact point where Markdown *becomes* LiaScript. Plain Markdown can show a question — but it is just text; nothing happens when you answer. Add a pair of brackets, and the same question becomes a real, checkable quiz. Watch the frame: the first question is inert Markdown, the second is LiaScript. One small piece of punctuation is the whole difference.
-
-**Add brackets, and static text becomes interaction. That is the transition.**
+Genau hier *wird* Markdown zu LiaScript. Reines Markdown kann einen Text, eine Formel oder eine Tabelle startisch anzeigen. Mit LiaScript wird eine Tabelle durchsuchbar, ein Textfeld editierbar, ein Quiz interaktiv.
 
 ```markdown @embed.style(height: 480px; min-width: 100%; border: 1px solid #003399; border-radius: 8px)
-# From Markdown to LiaScript
+# Von Markdown zu LiaScript
 
-Plain Markdown gives you a table — useful, but static:
+Reines Markdown gibt Ihnen eine Tabelle — nützlich, aber statisch:
 
-| Area       | Coverage |
-| ---------- | -------- |
-| Governance | 40       |
-| Training   | 55       |
-| Technical  | 70       |
+| Bereich    | Abdeckung |
+| ---------- | --------- |
+| Governance | 40        |
+| Schulung   | 55        |
+| Technik    | 70        |
 
-And a question — as plain text, nothing happens when you answer:
+Dieselbe Frage in LiaScript — Klammern hinzufügen, und sie wird interaktiv:
 
-> Is a LiaScript course a plain text file? (yes / no)
+Ist ein LiaScript-Kurs eine Textdatei? (ja / nein)
 
-The same question in LiaScript — add brackets, and it becomes interactive:
-
-- [(X)] Yes
-- [( )] No
+- [(X)] Ja
+- [( )] Nein
 ```
 
-That quiz worked the moment it was written — and it is written the same way you'd write the table above it: with a little punctuation, not a line of code. Interactivity is not a plugin bolted onto Markdown; in LiaScript it is part of the language itself.
+> [!NOTE] Warum das zählt
+> Weil Interaktion ein *Sprachmerkmal* ist, ist das Schreiben eines Quiz eine Frage der Zeichensetzung, nicht des Programmierens — kein JavaScript, kein Framework erforderlich. Das ist es, was interaktive OER überhaupt für Nicht-Programmierer schreibbar macht.
 
-> [!NOTE] Why this matters
-> Because interaction is a *language feature*, writing a quiz is a matter of punctuation, not programming — no JavaScript or framework required. That is what makes interactive OER writable by non-programmers.
+### Idee 3 — Sie ist erweiterbar
 
-### Idea 3 — It is extendable
+Die ersten beiden Ideen drehten sich ums Schreiben und Interagieren. Die dritte ist es, die LiaScript nahezu grenzenlos macht: Sie ist offen angelegt. Über die eingebauten Funktionen hinaus kann ein Kurs bei Bedarf spezialisierte Fähigkeiten hinzuladen — echten Programmcode ausführen, Text vorlesen, ein 3D-Modell darstellen, einen Schaltkreis zeichnen, Noten setzen. Nichts davon ist fest in die Sprache verdrahtet; es wird nur geladen, wenn ein Kurs es braucht.
 
-The first two ideas were about writing and interacting. The third is what gives LiaScript almost no ceiling: it is open-ended. Beyond the built-in features, a course can pull in specialized capabilities on demand — run real program code, read text aloud, render a 3D model, draw a circuit, typeset music. None of it is hard-wired into the language; it is loaded only when a course needs it.
+**Ab Werk — und weit darüber hinaus:**
 
-**Out of the box, and far beyond it:**
++ **Code ausführen** — Python, JavaScript, C++, R, SQL, ...
++ **Sprachausgabe** — beliebige Passagen vorlesen lassen (Barrierefreiheit)
++ **Daten speichern** — den Lernstand im Browser sichern
++ **3D-Modelle, Simulationen, Notenschrift, Schaltkreise und mehr**
 
-+ **Run code** — Python, JavaScript, C++, R, SQL, ...
-+ **Text-to-speech** — have any passage read aloud (accessibility)
-+ **Persist data** — store the learner's progress in the browser
-+ **3D models, simulations, musical notation, circuits, and more**
+> [!TIP] Wie die Erweiterungen funktionieren
+> LiaScript nutzt ein leichtgewichtiges Plugin-System für fachspezifische Funktionen: Sie fügen im Kopf eine `import`-URL hinzu, und diese liefert die eigentliche Funktionalität — von ausführbarem Code bis zur 3D-Darstellung. Das Dokument bleibt eine Textdatei; die Fähigkeit reist mit ihr.
 
-The mechanism is simple and, again, just plain text: a single `import` line names a URL that provides the extra capability. The course declares what it needs, and the browser fetches it on the spot — installation and package managers stay out of the picture.
+Hier ist das in Aktion. Der Rahmen unten ist ein eigenständiges LiaScript-Dokument, das ein Notenschrift-Template importiert — und aus wenigen Zeilen Text abspielbare Noten rendert. Nichts an Musik ist in LiaScript eingebaut; die `import`-Zeile hat es hereingeholt.
 
-> [!TIP] How the extensions work
-> LiaScript uses a lightweight plugin system for domain-specific features: you add an `import` URL in the header, and it supplies the actual functionality — from executable code to 3D rendering. The document stays a plain text file; the capability travels with it.
-
-Here is that in action. The frame below is a self-contained LiaScript document that imports a music-notation template — and renders playable sheet music from a few lines of text. Nothing about music is built into LiaScript; the `import` line brought it in.
-
-**A live example — an imported notation template turns text into playable sheet music:**
+**Ein Live-Beispiel — ein importiertes Notations-Template macht aus Text abspielbare Noten:**
 
 ````markdown @embed.style(height: 600px; min-width: 100%; border: 1px solid #003399; border-radius: 8px)
 <!--
 import: https://raw.githubusercontent.com/liaTemplates/ABCjs/main/README.md
 -->
 
-# The Browser as a Platform
+# Der Browser als Plattform
 
-__An imported template__ — a few lines of text become musical notation you can view and play:
+__Ein importiertes Template__ — ein paar Zeilen Text werden zu Noten, die Sie ansehen und abspielen können:
 
 ``` abc
 X:353
@@ -169,115 +183,112 @@ A2B2 | c4c4c4B2c2 | d4B3BB4A4 | G8F8 | G4e4d4c2A2 | B8A8 | G8z8
 @ABCJS.eval
 ````
 
-Runnable code, read-aloud text, 3D scenes, sheet music — none of it bloats the core language, and all of it is one `import` line away. Content over layout, interaction as a language feature, and open-ended extendability: those three ideas, which you just watched rather than read, are the whole of LiaScript. Everything after this is one of them, made bigger.
-
-> [!NOTE] Why this matters for the public sector specifically
-> Extendability with plain-text imports means a course reaches whatever a subject needs — accessibility read-aloud, data protection through client-side storage, domain-specific rendering — without locking into any one vendor's feature set, and while staying a text file that still opens in ten years.
+> [!NOTE] Warum das gerade für den öffentlichen Sektor zählt
+> Erweiterbarkeit über textbasierte Importe bedeutet, dass ein Kurs alles erreicht, was ein Fachgebiet braucht — barrierefreie Vorlesefunktion, Datenschutz durch clientseitige Speicherung, fachspezifische Darstellung — ohne sich an den Funktionsumfang eines einzelnen Anbieters zu binden, und während er eine Textdatei bleibt, die auch in zehn Jahren noch öffnet.
 
 ---
 
-## 2 · How a Whole Language Grows From a Few Symbols
+## 2 · Wie eine ganze Sprache aus wenigen Zeichen wächst
 
-Here is the part that makes LiaScript easy to learn: it doesn't ask you to memorize hundreds of commands. It reuses a couple of everyday symbols — an exclamation mark and a question mark — and combines them in ways you can almost guess.
+Hier ist der Teil, der LiaScript leicht erlernbar macht: Es verlangt nicht, sich Hunderte von Befehlen zu merken. Es verwendet ein paar alltägliche Zeichen wieder — ein Ausrufezeichen und ein Fragezeichen — und kombiniert sie auf eine Weise, die Sie fast erraten können.
 
-Think of it like this: an exclamation mark **`!`** means *"show something"*, and a question mark **`?`** means *"play something"*. Once you know those two, the rest of the table reads itself — including the row where you use *both* at once for a video (it shows **and** plays).
+Denken Sie es sich so: Ein Ausrufezeichen **`!`** bedeutet *„etwas zeigen"*, und ein Fragezeichen **`?`** bedeutet *„etwas abspielen"*. Sobald Sie diese beiden kennen, liest sich der Rest der Tabelle von selbst — einschließlich der Zeile, in der Sie *beide* zugleich für ein Video verwenden (es zeigt **und** spielt ab).
 
 <section>
 
-| To include a…            | You write | Read it as        |
-|--------------------------|-----------|-------------------|
-| **Image**                | `![…](…)` | ! = show          |
-| **Audio clip**           | `?[…](…)` | ? = play          |
-| **Video**                | `!?[…](…)`| show **and** play |
-| **Whole embedded page**  | `??[…](…)`| bring it all in   |
+| Zum Einbinden von …      | Sie schreiben | So liest man es       |
+|--------------------------|---------------|-----------------------|
+| **Bild**                 | `![…](…)`     | ! = zeigen            |
+| **Audio-Clip**           | `?[…](…)`     | ? = abspielen         |
+| **Video**                | `!?[…](…)`    | zeigen **und** abspielen |
+| **Ganze eingebettete Seite** | `??[…](…)` | alles hereinholen     |
 
 </section>
 
-Notice there is nothing to memorize: the symbols *describe* what they do. A video shows and plays, so you write both marks. That same "guess-able" logic runs through the entire language — which is why someone can become productive in it within an afternoon, not a training course.
+Beachten Sie: Es gibt nichts auswendig zu lernen — die Zeichen *beschreiben*, was sie tun. Ein Video zeigt und spielt ab, also schreiben Sie beide Zeichen. Dieselbe „erratbare" Logik zieht sich durch die gesamte Sprache — deshalb kann man in ihr innerhalb eines Nachmittags produktiv werden, nicht erst nach einem Schulungskurs.
 
-And here is the reassuring part — the reason none of this should feel intimidating:
+Und hier ist der beruhigende Teil — der Grund, warum nichts davon einschüchternd wirken sollte:
 
-> [!TIP] You don't even need to learn these symbols yourself
-> Because the whole language is simple, consistent plain text, an AI assistant can write it for you. You describe what you want — "a quiz here", "a chart of these numbers", "an image there" — and it produces the correct LiaScript. The symbols above are worth *recognizing*, so you can read and tweak the result, but you never have to type them from memory. That is exactly what the next section is about.
+> [!TIP] Sie müssen diese Zeichen nicht einmal selbst lernen
+> Weil die gesamte Sprache einfacher, konsistenter Text ist, kann eine KI-Assistenz sie für Sie schreiben. Sie beschreiben, was Sie wollen — „hier ein Quiz", „ein Diagramm dieser Zahlen", „dort ein Bild" — und sie erzeugt das korrekte LiaScript. Die Zeichen oben lohnt es sich zu *erkennen*, damit Sie das Ergebnis lesen und anpassen können, aber Sie müssen sie nie auswendig tippen. Genau darum geht es im nächsten Abschnitt.
 
-## 3 · LiaScript, AI, and Agents
+## 3 · LiaScript, KI und Agenten
 
-**A plain-text course is the ideal material for an AI to work with.** An agent reads and writes it as ordinary text — the same way it handles any other writing.
+**Ein textbasierter Kurs ist das ideale Material für eine KI.** Ein Agent liest und schreibt ihn wie gewöhnlichen Text — genauso, wie er mit jedem anderen Text umgeht.
 
-This course was not written by a single chatbot in one sitting. It was built by a small system of specialized agents, each with a defined role, all working around one shared file.
+Dieser Kurs wurde nicht von einem einzelnen Chatbot in einem Rutsch geschrieben. Er wurde von einem kleinen System spezialisierter Agenten gebaut, jeder mit einer festgelegten Rolle, alle arbeiten rund um eine gemeinsame Datei.
 
 <section>
 
-The **Teaching-Agent** system used to build this course coordinates four roles around a single project file:
+Das **Teaching-Agent**-System, mit dem dieser Kurs gebaut wurde, koordiniert vier Rollen rund um eine einzige Projektdatei:
 
 ```mermaid   @mermaid
 flowchart LR
-  J[("journal.md<br>the single<br>source of truth")]
-  T["🎓 Teaching<br>structure & content"] --> J
-  A["🎨 Artist<br>visuals & prompts"] --> J
-  L["🧑‍🎓 Learner<br>reviews as a persona"] --> J
-  D["🛠️ Development<br>validation & publishing"] --> J
-  J --> OUT["materials/*.md<br>the finished units"]
+  J[("journal.md<br>die zentrale<br>Wahrheitsquelle")]
+  T["🎓 Teaching<br>Struktur & Inhalt"] --> J
+  A["🎨 Artist<br>Bilder & Prompts"] --> J
+  L["🧑‍🎓 Learner<br>prüft als Persona"] --> J
+  D["🛠️ Development<br>Validierung & Veröffentlichung"] --> J
+  J --> OUT["materials/*.md<br>die fertigen Einheiten"]
 ```
 
 </section>
 
-The key design choice is that single file in the middle. Every decision — the learning objectives, the didactic concept, the fictional case organizations, each unit's plan — lives in one Markdown file called `journal.md`. The agents don't hold the project in their heads; they read and update that file. That makes the whole process inspectable and repeatable.
+Die entscheidende Entwurfsentscheidung ist diese eine Datei in der Mitte. Jede Entscheidung — die Lernziele, das didaktische Konzept, die fiktiven Fallorganisationen, der Plan jeder Einheit — steckt in einer einzigen Markdown-Datei namens `journal.md`. Die Agenten tragen das Projekt nicht im Kopf; sie lesen und aktualisieren diese Datei. Das macht den gesamten Prozess nachvollziehbar und wiederholbar.
 
-> [!NOTE] Spec-driven, not improvised
-> The course was defined *before* it was written: audience and objectives first, then didactics, then a per-unit plan, and only then the actual material — each step recorded in `journal.md` and checked against the previous ones. The AI accelerates the work; it does not replace the plan.
+> [!NOTE] Spezifikationsgetrieben, nicht improvisiert
+> Der Kurs wurde definiert, *bevor* er geschrieben wurde: zuerst Zielgruppe und Ziele, dann Didaktik, dann ein Plan je Einheit, und erst dann das eigentliche Material — jeder Schritt in `journal.md` festgehalten und gegen die vorherigen geprüft. Die KI beschleunigt die Arbeit; sie ersetzt nicht den Plan.
 
-And because the source of truth is plain text, none of this is locked to one AI tool either. The same specification builds configurations for several assistants — the vendor-independence goes all the way down.
+Und weil die Wahrheitsquelle einfacher Text ist, ist nichts davon an ein einzelnes KI-Werkzeug gebunden. Dieselbe Spezifikation erzeugt Konfigurationen für mehrere Assistenten — die Anbieterunabhängigkeit reicht bis nach ganz unten.
 
-> [!TIP] Editor-agnostic by construction
-> The same agent specification runs in Claude Code, GitHub Copilot, Cursor, and others. The plain-text principle that frees the *course* from lock-in frees the *authoring process* from it too.
+> [!TIP] Editor-unabhängig durch Konstruktion
+> Dieselbe Agenten-Spezifikation läuft in Claude Code, GitHub Copilot, Cursor und anderen. Das Prinzip des einfachen Texts, das den *Kurs* von Bindung befreit, befreit auch den *Erstellungsprozess* davon.
 
 ---
 
-## 4 · One File, Many Formats — the Exporter
+## 4 · Eine Datei, viele Formate — der Exporter
 
-The last tool answers the practical question every institution eventually asks: "that's a nice web course, but our learning-management system needs SCORM," or "we need a PDF for the archive." With LiaScript, you don't rebuild anything. One command turns the same source file into whatever format you need.
+Das letzte Werkzeug beantwortet die praktische Frage, die jede Institution irgendwann stellt: „Ein schöner Web-Kurs, aber unsere Lernplattform braucht SCORM", oder „Wir brauchen ein PDF fürs Archiv". Mit LiaScript bauen Sie nichts neu. Ein einziger Befehl verwandelt dieselbe Quelldatei in das Format, das Sie brauchen.
 
-**`liaex` — the LiaScript exporter.** The same `.md` file, transformed into the format the situation requires:
+**`liaex` — der LiaScript-Exporter.** Dieselbe `.md`-Datei, umgewandelt in das Format, das die Situation erfordert:
 
 <section>
 
-| You need…                        | Format        | Command (sketch)                         |
+| Sie brauchen …                   | Format        | Befehl (Skizze)                          |
 |----------------------------------|---------------|------------------------------------------|
-| Upload to Moodle / ILIAS / OPAL  | SCORM 1.2/2004| `liaex -i README.md -f scorm2004`        |
-| A printable / archival document  | PDF           | `liaex -i README.md -f pdf`              |
-| An e-reader version              | ePub          | `liaex -i README.md -f epub`             |
-| A Word document                  | DOCX          | `liaex -i README.md -f docx`             |
-| A self-hosted interactive site   | Web           | `liaex -i README.md -f web`             |
-| An offline mobile app            | Android APK   | `liaex -i README.md -f android`          |
-| Learning analytics               | xAPI          | `liaex -i README.md -f xapi`             |
+| Upload zu Moodle / ILIAS / OPAL  | SCORM 1.2/2004| `liaex -i README.md -f scorm2004`        |
+| Ein druckbares / Archiv-Dokument | PDF           | `liaex -i README.md -f pdf`              |
+| Eine E-Reader-Fassung            | ePub          | `liaex -i README.md -f epub`             |
+| Ein Word-Dokument                | DOCX          | `liaex -i README.md -f docx`             |
+| Eine selbst gehostete interaktive Seite | Web    | `liaex -i README.md -f web`             |
+| Eine Offline-Mobil-App           | Android APK   | `liaex -i README.md -f android`          |
+| Lern-Analytik                    | xAPI          | `liaex -i README.md -f xapi`             |
 
 </section>
 
-Notice what this means in one sentence: the SCORM package your LMS ingests, the PDF in your archive, and the interactive web course are not three separate products to maintain. They are three views of one text file. Fix a typo once, re-export, and every format is corrected.
+Beachten Sie, was das in einem Satz bedeutet: Das SCORM-Paket, das Ihre Lernplattform aufnimmt, das PDF in Ihrem Archiv und der interaktive Web-Kurs sind nicht drei getrennte Produkte, die gepflegt werden müssen. Sie sind drei Ansichten einer Textdatei. Beheben Sie einen Tippfehler einmal, exportieren Sie neu, und jedes Format ist korrigiert.
 
-> [!IMPORTANT] What "avoiding lock-in" concretely buys you
-> One source of truth, many delivery formats, all open and standards-based (SCORM, xAPI, ePub, PDF). The source stays yours and portable, independent of any single platform's export button — and every document in this repository was validated with exactly this exporter.
+> [!IMPORTANT] Was „Bindung vermeiden" konkret bringt
+> Eine Wahrheitsquelle, viele Auslieferungsformate, alle offen und standardbasiert (SCORM, xAPI, ePub, PDF). Die Quelle bleibt Ihre und ist portabel, unabhängig vom Export-Knopf einer einzelnen Plattform — und jedes Dokument in diesem Repository wurde mit genau diesem Exporter geprüft.
 
 ---
 
-## In One Sentence
+## In einem Satz
 
-So here is the whole argument, compressed. Everything you saw in the NIS2 course — and everything in this document — is one plain-text file, extended by a small consistent grammar, written with the help of AI agents, and exportable to any format an institution needs. That is the case for LiaScript: not a platform you adopt, but a text file you keep.
+Hier also das ganze Argument, verdichtet. Alles, was Sie im NIS2-Kurs gesehen haben — und alles in diesem Dokument — ist eine Textdatei, erweitert um eine kleine, konsistente Grammatik, geschrieben mit Hilfe von KI-Agenten und in jedes Format exportierbar, das eine Institution braucht. Das ist das Argument für LiaScript: keine Plattform, die man übernimmt, sondern eine Textdatei, die man behält.
 
-> A LiaScript course is **a plain text file you fully own** — with a small, consistent grammar for interaction, an authoring process that AI can accelerate, and an exporter that reaches every major format without lock-in.
+> Ein LiaScript-Kurs ist **eine Textdatei, die vollständig Ihnen gehört** — mit einer kleinen, konsistenten Grammatik für Interaktion, einem Erstellungsprozess, den KI beschleunigen kann, und einem Exporter, der jedes wichtige Format ohne Bindung erreicht.
 >
-> The NIS2 course next door is the proof. This document is the explanation.
+> Der NIS2-Kurs nebenan ist der Beweis. Dieses Dokument ist die Erklärung.
 
-**A quick check — what did this document actually claim?**
+**Ein kurzer Check — was hat dieses Dokument eigentlich behauptet?**
 
-- [[X]] A LiaScript course is a plain text file
-- [[X]] Interaction is a language feature, not a plugin
-- [[X]] One source file exports to many formats
-- [[ ]] You need a proprietary editor and a server to run it
-
+- [[X]] Ein LiaScript-Kurs ist eine Textdatei
+- [[X]] Interaktion ist ein Sprachmerkmal, kein Plugin
+- [[X]] Eine Quelldatei exportiert in viele Formate
+- [[ ]] Man braucht einen proprietären Editor und einen Server, damit es läuft
 ***********************************************
 
-The first three are the whole idea; the last one is exactly what LiaScript avoids — an ordinary text file, opened in a browser, is all it takes.
+Die ersten drei sind der ganze Kern; das letzte ist genau das, was LiaScript vermeidet — eine gewöhnliche Textdatei, im Browser geöffnet, ist alles, was es braucht.
 
 ***********************************************

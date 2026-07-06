@@ -2,249 +2,249 @@
 author:   André Dietrich
 email:    LiaScript@web.de
 version:  2.0.0
-language: en
-narrator: English Female
+language: de
+narrator: Deutsch Female
 
 edit:     true
 
 logo:     assets/images/preview-card.png
 
-comment:  Unit 2 of "NIS2 Ready" — the two-step scope test (sector, then size) for determining essential vs. important entity status under NIS2.
+comment:  Einheit 2 von „NIS2 Ready" — der zweistufige Test zum Anwendungsbereich (erst Sektor, dann Größe) zur Einordnung als wesentliche vs. wichtige Einrichtung unter NIS2.
 
 import: https://raw.githubusercontent.com/liaScript/mermaid_template/master/README.md
 -->
 
-# Are You in Scope? Essential vs. Important Entities
+# Sind Sie im Anwendungsbereich? Wesentliche vs. wichtige Einrichtungen
 
     --{{0}}--
-Welcome back. In the next forty minutes, you'll do less reading and a lot more applying: by the end, you'll know exactly whether NIS2 applies to your organization — and to which of two categories. Most of your time today goes to one worksheet, not new theory.
+Willkommen zurück. In den nächsten vierzig Minuten lesen Sie weniger und wenden dafür deutlich mehr an: Am Ende wissen Sie genau, ob NIS2 auf Ihre Organisation zutrifft — und wenn ja, welcher der beiden Kategorien sie zuzuordnen ist. Der größte Teil Ihrer Zeit fließt heute in ein einziges Arbeitsblatt, nicht in neue Theorie.
 
-> **NIS2 Ready — Cybersecurity Compliance for Public Administration & Critical Infrastructure**
+> **NIS2 Ready — Cybersecurity-Compliance für die öffentliche Verwaltung und kritische Infrastrukturen**
 >
-> *Unit 2 of 6 · exercise · ~40 minutes · builds on Unit 1's orientation, but stands on its own*
+> *Einheit 2 von 6 · Übung · ~40 Minuten · baut auf der Orientierung aus Einheit 1 auf, steht aber für sich*
 
-## Nordholm Nahverkehr Isn't Sure
+## Nordholm Nahverkehr ist sich nicht sicher
 
-![Flat geometric illustration of a diverse public-transport control-room team studying an abstract route network map with a small shield icon overlay, rendered in EU blue and gold on a neutral background.](assets/images/nahverkehr-control-room-hero.png)
+![Flache geometrische Illustration eines vielfältigen Leitstellenteams eines öffentlichen Nahverkehrs, das eine abstrakte Streckennetzkarte mit einem kleinen eingeblendeten Schild-Symbol studiert, dargestellt in EU-Blau und -Gold auf neutralem Hintergrund.](assets/images/nahverkehr-control-room-hero.png)
 
     --{{0}}--
-Let's meet this unit's case organization before we meet the test.
+Lernen wir die Fallorganisation dieser Einheit kennen, bevor wir uns dem Test widmen.
 
-**Nordholm Nahverkehr** is the regional public-transport operator for the city of Nordholm — buses and trams, about 180 staff, a subsidiary of Stadtverwaltung Nordholm (the municipal administration from Unit 1, though the two run entirely separate IT systems).
+**Nordholm Nahverkehr** ist der regionale Nahverkehrsbetreiber der Stadt Nordholm — Busse und Straßenbahnen, rund 180 Beschäftigte, eine Tochtergesellschaft der Stadtverwaltung Nordholm (der Kommunalverwaltung aus Einheit 1, wobei beide vollständig getrennte IT-Systeme betreiben).
 
     --{{1}}--
-Here's the situation: their new IT lead just read a memo about NIS2 and asked the obvious question — *does this even apply to us?* — and got three different guesses from three colleagues.
+Die Ausgangslage: Die neue IT-Leitung hat gerade ein Memo über NIS2 gelesen und die naheliegende Frage gestellt — *trifft das überhaupt auf uns zu?* — und drei unterschiedliche Vermutungen von drei Kolleginnen und Kollegen erhalten.
 
       {{1}}
-> [!WARNING] Three guesses, three different answers
-> *"We're not big enough for this." · "We're transport, not energy — this is for utilities." · "Our IT is mostly outsourced, so it's the vendor's problem."*
+> [!WARNING] Drei Vermutungen, drei verschiedene Antworten
+> *„Dafür sind wir nicht groß genug." · „Wir sind Verkehr, nicht Energie — das ist etwas für Versorgungsunternehmen." · „Unsere IT ist größtenteils ausgelagert, das ist also Sache des Dienstleisters."*
 
     --{{2}}--
-All three guesses sound reasonable. All three are exactly the kind of guess Unit 1 warned you about. This unit replaces the guessing with a test you can actually run — on Nordholm Nahverkehr, and then on your own organization.
+Alle drei Vermutungen klingen plausibel. Alle drei sind genau die Art von Vermutung, vor der Einheit 1 gewarnt hat. Diese Einheit ersetzt das Raten durch einen Test, den Sie tatsächlich durchführen können — an Nordholm Nahverkehr und anschließend an Ihrer eigenen Organisation.
 
-### Sector First, Size Second — Not the Other Way Around
-
-    --{{0}}--
-If you've dealt with GDPR before, your instinct is probably "big organization = covered, small organization = exempt." Drop that instinct here — NIS2 works differently.
-
-> [!IMPORTANT] Correcting the GDPR-style instinct
-> NIS2 scope is **sector-driven first, size-driven second**. A small transport operator in a listed sector can be in scope while a much larger company outside any listed sector is not. Size only enters the picture *after* the sector question is settled.
-
-## The Two-Step Scope Test
+### Zuerst der Sektor, dann die Größe — nicht umgekehrt
 
     --{{0}}--
-Here it is — the entire test this unit is built around. Two questions, asked in order. Skip the order and you'll get the wrong answer.
+Wenn Sie schon mit der DSGVO zu tun hatten, lautet Ihr Instinkt vermutlich „große Organisation = erfasst, kleine Organisation = ausgenommen". Lassen Sie diesen Instinkt hier los — NIS2 funktioniert anders.
 
-1. **Is your sector listed in Annex I or Annex II** of the directive?
-2. **If yes** — does your organization meet the size threshold (with a short list of named exceptions that apply regardless of size)?
+> [!IMPORTANT] Den DSGVO-Instinkt korrigieren
+> Der NIS2-Anwendungsbereich ist **zuerst sektorgetrieben, erst danach größengetrieben**. Ein kleiner Verkehrsbetreiber in einem gelisteten Sektor kann im Anwendungsbereich liegen, während ein viel größeres Unternehmen außerhalb jedes gelisteten Sektors es nicht ist. Die Größe kommt erst ins Spiel, *nachdem* die Sektorfrage geklärt ist.
 
-### Step 1 — Is Your Sector Listed?
+## Der zweistufige Anwendungsbereichs-Test
 
     --{{0}}--
-Eighteen sectors, split into two annexes. Annex I sectors carry the possibility of "essential" status; Annex II sectors are always, at most, "important."
+Hier ist er — der gesamte Test, um den diese Einheit gebaut ist. Zwei Fragen, in dieser Reihenfolge gestellt. Halten Sie die Reihenfolge nicht ein, erhalten Sie die falsche Antwort.
 
-**Annex I — 11 "high-criticality" sectors:**
+1. **Ist Ihr Sektor in Anhang I oder Anhang II** der Richtlinie gelistet?
+2. **Wenn ja** — erfüllt Ihre Organisation den Größenschwellenwert (mit einer kurzen Liste benannter Ausnahmen, die unabhängig von der Größe gelten)?
 
-| #  | Sector                                                                             |
+### Schritt 1 — Ist Ihr Sektor gelistet?
+
+    --{{0}}--
+Achtzehn Sektoren, aufgeteilt auf zwei Anhänge. Sektoren nach Anhang I bergen die Möglichkeit des Status „wesentlich"; Sektoren nach Anhang II sind stets höchstens „wichtig".
+
+**Anhang I — 11 Sektoren mit „hoher Kritikalität":**
+
+| #  | Sektor                                                                             |
 |----|------------------------------------------------------------------------------------|
-| 1  | Energy (electricity, district heating/cooling, oil, gas, hydrogen)                 |
-| 2  | Transport (air, rail, water, road)                                                 |
-| 3  | Banking                                                                            |
-| 4  | Financial market infrastructure                                                    |
-| 5  | Health                                                                             |
-| 6  | Drinking water                                                                     |
-| 7  | Waste water                                                                        |
-| 8  | Digital infrastructure (cloud, data centres, DNS, TLD registries, CDNs, telecoms…) |
-| 9  | ICT service management (B2B — managed service/security providers)                  |
-| 10 | Public administration (central and regional government)                            |
-| 11 | Space                                                                              |
+| 1  | Energie (Elektrizität, Fernwärme/-kälte, Öl, Gas, Wasserstoff)                     |
+| 2  | Verkehr (Luft, Schiene, Wasser, Straße)                                            |
+| 3  | Bankwesen                                                                          |
+| 4  | Finanzmarktinfrastrukturen                                                         |
+| 5  | Gesundheit                                                                         |
+| 6  | Trinkwasser                                                                        |
+| 7  | Abwasser                                                                           |
+| 8  | Digitale Infrastruktur (Cloud, Rechenzentren, DNS, TLD-Registries, CDNs, Telekom…)|
+| 9  | Verwaltung von IKT-Diensten (B2B — Managed-Service-/Sicherheitsdienstleister)      |
+| 10 | Öffentliche Verwaltung (zentrale und regionale Ebene)                              |
+| 11 | Weltraum                                                                           |
 
-**Annex II — 7 "other critical" sectors:**
+**Anhang II — 7 „sonstige kritische" Sektoren:**
 
-| # | Sector |
+| # | Sektor |
 | --- | --- |
-| 1 | Postal and courier services |
-| 2 | Waste management |
-| 3 | Chemicals (manufacture, production, distribution) |
-| 4 | Food (production, processing, wholesale distribution) |
-| 5 | Manufacturing (medical devices, electronics, electrical equipment, machinery, motor vehicles, other transport equipment) |
-| 6 | Digital providers (online marketplaces, search engines, social networking platforms) |
-| 7 | Research organizations |
+| 1 | Post- und Kurierdienste |
+| 2 | Abfallbewirtschaftung |
+| 3 | Chemie (Herstellung, Produktion, Vertrieb) |
+| 4 | Lebensmittel (Produktion, Verarbeitung, Großhandel) |
+| 5 | Verarbeitendes Gewerbe/Herstellung von Waren (Medizinprodukte, Elektronik, elektrische Ausrüstungen, Maschinen, Kraftfahrzeuge, sonstige Fahrzeuge) |
+| 6 | Anbieter digitaler Dienste (Online-Marktplätze, Suchmaschinen, soziale Netzwerke) |
+| 7 | Forschung (Forschungseinrichtungen) |
 
-> [!NOTE] Not listed doesn't always mean "safe"
-> A few member states extend NIS2 to additional cases — local-government administration and education/research bodies doing critical research are both explicitly allowed as national opt-ins (Art. 2(5)). If you're unsure, "not listed" is a good default assumption, but confirm with your compliance lead rather than treating it as final.
+> [!NOTE] Nicht gelistet heißt nicht immer „sicher"
+> Einige Mitgliedstaaten dehnen NIS2 auf zusätzliche Fälle aus — die kommunale Verwaltung sowie Bildungs-/Forschungseinrichtungen, die kritische Forschung betreiben, sind beide ausdrücklich als nationale Opt-ins zugelassen (Art. 2(5)). Wenn Sie unsicher sind, ist „nicht gelistet" eine gute Ausgangsannahme, klären Sie dies aber mit Ihrer Compliance-Leitung, statt es als endgültig zu behandeln.
 
-### Step 2 — Does Your Organization Meet the Size Threshold?
+### Schritt 2 — Erfüllt Ihre Organisation den Größenschwellenwert?
 
     --{{0}}--
-If Step 1 landed on "yes," Step 2 decides which of two categories you're in — and whether size even matters for your case.
+Wenn Schritt 1 mit „ja" endete, entscheidet Schritt 2, welcher der beiden Kategorien Sie zuzuordnen sind — und ob die Größe für Ihren Fall überhaupt eine Rolle spielt.
 
-| Size class             | Staff headcount | Annual turnover    (million €) | Balance sheet (million €) |
-|------------------------|----------------:|-------------------------------:|--------------------------:|
-| Micro                  |        $ 10 < $ |                      2 million |                 2 million |
-| Small                  |        $ 50 < $ |                     10 million |                10 million |
-| Medium                 |       $ 250 < $ |                     50 million |                43 million |
-| Large (exceeds medium) |       $ 250 <=$ |                     50 million |                43 million |
+| Größenklasse             | Beschäftigtenzahl | Jahresumsatz    (Mio. €) | Bilanzsumme (Mio. €) |
+|--------------------------|------------------:|-------------------------:|---------------------:|
+| Kleinstunternehmen       |          $ 10 < $ |                        2 |                    2 |
+| Kleines Unternehmen      |          $ 50 < $ |                       10 |                   10 |
+| Mittleres Unternehmen    |         $ 250 < $ |                       50 |                   43 |
+| Großes Unternehmen (überschreitet mittleres) | $ 250 <=$ |               50 |                   43 |
 
     --{{1}}--
-As a rule: medium and large organizations in a listed sector are in scope. Micro and small organizations usually are not — *usually*, because a short list of named exceptions overrides size entirely.
+Als Faustregel: Mittlere und große Organisationen in einem gelisteten Sektor liegen im Anwendungsbereich. Kleinst- und kleine Organisationen in der Regel nicht — *in der Regel*, denn eine kurze Liste benannter Ausnahmen setzt die Größe vollständig außer Kraft.
 
       {{1}}
-> [!NOTE] Named exceptions — in scope regardless of the size test
-> A handful of entity types are covered no matter how small they are, or count as **essential** even at only "medium" size: qualified trust service providers, top-level-domain registries and DNS service providers; providers of public electronic-communications networks or services; public administration entities of **central** government; and entities separately designated as critical infrastructure under the EU's Critical Entities Resilience (CER) Directive. If none of these apply to your organization, the ordinary sector-then-size test governs.
+> [!NOTE] Benannte Ausnahmen — im Anwendungsbereich unabhängig vom Größentest
+> Eine Handvoll Einrichtungstypen sind erfasst, egal wie klein sie sind, oder gelten selbst bei nur „mittlerer" Größe als **wesentliche Einrichtung**: qualifizierte Vertrauensdiensteanbieter, Namensregister der Domänen oberster Stufe (TLD) und DNS-Diensteanbieter; Anbieter öffentlicher elektronischer Kommunikationsnetze oder -dienste; Einrichtungen der öffentlichen Verwaltung der **zentralen** Ebene; sowie Einrichtungen, die gesondert als kritische Infrastruktur nach der EU-Richtlinie zur Resilienz kritischer Einrichtungen (CER) eingestuft sind. Wenn keine davon auf Ihre Organisation zutrifft, gilt der gewöhnliche Test „erst Sektor, dann Größe".
 
     --{{2}}--
-Here's the whole test as one flow — sector first, then size, with the named exceptions branching off.
+Hier der gesamte Test als ein Ablauf — zuerst der Sektor, dann die Größe, mit den benannten Ausnahmen, die abzweigen.
 
       {{2}}
 ```mermaid   @mermaid
 flowchart TD
-  A["Is your sector listed<br>in Annex I or Annex II?"] -->|No| Z["Not in scope<br>(unless nationally extended, Art. 2(5))"]
-  A -->|Yes| E{"Named exception?<br>(trust/DNS/TLD, telecom,<br>central-gov admin, CER-critical)"}
-  E -->|Yes| ESS["Essential Entity<br>— regardless of size"]
-  E -->|No| B{"Size class?"}
-  B -->|Micro or Small| Z2["Usually not in scope"]
-  B -->|Medium| IMP["Important Entity"]
-  B -->|Large, Annex I only| ESS
-  B -->|Large, Annex II| IMP
+  A["Ist Ihr Sektor in<br>Anhang I oder Anhang II gelistet?"] -->|Nein| Z["Nicht im Anwendungsbereich<br>(sofern nicht national erweitert, Art. 2(5))"]
+  A -->|Ja| E{"Benannte Ausnahme?<br>(Vertrauensdienst/DNS/TLD, Telekom,<br>Verwaltung zentrale Ebene, CER-kritisch)"}
+  E -->|Ja| ESS["Wesentliche Einrichtung<br>— unabhängig von der Größe"]
+  E -->|Nein| B{"Größenklasse?"}
+  B -->|Kleinst oder klein| Z2["In der Regel nicht im Anwendungsbereich"]
+  B -->|Mittel| IMP["Wichtige Einrichtung"]
+  B -->|Groß, nur Anhang I| ESS
+  B -->|Groß, Anhang II| IMP
 ```
 
-## Essential or Important? What Actually Differs
+## Wesentlich oder wichtig? Was sich tatsächlich unterscheidet
 
     --{{0}}--
-Both labels sound similar, and for good reason: what you're *required to do* barely changes between them. What changes is how closely you're watched.
+Beide Bezeichnungen klingen ähnlich, und das aus gutem Grund: Das, was Sie *tun müssen*, ändert sich zwischen ihnen kaum. Was sich ändert, ist, wie genau Sie beaufsichtigt werden.
 
-- **Same for both:** the ten Art. 21 risk-management measures and the Art. 23 incident-reporting duties apply equally — being "important" instead of "essential" is not a lighter set of obligations. *Unit 3 walks through all ten measures in detail.*
-- **Different: the supervision regime.** Essential entities face proactive, ex-ante oversight — routine inspections and audits, whether or not anything has gone wrong. Important entities face reactive, ex-post oversight only, triggered by evidence of a problem. *Unit 5 covers exactly what each regime looks like in practice, and who's personally on the hook.*
+- **Gleich für beide:** Die zehn Risikomanagementmaßnahmen nach Art. 21 und die Meldepflichten nach Art. 23 gelten gleichermaßen — „wichtig" statt „wesentlich" zu sein bedeutet keinen leichteren Pflichtenkatalog. *Einheit 3 geht alle zehn Maßnahmen im Detail durch.*
+- **Unterschiedlich: das Aufsichtsregime.** Wesentliche Einrichtungen unterliegen einer proaktiven Ex-ante-Aufsicht — routinemäßige Inspektionen und Prüfungen, unabhängig davon, ob etwas schiefgelaufen ist. Wichtige Einrichtungen unterliegen nur einer reaktiven Ex-post-Aufsicht, ausgelöst durch Hinweise auf ein Problem. *Einheit 5 behandelt genau, wie jedes Regime in der Praxis aussieht und wer persönlich in der Verantwortung steht.*
 
-> [!TIP] If you remember one thing from this section
-> "Important" is not "NIS2 lite." It's the same duties, checked differently.
+> [!TIP] Wenn Sie sich eine Sache aus diesem Abschnitt merken
+> „Wichtig" ist nicht „NIS2 light". Es sind dieselben Pflichten, nur anders kontrolliert.
 
-## Worked Example: Walking Nordholm Nahverkehr Through the Test
+## Durchgerechnetes Beispiel: Nordholm Nahverkehr durch den Test führen
 
     --{{0}}--
-Let's run the actual test on Nordholm Nahverkehr — the same two steps you'll use on your own organization next.
+Führen wir den tatsächlichen Test an Nordholm Nahverkehr durch — dieselben zwei Schritte, die Sie anschließend an Ihrer eigenen Organisation anwenden werden.
 
-**Step 1 — Sector.** Nordholm Nahverkehr operates both buses and trams. The tram network puts it squarely under Annex I, Sector 2 (Transport → rail) as a railway undertaking. *This detail matters: a bus-only operator sits in genuinely grayer territory under some national transpositions — which is exactly why picking an operator that also runs rail keeps this worked example clean, and why "check the precise service definition, not the everyday job title" is worth remembering for your own case.*
+**Schritt 1 — Sektor.** Nordholm Nahverkehr betreibt sowohl Busse als auch Straßenbahnen. Das Straßenbahnnetz ordnet den Betrieb eindeutig Anhang I, Sektor 2 (Verkehr → Schiene) als Eisenbahnverkehrsunternehmen zu. *Dieses Detail ist wichtig: Ein reiner Busbetreiber bewegt sich unter manchen nationalen Umsetzungen in echt graueren Bereichen — genau deshalb hält die Wahl eines Betreibers, der auch Schiene betreibt, dieses Beispiel sauber, und deshalb lohnt es sich für Ihren eigenen Fall, „die genaue Dienstdefinition zu prüfen, nicht die alltägliche Berufsbezeichnung" im Kopf zu behalten.*
 
     --{{1}}--
-Sector question: **settled, yes.** Now size.
+Sektorfrage: **geklärt, ja.** Jetzt die Größe.
 
       {{1}}
-**Step 2 — Size.** About 180 staff, annual turnover well under €50 million — that's a **medium**-sized enterprise. None of the named exceptions apply: Nordholm Nahverkehr isn't a telecom provider, a trust service provider, a central-government body, or a CER-designated critical entity.
+**Schritt 2 — Größe.** Rund 180 Beschäftigte, ein Jahresumsatz deutlich unter 50 Mio. € — das ist ein **mittleres** Unternehmen. Keine der benannten Ausnahmen greift: Nordholm Nahverkehr ist kein Telekommunikationsanbieter, kein Vertrauensdiensteanbieter, keine Einrichtung der zentralen Ebene und keine nach CER eingestufte kritische Einrichtung.
 
     --{{2}}--
-Sector: Annex I, transport. Size: medium, no named exception. Follow the flowchart, and there's only one place that lands.
+Sektor: Anhang I, Verkehr. Größe: mittel, keine benannte Ausnahme. Folgen Sie dem Flussdiagramm, dann gibt es nur ein Ergebnis, bei dem man landet.
 
       {{2}}
-> [!NOTE] Result: Important Entity
-> Nordholm Nahverkehr is an **important entity** under NIS2 — in scope, subject to the full Art. 21 measures and Art. 23 reporting duties, under the reactive (ex-post) supervision regime. Not "essential," not "exempt" — a real, specific, checkable answer instead of three competing guesses.
+> [!NOTE] Ergebnis: Wichtige Einrichtung
+> Nordholm Nahverkehr ist eine **wichtige Einrichtung** nach NIS2 — im Anwendungsbereich, den vollständigen Maßnahmen nach Art. 21 und den Meldepflichten nach Art. 23 unterworfen, unter dem reaktiven (Ex-post-)Aufsichtsregime. Nicht „wesentlich", nicht „ausgenommen" — eine echte, konkrete, überprüfbare Antwort statt dreier konkurrierender Vermutungen.
 
-## Now Apply It to Your Own Organization
-
-    --{{0}}--
-Same two steps, aimed at your own organization or the part of it you're responsible for. Work through it honestly — an unclear answer here is a useful result, not a failed one.
-
-**Step 1 — Sector check.** Tick anything that plausibly describes a service your organization provides:
-
-[[ ]] Energy, transport, banking, or financial market infrastructure
-[[ ]] Health, drinking water, or waste water
-[[ ]] Digital infrastructure, cloud/data-centre services, or managed IT/security services (B2B)
-[[ ]] Public administration (central or regional government)
-[[ ]] Space
-[[ ]] Postal/courier, waste management, chemicals, or food production/distribution
-[[ ]] Manufacturing (medical devices, electronics, electrical equipment, machinery, vehicles)
-[[ ]] Digital services (marketplace, search engine, social platform) or research
-[[ ]] None of the above, as far as I can tell
-
-**Step 2 — Size check.** Which best describes your organization?
-
-[[ ]] Micro or small (under 50 staff, and under €10 million turnover)
-[[ ]] Medium (50–249 staff, or €10–50 million turnover)
-[[ ]] Large (250+ staff, or over €50 million turnover and €43 million balance sheet)
-[[ ]] One of the named exceptions applies (telecom, trust service, DNS/TLD, central-government admin, or CER-critical) regardless of size
-
-**Your tentative classification, based on the flowchart above:**
-
-[[___ ___ ___]]
-
-**One piece of information you'd need to confirm with your compliance or IT lead to be certain:**
-
-[[___ ___ ___]]
-
-> [!NOTE] Not graded, and not final
-> This worksheet gives you a *reasoned first answer*, not an official determination — member states maintain the authoritative registry of essential/important entities. Treat a confident "important" or "essential" result here as "go verify this," not as a filed classification.
-
-## Wrap-Up & Self-Check
+## Wenden Sie es nun auf Ihre eigene Organisation an
 
     --{{0}}--
-Three quick questions, not graded, just a gut-check on the two-step test itself.
+Dieselben zwei Schritte, ausgerichtet auf Ihre eigene Organisation oder den Teil davon, für den Sie verantwortlich sind. Arbeiten Sie ehrlich durch — eine unklare Antwort ist hier ein nützliches Ergebnis, kein gescheitertes.
 
-**1. What is the correct order of the NIS2 scope test?**
+**Schritt 1 — Sektorprüfung.** Kreuzen Sie alles an, was einen Dienst, den Ihre Organisation erbringt, plausibel beschreibt:
 
-- [(X)] Check the sector first (Annex I/II), then check size
-- [( )] Check size first, then check the sector
-- [( )] There is no fixed order — either works
-******
+[[ ]] Energie, Verkehr, Bankwesen oder Finanzmarktinfrastrukturen
+[[ ]] Gesundheit, Trinkwasser oder Abwasser
+[[ ]] Digitale Infrastruktur, Cloud-/Rechenzentrumsdienste oder Managed IT-/Sicherheitsdienste (B2B)
+[[ ]] Öffentliche Verwaltung (zentrale oder regionale Ebene)
+[[ ]] Weltraum
+[[ ]] Post/Kurier, Abfallbewirtschaftung, Chemie oder Lebensmittelproduktion/-vertrieb
+[[ ]] Verarbeitendes Gewerbe (Medizinprodukte, Elektronik, elektrische Ausrüstungen, Maschinen, Fahrzeuge)
+[[ ]] Digitale Dienste (Marktplatz, Suchmaschine, soziale Plattform) oder Forschung
+[[ ]] Nichts davon, soweit ich das beurteilen kann
 
-> The order matters: size only becomes relevant once the sector question is settled. Reversing it is exactly the GDPR-style mistake this unit corrects.
+**Schritt 2 — Größenprüfung.** Was beschreibt Ihre Organisation am besten?
 
-******
+[[ ]] Kleinst oder klein (unter 50 Beschäftigte und unter 10 Mio. € Umsatz)
+[[ ]] Mittel (50–249 Beschäftigte oder 10–50 Mio. € Umsatz)
+[[ ]] Groß (250+ Beschäftigte oder über 50 Mio. € Umsatz und 43 Mio. € Bilanzsumme)
+[[ ]] Eine der benannten Ausnahmen greift (Telekom, Vertrauensdienst, DNS/TLD, Verwaltung zentrale Ebene oder CER-kritisch) unabhängig von der Größe
 
-**2. An organization is medium-sized, operates in an Annex II sector, and has no named exception. What is it?**
-
-- [( )] Essential entity
-- [(X)] Important entity
-- [( )] Out of scope
-******
-
-> Annex II entities are always, at most, "important" — Annex I large enterprises (or a named exception) are the only routes to "essential."
-
-******
-
-**3. True or false: "important" entities have fewer cybersecurity obligations than "essential" entities.**
-
-- [( )] True
-- [(X)] False
-******
-
-> False — the Art. 21 measures and Art. 23 reporting duties are the same for both. Only the supervision regime differs (proactive vs. reactive).
-
-******
-
-### Before You Go: One Quick Reflection
-
-Think back to your Step 1/Step 2 answers above. If your tentative result was "important" or "essential" — who in your organization could actually confirm that for you this week?
+**Ihre vorläufige Einstufung, basierend auf dem Flussdiagramm oben:**
 
 [[___ ___ ___]]
 
-### Up Next
+**Eine Information, die Sie mit Ihrer Compliance- oder IT-Leitung bestätigen müssten, um sicher zu sein:**
 
-**Unit 3 — The 10 Measures You Actually Need.** Now that you know *whether* NIS2 applies, we'll meet Klinikum Ostheide, a regional hospital network, and map the ten Art. 21 measures onto a real IT/OT environment — and then onto yours.
+[[___ ___ ___]]
 
-**References:**
+> [!NOTE] Nicht benotet und nicht endgültig
+> Dieses Arbeitsblatt liefert Ihnen eine *begründete erste Antwort*, keine offizielle Feststellung — die Mitgliedstaaten führen das maßgebliche Verzeichnis der wesentlichen/wichtigen Einrichtungen. Behandeln Sie ein selbstbewusstes „wichtig"- oder „wesentlich"-Ergebnis hier als „das gilt es zu überprüfen", nicht als eingetragene Einstufung.
 
-1. Directive (EU) 2022/2555 (NIS2), Art. 2–3 (scope, essential and important entities) — `data/cybersichert.pdf`
-2. Directive (EU) 2022/2555 (NIS2), Annexes I–II (sector lists) — `data/cybersichert.pdf`
-3. Commission Recommendation 2003/361/EC (SME size-class definitions, referenced by NIS2 Art. 2(1)) — full text at `data/cybersichert.pdf`, Art. 2 note
-4. Course Agenda — `journal.md` → `## Agenda`
+## Zusammenfassung & Selbstkontrolle
+
+    --{{0}}--
+Drei kurze Fragen, nicht benotet, nur ein Bauchgefühl-Check zum zweistufigen Test selbst.
+
+**1. Was ist die richtige Reihenfolge des NIS2-Anwendungsbereichs-Tests?**
+
+- [(X)] Zuerst den Sektor prüfen (Anhang I/II), dann die Größe
+- [( )] Zuerst die Größe prüfen, dann den Sektor
+- [( )] Es gibt keine feste Reihenfolge — beides funktioniert
+******
+
+> Die Reihenfolge ist entscheidend: Die Größe wird erst relevant, wenn die Sektorfrage geklärt ist. Die Reihenfolge umzukehren ist genau der DSGVO-artige Fehler, den diese Einheit korrigiert.
+
+******
+
+**2. Eine Organisation ist mittelgroß, tätig in einem Anhang-II-Sektor und ohne benannte Ausnahme. Was ist sie?**
+
+- [( )] Wesentliche Einrichtung
+- [(X)] Wichtige Einrichtung
+- [( )] Außerhalb des Anwendungsbereichs
+******
+
+> Einrichtungen nach Anhang II sind stets höchstens „wichtig" — große Unternehmen nach Anhang I (oder eine benannte Ausnahme) sind die einzigen Wege zu „wesentlich".
+
+******
+
+**3. Richtig oder falsch: „wichtige" Einrichtungen haben weniger Cybersicherheitspflichten als „wesentliche" Einrichtungen.**
+
+- [( )] Richtig
+- [(X)] Falsch
+******
+
+> Falsch — die Maßnahmen nach Art. 21 und die Meldepflichten nach Art. 23 sind für beide gleich. Nur das Aufsichtsregime unterscheidet sich (proaktiv vs. reaktiv).
+
+******
+
+### Bevor Sie gehen: Eine kurze Reflexion
+
+Denken Sie an Ihre Antworten zu Schritt 1/Schritt 2 oben zurück. Wenn Ihr vorläufiges Ergebnis „wichtig" oder „wesentlich" lautete — wer in Ihrer Organisation könnte Ihnen das diese Woche tatsächlich bestätigen?
+
+[[___ ___ ___]]
+
+### Als Nächstes
+
+**Einheit 3 — Die 10 Maßnahmen, die Sie wirklich brauchen.** Jetzt, da Sie wissen, *ob* NIS2 zutrifft, treffen wir das Klinikum Ostheide, ein regionales Krankenhausnetz, und übertragen die zehn Maßnahmen nach Art. 21 auf eine reale IT/OT-Umgebung — und dann auf Ihre.
+
+**Quellen:**
+
+1. Richtlinie (EU) 2022/2555 (NIS2), Art. 2–3 (Anwendungsbereich, wesentliche und wichtige Einrichtungen) — `data/cybersichert.pdf`
+2. Richtlinie (EU) 2022/2555 (NIS2), Anhänge I–II (Sektorlisten) — `data/cybersichert.pdf`
+3. Empfehlung 2003/361/EG der Kommission (KMU-Größenklassendefinitionen, referenziert durch NIS2 Art. 2(1)) — Volltext unter `data/cybersichert.pdf`, Anmerkung zu Art. 2
+4. Kursagenda — `journal.md` → `## Agenda`

@@ -3,6 +3,7 @@ author:   Sebastian Zug, André Dietrich
 email:    sebastian.zug@informatik.tu-freiberg.de
 version:  0.1.0
 language: de
+mode:     Presentation
 
 comment:  Ein Blick hinter die Kulissen des Kurses „NIS2 Ready" — eine behutsame Einführung von Grund auf in LiaScript, den KI-Agenten-Workflow und den liaex-Exporter, für Leserinnen und Leser, die alle drei noch nicht kennen.
 
@@ -37,7 +38,7 @@ Den ersten Prototypen eines NIS2-Kurs kennen Sie bereits. Er ist interaktiv, bar
 > Das Werkzeug, mit dem das Material erstellt wurde, heißt [**LiaScript**](https://liascript.github.io/). In den nächsten Abschnitten bauen wir Schritt für Schritt auf, was es ist, zeigen dann, wie dieser Kurs tatsächlich mit Hilfe von KI geschrieben wurde, und schließlich, wie aus einer einzigen Textdatei jedes Format wird, das eine Institution benötigt.
 >
 > 0. **Warum nicht einfach PowerPoint oder PDF?** — die Risse im gewohnten Vorgehen
-> 1. **Was LiaScript ist** — gezeigt, nicht nur beschrieben, anhand dreierP einfacher Ideen
+> 1. **Was LiaScript ist** — gezeigt, nicht nur beschrieben, anhand dreier einfacher Ideen
 > 2. **Wie eine ganze Sprache wächst** — aus ein paar Satzzeichen
 > 3. **LiaScript und KI** — wie dieser Kurs tatsächlich geschrieben wurde
 > 4. **Der Exporter** — eine Textdatei, umgewandelt in jedes Format, das eine Institution braucht
@@ -254,22 +255,23 @@ Das letzte Werkzeug beantwortet die praktische Frage, die jede Institution irgen
 
 <section>
 
-| Sie brauchen …                   | Format        | Befehl (Skizze)                          |
-|----------------------------------|---------------|------------------------------------------|
-| Upload zu Moodle / ILIAS / OPAL  | SCORM 1.2/2004| `liaex -i README.md -f scorm2004`        |
-| Ein druckbares / Archiv-Dokument | PDF           | `liaex -i README.md -f pdf`              |
-| Eine E-Reader-Fassung            | ePub          | `liaex -i README.md -f epub`             |
-| Ein Word-Dokument                | DOCX          | `liaex -i README.md -f docx`             |
-| Eine selbst gehostete interaktive Seite | Web    | `liaex -i README.md -f web`             |
-| Eine Offline-Mobil-App           | Android APK   | `liaex -i README.md -f android`          |
-| Lern-Analytik                    | xAPI          | `liaex -i README.md -f xapi`             |
+| Sie brauchen …                          | Format         | Befehl (Skizze)                   |
+| --------------------------------------- | -------------- | --------------------------------- |
+| Upload zu Moodle / ILIAS / OPAL         | SCORM 1.2/2004 | `liaex -i README.md -f scorm2004` |
+| Ein druckbares / Archiv-Dokument        | PDF            | `liaex -i README.md -f pdf`       |
+| Eine E-Reader-Fassung                   | ePub           | `liaex -i README.md -f epub`      |
+| Ein Word-Dokument                       | DOCX           | `liaex -i README.md -f docx`      |
+| Eine selbst gehostete interaktive Seite | Web            | `liaex -i README.md -f web`       |
+| Eine Offline-Mobil-App                  | Android APK    | `liaex -i README.md -f android`   |
+| Lern-Analytik                           | xAPI           | `liaex -i README.md -f xapi`      |
 
 </section>
 
-Beachten Sie, was das in einem Satz bedeutet: Das SCORM-Paket, das Ihre Lernplattform aufnimmt, das PDF in Ihrem Archiv und der interaktive Web-Kurs sind nicht drei getrennte Produkte, die gepflegt werden müssen. Sie sind drei Ansichten einer Textdatei. Beheben Sie einen Tippfehler einmal, exportieren Sie neu, und jedes Format ist korrigiert.
+Das vorliegende LiaScript-Material als SCORM Paket auf [SCORM Cloud](https://app.cloud.scorm.com/sc/InvitationConfirmEmail?publicInvitationId=fe1d1832-9442-44a7-9a2e-effb978b033c) testen.
+
 
 > [!IMPORTANT] Was „Bindung vermeiden" konkret bringt
-> Eine Wahrheitsquelle, viele Auslieferungsformate, alle offen und standardbasiert (SCORM, xAPI, ePub, PDF). Die Quelle bleibt Ihre und ist portabel, unabhängig vom Export-Knopf einer einzelnen Plattform — und jedes Dokument in diesem Repository wurde mit genau diesem Exporter geprüft.
+> Beachten Sie, was das in einem Satz bedeutet: Das SCORM-Paket, das Ihre Lernplattform aufnimmt, das PDF in Ihrem Archiv und der interaktive Web-Kurs sind nicht drei getrennte Produkte, die gepflegt werden müssen. Sie sind drei Ansichten einer Textdatei. Beheben Sie einen Tippfehler einmal, exportieren Sie neu, und jedes Format ist korrigiert.
 
 ---
 

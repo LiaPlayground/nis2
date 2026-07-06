@@ -10,10 +10,11 @@ comment: >
   </span>
   <br><br>
   <span style="margin:0 auto; background-color:rgba(255,255,255,0.8); padding:4px 8px;">
-    A free, interactive, self-paced course (6 units, ~4&ndash;6 hours) for employees across
-    ministries, public administrations, and critical-infrastructure organizations who fall
-    under the EU NIS2 Directive &mdash; decision-makers, IT/security staff, and general
-    employees alike, no prior technical or legal background required.
+    Ein kostenloser, interaktiver Selbstlernkurs (6 Einheiten, ca. 4&ndash;6 Stunden) für
+    Beschäftigte in Ministerien, öffentlichen Verwaltungen und Organisationen kritischer
+    Infrastrukturen, die unter die EU-NIS2-Richtlinie fallen &mdash; für Entscheidungsträger,
+    IT-/Sicherheitspersonal und allgemeine Mitarbeitende gleichermaßen, ohne technische
+    oder juristische Vorkenntnisse.
   </span>
 
 logo: assets/images/hero.png
@@ -23,81 +24,85 @@ navbar:
   background: "#003399"
   theme: dark
   links:
-    - label: Course
+    - label: Kurs
       url: "#"
-    - label: Behind the Scenes
+    - label: Hinter den Kulissen
       url: "#behind-the-scenes"
 
 footer: >
-  Created with LiaScript —
-  <a href="https://liascript.github.io" target="_blank">LiaScript.github.io</a>
+  Erstellt mit LiaScript —
+  <a href="https://liascript.github.io" target="_blank">LiaScript.github.io</a> ·
+  <a href="https://github.com/LiaPlayground/nis2" target="_blank">GitHub-Projekt</a> ·
+  <a href="https://github.com/LiaPlayground/nis2/blob/main/README.md" target="_blank">Teaching-Agent-Projekt</a>
 
 meta:
   title: NIS2 Ready — Cybersecurity Compliance for Public Administration & Critical Infrastructure
   description: >
-    An interactive, self-paced course (6 units, ~4-6 hours) on the EU NIS2 Directive
-    (2022/2555) for public administration and critical-infrastructure staff. Learn whether
-    your organization is in scope, the concrete cybersecurity measures it requires, how to
-    handle and report incidents, who's liable if things go wrong, and calculate your own
-    NIS2 Readiness Score.
+    Ein interaktiver Selbstlernkurs (6 Einheiten, ca. 4-6 Stunden) zur EU-NIS2-Richtlinie
+    (2022/2555) für Beschäftigte in der öffentlichen Verwaltung und in kritischen
+    Infrastrukturen. Erfahren Sie, ob Ihre Organisation in den Anwendungsbereich fällt,
+    welche konkreten Cybersicherheitsmaßnahmen erforderlich sind, wie Vorfälle behandelt
+    und gemeldet werden, wer haftet, wenn etwas schiefgeht, und berechnen Sie Ihren eigenen
+    NIS2-Readiness-Score.
   image: https://raw.githubusercontent.com/LiaPlayground/nis2/main/assets/images/hero.png
 
 tags:
   - NIS2
-  - Cybersecurity
+  - Cybersicherheit
   - Compliance
 
 collection:
   - html: >
-      <h2>What You'll Learn</h2>
-      <p>Six self-paced units, roughly four to six hours total &mdash; take them in order,
-      or jump straight to the one your role needs most:</p>
+      <h2>Was Sie lernen</h2>
+      <p>Sechs Einheiten im eigenen Tempo, insgesamt etwa vier bis sechs Stunden &mdash;
+      bearbeiten Sie sie der Reihe nach oder springen Sie direkt zu der Einheit, die Ihre
+      Rolle am dringendsten braucht:</p>
       <ol>
-        <li><strong>Welcome &amp; Why NIS2 Matters</strong> (lecture, 25 min) &mdash; sets up
-        the course rhythm and the stakes.</li>
-        <li><strong>Are You in Scope? Essential vs. Important Entities</strong> (exercise,
-        40 min) &mdash; determine whether your organization falls under NIS2.</li>
-        <li><strong>The 10 Measures You Actually Need</strong> (exercise, 50 min) &mdash; the
-        Art. 21 risk-management measures, translated into plain language.</li>
-        <li><strong>Handling &amp; Reporting Incidents</strong> (lecture, 45 min) &mdash; the
-        24h / 72h / 1-month incident-reporting timeline.</li>
-        <li><strong>Who's Responsible? Governance &amp; Consequences</strong> (lecture,
-        40 min) &mdash; liability and sanctions under NIS2.</li>
-        <li><strong>Your NIS2 Readiness Score</strong> (exercise, 35 min) &mdash; a live,
-        interactive self-assessment calculator.</li>
+        <li><strong>Willkommen &amp; Warum NIS2 wichtig ist</strong> (Modul, 25 Min) &mdash;
+        führt in den Kursrhythmus und die Bedeutung des Themas ein.</li>
+        <li><strong>Sind Sie im Anwendungsbereich? Wesentliche vs. wichtige Einrichtungen</strong>
+        (Übung, 40 Min) &mdash; bestimmen Sie, ob Ihre Organisation unter NIS2 fällt.</li>
+        <li><strong>Die 10 Maßnahmen, die Sie wirklich brauchen</strong> (Übung, 50 Min)
+        &mdash; die Risikomanagementmaßnahmen aus Art. 21, in Alltagssprache übersetzt.</li>
+        <li><strong>Umgang mit und Meldung von Vorfällen</strong> (Modul, 45 Min) &mdash;
+        die 24-Stunden-/72-Stunden-/1-Monats-Frist für Vorfallmeldungen.</li>
+        <li><strong>Wer ist verantwortlich? Governance &amp; Konsequenzen</strong> (Modul,
+        40 Min) &mdash; Haftung und Sanktionen unter NIS2.</li>
+        <li><strong>Ihr NIS2-Readiness-Score</strong> (Übung, 35 Min) &mdash; ein
+        interaktiver Selbstbewertungsrechner.</li>
       </ol>
-      <p><em>Units 4&ndash;6 are still in development and will appear below once published.</em></p>
+      <p><em>Die Einheiten 4&ndash;6 sind noch in Entwicklung und erscheinen unten, sobald sie veröffentlicht sind.</em></p>
 
   - url: https://raw.githubusercontent.com/LiaPlayground/nis2/main/materials/1-welcome-why-nis2-matters/README.md
     tags:
-      - Unit 1
+      - Einheit 1
 
   - url: https://raw.githubusercontent.com/LiaPlayground/nis2/main/materials/2-are-you-in-scope-essential-vs-important/README.md
     tags:
-      - Unit 2
+      - Einheit 2
 
   - url: https://raw.githubusercontent.com/LiaPlayground/nis2/main/materials/3-the-10-measures-you-actually-need/README.md
     tags:
-      - Unit 3
+      - Einheit 3
 
   - html: >
       <hr id="behind-the-scenes">
-      <h1>Behind the Scenes</h1>
-      <p>How this course and its tooling were built — reference material, not part of the learning path. No downloadable export formats — browse online only.</p>
+      <h1>Hinter den Kulissen</h1>
+      <p>Wie dieser Kurs und seine Werkzeuge entstanden sind — Referenzmaterial, nicht Teil des Lernpfads. Keine herunterladbaren Exportformate — nur online ansehen.</p>
 
   - url: https://raw.githubusercontent.com/LiaPlayground/nis2/main/about-liascript.md
-    comment: How this course was built — LiaScript, the Teaching-Agent multi-agent system, and the liaex exporter, explained through concrete features used in the course.
+    comment: Wie dieser Kurs gebaut wurde — LiaScript, das Teaching-Agent-Multi-Agenten-System und der liaex-Exporter, erklärt anhand konkreter Funktionen, die im Kurs verwendet werden.
     tags:
-      - Reference
+      - Referenz
     arguments:
       - project-generate-pdf: false
       - project-generate-scorm12: false
       - project-generate-scorm2004: false
 
   - url: https://raw.githubusercontent.com/LiaPlayground/nis2/main/journal.md
-    comment: The project's own planning journal — course context, didactics, agenda, session drafts, and agent memory, kept live throughout development.
+    comment: Das projekteigene Planungsjournal — Kurskontext, Didaktik, Agenda, Sitzungsentwürfe und Agenten-Gedächtnis, während der Entwicklung live gepflegt.
     tags:
-      - Reference
+      - Referenz
     arguments:
       - project-generate-pdf: false
       - project-generate-scorm12: false
